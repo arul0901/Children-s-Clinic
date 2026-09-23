@@ -1,0 +1,38 @@
+.vision-section {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.vision-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.vision-subtitle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-teal-muted);
+  margin-bottom: 2rem;
+}
+
+.vision-statement {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.3;
+  color: rgba(26, 26, 36, 0.3);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vision-statement span {
+  transition: color 0.3s;
+}

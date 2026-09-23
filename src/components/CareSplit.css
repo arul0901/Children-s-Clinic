@@ -1,0 +1,186 @@
+.care-split-section {
+  background-color: var(--color-bg);
+  padding: var(--spacing-section-y) 0;
+}
+
+.care-split-header {
+  text-align: center;
+}
+
+.care-split-container {
+  display: flex;
+  gap: 2rem;
+  height: 600px;
+  width: 100%;
+}
+
+.split-card {
+  flex: 1;
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: flex 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.split-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.split-card.expand {
+  flex: 1.6;
+}
+
+.split-card.shrink {
+  flex: 0.8;
+}
+
+/* Background & Overlays */
+.split-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.split-card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(50, 16, 75, 0.9) 0%, rgba(50, 16, 75, 0.4) 50%, rgba(50, 16, 75, 0.1) 100%);
+  transition: background 0.8s ease;
+  pointer-events: none;
+}
+
+.split-card:hover .split-card-bg {
+  transform: scale(1.05);
+}
+
+.neonatal-card .split-card-overlay {
+  background: linear-gradient(to top, rgba(79, 25, 117, 0.95) 0%, rgba(79, 25, 117, 0.3) 100%);
+}
+
+.pediatric-card .split-card-overlay {
+  background: linear-gradient(to top, rgba(50, 16, 75, 0.95) 0%, rgba(50, 16, 75, 0.3) 100%);
+}
+
+/* Content */
+.split-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  color: var(--color-white);
+  transition: all 0.6s ease;
+}
+
+.split-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  transition: transform 0.6s ease;
+}
+
+/* Details List - Hidden by Default, Shows on Hover */
+.split-card-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(20px);
+}
+
+.split-card.expand .split-card-details {
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.split-card.expand .split-card-title {
+  transform: translateY(-10px);
+}
+
+.split-card-details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.split-card-details ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Button */
+.split-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-white);
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.split-card-btn:hover {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.split-card-btn .arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.split-card-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .care-split-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .split-card {
+    min-height: 400px;
+  }
+  
+  .split-card.expand {
+    flex: unset;
+  }
+  
+  .split-card.shrink {
+    flex: unset;
+  }
+  
+  .split-card-details {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .split-card-title {
+    transform: none;
+  }
+}

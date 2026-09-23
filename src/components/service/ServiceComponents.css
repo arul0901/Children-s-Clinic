@@ -1,0 +1,351 @@
+/* ------------------------------------
+   SERVICE COMPONENTS CSS
+------------------------------------ */
+
+/* HERO SECTION */
+.service-hero-section {
+  padding: 8rem 2rem 4rem;
+  background-color: var(--color-lavender-light);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .service-hero-section {
+    padding: 10rem 4rem 6rem;
+  }
+}
+
+.service-hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .service-hero-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+.sh-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sh-title {
+  font-family: var(--font-display);
+  color: var(--color-primary);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+}
+
+.sh-image-container {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.sh-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERVIEW SECTION */
+.so-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.so-title {
+  color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+  font-family: var(--font-serif);
+}
+
+.so-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--color-navy);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+/* INCLUDES SECTION */
+.si-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.si-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.si-eyebrow {
+  font-family: var(--font-body);
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.si-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.si-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.si-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.si-number {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: var(--color-lavender);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.si-card h3 {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+}
+
+.si-card p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* PROCESS SECTION */
+.sp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .sp-timeline {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.sp-step {
+  flex: 1;
+  position: relative;
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+}
+
+.sp-step:hover {
+  transform: translateY(-5px);
+}
+
+.sp-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sp-step h4 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sp-step p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* INFORMATION SECTION */
+.sinfo-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+  border-radius: 30px;
+  padding: 4rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .sinfo-container {
+    padding: 5rem 4rem;
+  }
+}
+
+.sinfo-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sinfo-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.sinfo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .sinfo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sinfo-item h3 {
+  color: var(--color-gold);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.sinfo-item p {
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+}
+
+/* FAQ SECTION */
+.sfaq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sfaq-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sfaq-header h2 {
+  color: var(--color-primary);
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.sfaq-item {
+  background: var(--color-white);
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.sfaq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1.5rem 2rem;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.sfaq-icon {
+  color: var(--color-primary-light);
+  transition: transform 0.3s ease;
+}
+
+.sfaq-item.active .sfaq-icon {
+  transform: rotate(45deg);
+}
+
+.sfaq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.sfaq-item.active .sfaq-answer {
+  max-height: 300px;
+}
+
+.sfaq-answer p {
+  padding: 0 2rem 1.5rem;
+  color: var(--color-navy);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* CTA SECTION */
+.scta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.scta-title {
+  color: var(--color-primary);
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.scta-desc {
+  font-size: 1.2rem;
+  color: var(--color-navy);
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
