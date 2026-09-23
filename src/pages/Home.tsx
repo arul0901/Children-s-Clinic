@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ChevronLeft, ChevronRight, Stethoscope, Baby, ShieldPlus, HeartPulse, Hospital, Clock, ArrowRight, Users, Syringe, Droplets, Apple, Brain, Eye, Compass, Sparkles, CheckCircle2, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Stethoscope, Baby, ShieldPlus, HeartPulse, Hospital, Clock, ArrowRight, Users, Syringe, Droplets, Apple, Brain } from 'lucide-react';
 import HeroStatic from '../components/HeroStatic';
 import SpecializedCareShowcase from '../components/SpecializedCareShowcase';
 import CareSplit from '../components/CareSplit';
