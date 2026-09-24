@@ -23,6 +23,16 @@ export interface ServiceContent {
     question: string;
     answer: string;
   }[];
+  schedule?: {
+    columns: string[];
+    rows: string[][];
+  };
+  center?: {
+    title: string;
+    intro: string;
+    quote: string;
+    images: { src: string; caption: string }[];
+  };
 }
 
 export const servicesData: Record<string, ServiceContent> = {

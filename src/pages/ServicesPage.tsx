@@ -121,15 +121,15 @@ const ServicePage = () => {
               <table className="sd-table">
                 <thead>
                   <tr>
-                    {schedule.columns.map((column) => (
+                    {schedule.columns.map((column: string) => (
                       <th key={column}>{column}</th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
-                  {schedule.rows.map((row) => (
+                  {schedule.rows.map((row: string[]) => (
                     <tr key={row.join('-')}>
-                      {row.map((cell) => (
+                      {row.map((cell: string) => (
                         <td key={cell}>{cell}</td>
                       ))}
                     </tr>
@@ -160,7 +160,7 @@ const ServicePage = () => {
             </div>
 
             <div className="sd-gallery">
-              {center.images.map((image) => (
+              {center.images.map((image: { src: string; caption: string }) => (
                 <figure key={image.caption}>
                   <img src={image.src} alt="" />
                   <figcaption className="sd-reveal sd-text" data-reveal>{image.caption}</figcaption>
