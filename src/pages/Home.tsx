@@ -1,19 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ChevronLeft, ChevronRight, Stethoscope, Baby, ShieldPlus, HeartPulse, Hospital, Clock, ArrowRight, Users, Syringe, Droplets, Apple, Brain, CheckCircle2 } from 'lucide-react';
+import { Stethoscope, Baby, HeartPulse, Users, Syringe, Droplets } from 'lucide-react';
 import { HeroStatic, HolisticWellness, SpecializedCareShowcase, CareSplit, HospitalInfrastructure, BookAppointmentCTA, Testimonials } from '../components';
 
 import './Home.css';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const TESTIMONIALS = [
-  { quote: "Dr. Fathima and her team made us feel completely confident from our very first visit. Our newborn received the most attentive care.", author: "Priya S.", role: "Mother of a newborn, Krishnagiri" },
-  { quote: "We heard so much about the expertise here. Every visit reassured us that our child was in the most capable hands.", author: "Ramesh K.", role: "Father of a 6-month-old, Krishnagiri" },
-  { quote: "The doctors explained everything so clearly. I never felt rushed or dismissed. I finally felt truly understood as a parent.", author: "Meena L.", role: "Mother of twins, Krishnagiri" },
-];
 
 const SPECIALTIES = [
   { name: 'Internal Medicine', Icon: Stethoscope, id: 'stethoscope' },
@@ -24,32 +18,9 @@ const SPECIALTIES = [
   { name: 'Lactation', Icon: Droplets, id: 'droplets' }
 ];
 
-
-
-const SERVICES = [
-  { icon: <Baby size={24} />, title: "Newborn Care", desc: "Specialised monitoring and gentle support for your baby's critical first days and weeks.", link: "/services/newborn-care", img: "/service_neonatal_care_1789988898999.jpg" },
-  { icon: <HeartPulse size={24} />, title: "Lactation Support", desc: "Expert guidance for mothers to establish successful and stress-free breastfeeding.", link: "/services/lactation-support", img: "/phototherapy_treatment_1789989308209.jpg" },
-  { icon: <ShieldPlus size={24} />, title: "Vaccination", desc: "Complete immunisation schedules protecting children through every phase of development.", link: "/services/vaccination", img: "/service_preventative_care_1789988969044.jpg" },
-  { icon: <Stethoscope size={24} />, title: "Pediatric Consultation", desc: "Routine check-ups, growth monitoring, and holistic preventive care for all ages.", link: "/services/pediatric-care", img: "/pediatric_bg.jpg" },
-  { icon: <Hospital size={24} />, title: "Neonatal Care", desc: "Advanced NICU support for premature babies and complex newborn conditions.", link: "/services/neonatal-care", img: "/neonatal_bg.jpg" },
-  { icon: <Clock size={24} />, title: "Pediatric Emergency", desc: "Rapid, expert response when your child needs urgent care, 24/7.", link: "/services/pediatric-care", img: "/service_emergency_care_1789988990048.jpg" },
-  { icon: <Brain size={24} />, title: "Development Assessment", desc: "Track your child's physical, cognitive, and social milestones with expert evaluations.", link: "/services/pediatric-care", img: "/service_editorial_1_1789990863800.jpg" },
-  { icon: <Apple size={24} />, title: "Nutritional Counseling", desc: "Personalized diet plans and guidance to ensure optimal growth and healthy eating habits.", link: "/services/pediatric-care", img: "/services_image.jpg" },
-];
-
 const Home = () => {
   const pageRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-  const [testIdx, setTestIdx] = useState(0);
-
-  // Testimonial auto-advance
-  useEffect(() => {
-    const id = setInterval(() => setTestIdx(i => (i + 1) % TESTIMONIALS.length), 6000);
-    return () => clearInterval(id);
-  }, []);
-
-  const prevTest = () => setTestIdx(i => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
-  const nextTest = () => setTestIdx(i => (i + 1) % TESTIMONIALS.length);
 
   // GSAP Animations
   useEffect(() => {
