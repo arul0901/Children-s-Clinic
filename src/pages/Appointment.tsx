@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import AppointmentComponent from '../components/Appointment';
+import { Appointment as AppointmentComponent } from '../components';
 
 const Appointment = () => {
   useEffect(() => {

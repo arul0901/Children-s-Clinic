@@ -2,10 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ChevronLeft, ChevronRight, Stethoscope, Baby, ShieldPlus, HeartPulse, Hospital, Clock, ArrowRight, Users, Syringe, Droplets, Apple, Brain } from 'lucide-react';
-import HeroStatic from '../components/HeroStatic';
-import SpecializedCareShowcase from '../components/SpecializedCareShowcase';
-import CareSplit from '../components/CareSplit';
+import { ChevronLeft, ChevronRight, Stethoscope, Baby, ShieldPlus, HeartPulse, Hospital, Clock, ArrowRight, Users, Syringe, Droplets, Apple, Brain, CheckCircle2 } from 'lucide-react';
+import { HeroStatic, HolisticWellness, SpecializedCareShowcase, CareSplit, HospitalInfrastructure, BookAppointmentCTA, Testimonials } from '../components';
+
 import './Home.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -24,6 +23,8 @@ const SPECIALTIES = [
   { name: 'Immunisation', Icon: Syringe, id: 'syringe' },
   { name: 'Lactation', Icon: Droplets, id: 'droplets' }
 ];
+
+
 
 const SERVICES = [
   { icon: <Baby size={24} />, title: "Newborn Care", desc: "Specialised monitoring and gentle support for your baby's critical first days and weeks.", link: "/services/newborn-care", img: "/service_neonatal_care_1789988898999.jpg" },
@@ -102,6 +103,9 @@ const Home = () => {
       {/* ─── 1. HERO ────────────────────────── */}
       <HeroStatic />
 
+      {/* ─── 2. HOLISTIC WELLNESS ──────────── */}
+      <HolisticWellness />
+
       {/* ─── 2. SPECIALTIES (Horizontal Swipe) ───────────────────────── */}
       <section className="home-section bg-lavender" style={{ padding: '4rem 0' }}>
         <div className="container">
@@ -139,51 +143,18 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ─── 3. NUMBERED SERVICE CARDS ───────────────────────── */}
-      <section className="home-section" id="services" >
-        <div className="container">
-          <div className="section-header fade-up" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <span className="eyebrow">Comprehensive Care</span>
-            <h2 className="serif-heading" style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)' }}>
-              Dedicated to every stage.
-            </h2>
-          </div>
+      {/* ─── 3. HOSPITAL INFRASTRUCTURE & FACILITIES ───────────────────────── */}
+      <HospitalInfrastructure onCtaClick={() => navigate('/gallery')} />
 
-          <div className="premium-services-grid">
-            {SERVICES.map((s, i) => (
-              <div
-                className="premium-service-card fade-up"
-                key={i}
-                onClick={() => navigate(s.link)}
-              >
-                <div className="card-top-row">
-                  <div className="service-icon-minimal">
-                    {s.icon}
-                  </div>
-                  <span className="service-number">{String(i + 1).padStart(2, '0')}.</span>
-                </div>
-                <div className="card-content-area">
-                  <h3>{s.title}</h3>
-                  <p>{s.desc}</p>
-                </div>
-                <div className="card-graphic-area">
-                  <div className="graphic-shape shape-left" style={{ backgroundImage: `url(${s.img})` }}></div>
-                  <div className="graphic-shape shape-center" style={{ backgroundImage: `url(${s.img})` }}></div>
-                  <div className="graphic-shape shape-right" style={{ backgroundImage: `url(${s.img})` }}></div>
-                </div>
-                <div className="card-bottom-row">
-                  <span className="learn-more-text">Learn More</span>
-                  <div className="service-arrow">
-                    <ArrowRight size={16} />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ─── 4. TRUST / KEY METRICS ───────────────────────── */}
+
+      {/* ─── 5. LARGE EDITORIAL SECTION ────────────────────────────── */}
+
+
+      {/* ─── 6. SPECIALIZED CARE SHOWCASE (Immersive Stacked Cards) ──── */}
+      <SpecializedCareShowcase />
+
       <section className="home-section trust-metrics-section">
         <div className="container">
           <div className="trust-header fade-up">
@@ -215,144 +186,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ─── 5. LARGE EDITORIAL SECTION ────────────────────────────── */}
-      <section className="home-section editorial-section">
-        <div className="container editorial-grid">
-          <div className="editorial-content fade-up">
-            <span className="eyebrow">Holistic Wellness</span>
-            <h2 className="serif-heading editorial-title">
-              Thoughtful care at every stage of childhood.
-            </h2>
-            <p className="editorial-desc">
-              We believe that caring for an unwell child can feel overwhelming. Our role is to stand beside you, explain every decision clearly, and guide your family every step of the way with the most advanced pediatric practices available.
-            </p>
-            <button className="btn-secondary" onClick={() => navigate('/about')} style={{ marginTop: '2rem' }}>
-              Explore Our Care
-            </button>
-          </div>
-
-          <div className="editorial-image-wrapper fade-up">
-            <img src="/service_editorial_1_1789990863800.jpg" alt="Parent and child in warm consultation" className="editorial-main-img" />
-            <div className="editorial-floating-card">
-              <h4>Newborn Care</h4>
-              <p>Gentle support during the earliest stages.</p>
-              <span className="floating-explore">Explore <ArrowRight size={16} style={{ marginLeft: '4px' }} /></span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── 6. SPECIALIZED CARE SHOWCASE (Immersive Stacked Cards) ──── */}
-      <SpecializedCareShowcase />
 
       {/* ─── 7. CARESPLIT (Preserved & Upgraded) ───────────────── */}
       <CareSplit />
 
-      {/* ─── 7. VISION & MISSION (Humanized & Warm Layout) ─── */}
-      <section className="hvm-section" id="vision-mission">
-        <div className="container">
-          <div className="section-header fade-up" style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <span className="eyebrow">Our Foundation</span>
-            <h2 className="serif-heading" style={{ fontSize: 'clamp(2.4rem, 4vw, 3.4rem)', color: 'var(--color-primary-dark)' }}>
-              Vision & Mission
-            </h2>
-          </div>
-
-          <div className="hvm-grid">
-            {/* Our Vision Card */}
-            <div className="hvm-card fade-up">
-              <div className="hvm-card-top">
-                <span className="hvm-label">01 / Our Vision</span>
-                <h3 className="hvm-card-title">Where Every Child Thrives</h3>
-              </div>
-
-              <p className="hvm-text">
-                To be the region's most trusted pediatric and neonatal center, setting the benchmark for compassionate, evidence-based healthcare where every child can thrive and reach their full potential in a safe, nurturing environment.
-              </p>
-
-              <div className="hvm-card-footer">
-                <span className="hvm-dot"></span>
-                <span>Compassionate & Evidence-Based Pediatric Care</span>
-              </div>
-            </div>
-
-            {/* Our Mission Card */}
-            <div className="hvm-card fade-up">
-              <div className="hvm-card-top">
-                <span className="hvm-label">02 / Our Mission</span>
-                <h3 className="hvm-card-title">Dedicated to Family Well-being</h3>
-              </div>
-
-              <p className="hvm-text">
-                To provide world-class, holistic medical care to infants, children, and adolescents through advanced clinical expertise, transparent communication with families, and a deep commitment to preventive health and overall well-being.
-              </p>
-
-              <div className="hvm-card-footer">
-                <span className="hvm-dot"></span>
-                <span>Clinical Expertise & Transparent Communication</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* ─── 8. TESTIMONIALS ───────────────────────── */}
-      <section className="home-section bg-lavender">
-        <div className="container">
-          <div className="section-header fade-up" style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <span className="eyebrow">What Parents Say</span>
-          </div>
-
-          <div className="testimonial-carousel fade-up">
-            <div className="testimonial-view">
-              {TESTIMONIALS.map((t, i) => {
-                const isMobileActive = i === testIdx;
-                const isDesktopActive1 = i === testIdx;
-                const isDesktopActive2 = i === (testIdx + 1) % TESTIMONIALS.length;
-
-                return (
-                  <div
-                    key={i}
-                    className={`testimonial-slide ${isMobileActive ? 'mobile-active' : ''} ${isDesktopActive1 ? 'desktop-active-1' : ''} ${isDesktopActive2 ? 'desktop-active-2' : ''}`}
-                  >
-                    <p className="testimonial-quote">"{t.quote}"</p>
-                    <p className="testimonial-author">{t.author}</p>
-                    <p className="testimonial-role">{t.role}</p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="testimonial-nav">
-              <button className="test-arrow" onClick={prevTest} aria-label="Previous">
-                <ChevronLeft size={20} />
-              </button>
-              {TESTIMONIALS.map((_, i) => (
-                <button
-                  key={i}
-                  className={`test-dot ${i === testIdx ? 'active' : ''}`}
-                  onClick={() => setTestIdx(i)}
-                  aria-label={`Go to slide ${i + 1}`}
-                />
-              ))}
-              <button className="test-arrow" onClick={nextTest} aria-label="Next">
-                <ChevronRight size={20} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       {/* ─── 8. FINAL CTA ──────────────────────────── */}
-      <section className="final-cta-section">
-        <div className="container final-cta-content fade-up">
-          <span className="eyebrow" style={{ color: 'var(--color-lavender-light)' }}>Take the First Step</span>
-          <h2 className="serif-heading">Your child's health deserves thoughtful, expert care.</h2>
-          <button className="btn-primary" style={{ backgroundColor: 'var(--color-gold)', borderColor: 'var(--color-gold)' }} onClick={() => navigate('/appointment')}>
-            Book an Appointment
-          </button>
-        </div>
-      </section>
+      <BookAppointmentCTA />
 
     </div>
   );

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import EmergencyCTA from '../components/EmergencyCTA';
+import { EmergencyCTA } from '../components';
 
 const Contact = () => {
   useEffect(() => {

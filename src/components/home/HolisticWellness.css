@@ -1,0 +1,276 @@
+/* ─────────────────────────────────────────────────────────────
+   HOLISTIC WELLNESS SECTION - Exact Reference Match
+   ───────────────────────────────────────────────────────────── */
+
+.holistic-wellness-section {
+  background-color: #ffffff;
+  padding: clamp(4rem, 7vw, 6.5rem) 1.5rem;
+  overflow: hidden;
+}
+
+.holistic-wellness-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 5.5vw, 5.5rem);
+  align-items: center;
+}
+
+/* Left Media Collage Grid (2x2) */
+.holistic-media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.holistic-img-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  background-color: #f1f5f9;
+}
+
+.holistic-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.holistic-img-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Card 1: Top-Left with Lime Green Arch Top-Left Corner */
+.holistic-card-top-left {
+  height: clamp(190px, 23vh, 250px);
+  border-radius: 80px 18px 18px 18px;
+  position: relative;
+}
+
+.holistic-card-top-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #84cc16; /* Lime Green accent top-left */
+  border-radius: 80px 0 0 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.holistic-card-top-left img {
+  position: relative;
+  z-index: 2;
+  border-radius: 80px 18px 18px 18px;
+}
+
+/* Card 2: Top-Right (Standard Rounded Rectangle) */
+.holistic-card-top-right {
+  height: clamp(250px, 29vh, 310px);
+  border-radius: 18px;
+  grid-row: span 1;
+}
+
+/* Card 3: Bottom-Left (Rounded Corner Arch Bottom-Left) */
+.holistic-card-bottom-left {
+  height: clamp(250px, 29vh, 310px);
+  border-radius: 18px 18px 18px 80px;
+  margin-top: -24px;
+}
+
+/* Card 4: Bottom-Right with Vibrant Purple Arch Bottom-Right Corner */
+.holistic-card-bottom-right {
+  height: clamp(190px, 23vh, 250px);
+  border-radius: 18px 18px 80px 18px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.holistic-card-bottom-right::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 14px;
+  background-color: #8b5cf6; /* Vibrant Purple accent bottom-right curve */
+  border-radius: 0 0 80px 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.holistic-card-bottom-right img {
+  position: relative;
+  z-index: 2;
+  border-radius: 18px 18px 80px 18px;
+  filter: grayscale(100%) contrast(1.1); /* Black & white baby photo as shown in reference */
+}
+
+/* Right Content Column */
+.holistic-content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.holistic-main-heading {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #0b0f19;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.5rem 0;
+}
+
+.text-lime {
+  color: #84cc16; /* Lime green text match */
+}
+
+.text-purple {
+  color: #8b5cf6; /* Vibrant purple text match */
+}
+
+.holistic-desc-paragraph {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(0.98rem, 1.2vw, 1.1rem);
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  max-width: 540px;
+}
+
+.holistic-desc-paragraph:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* 4 Outlined Stat Pills Grid */
+.holistic-pills-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.holistic-stat-pill {
+  background: #ffffff;
+  border: 1.5px solid #d97706; /* Golden-amber thin border match */
+  border-radius: 12px;
+  padding: 0.5rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.06);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.holistic-stat-pill:hover {
+  transform: translateY(-2px);
+  border-color: #b45309;
+}
+
+.holistic-pill-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f3e8ff;
+  color: #8b5cf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.holistic-pill-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.holistic-pill-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #4c1d95;
+  white-space: nowrap;
+}
+
+.holistic-pill-sub {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #4c1d95;
+  white-space: nowrap;
+}
+
+/* CTA Purple Button */
+.holistic-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  background: #8b5cf6;
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  color: #ffffff;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.95rem 2.4rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(139, 61, 255, 0.38);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.holistic-cta-btn:hover {
+  background: linear-gradient(135deg, #9333ea 0%, #6d28d9 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 34px rgba(139, 61, 255, 0.5);
+}
+
+/* ──────────────── Responsive Styles ──────────────── */
+@media (max-width: 1024px) {
+  .holistic-wellness-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .holistic-content-col {
+    order: 2;
+  }
+
+  .holistic-media-grid {
+    order: 1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .holistic-wellness-section {
+    padding: 3rem 1rem;
+  }
+
+  .holistic-pills-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .holistic-stat-pill {
+    padding: 0.5rem 0.65rem;
+  }
+
+  .holistic-cta-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}

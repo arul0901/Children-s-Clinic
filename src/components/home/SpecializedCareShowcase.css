@@ -1,0 +1,248 @@
+.medical-services-section {
+  background-color: #ffffff;
+  padding: clamp(4rem, 7vw, 6.5rem) 1.5rem;
+}
+
+.medical-services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1240px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem) auto;
+  gap: 2rem;
+}
+
+.medical-services-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.1;
+  color: #0b0f19;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.medical-services-subtitle {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+  color: #475569;
+  max-width: 420px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
+
+/* 4-Column Grid Layout matching reference image */
+.medical-services-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 260px);
+  gap: 1.5rem;
+}
+
+/* Common Card Styles */
+.medical-service-card {
+  border-radius: 22px;
+  padding: 1.35rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 260px;
+  box-sizing: border-box;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+}
+
+/* Number Wrapper with Top Cutout Clipping (Matching Reference Image) */
+.service-card-number-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.service-card-number {
+  font-family: 'Happy Monkey', cursive, sans-serif;
+  font-size: clamp(3.8rem, 5.5vw, 5.8rem);
+  line-height: 0.72;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  transform: translateY(12px);
+  user-select: none;
+}
+
+/* Outlined White Cards (01, 03, 04, 05, 06) */
+.outlined-card {
+  background-color: #ffffff;
+  border: 1.5px solid rgba(79, 25, 117, 0.25);
+}
+
+.outlined-card .service-card-number {
+  color: #4f1975;
+  opacity: 0.75;
+}
+
+.outlined-card .service-card-title {
+  color: #4f1975;
+}
+
+.outlined-card .service-card-desc {
+  color: #475569;
+}
+
+.outlined-card:hover {
+  transform: translateY(-5px);
+  border-color: #4f1975;
+  box-shadow: 0 14px 32px rgba(79, 25, 117, 0.18);
+}
+
+/* Solid Filled Purple Card (02 - Lactation Support) */
+.filled-purple-card {
+  background: #4f1975;
+  background: linear-gradient(145deg, #6b2a91 0%, #4f1975 100%);
+  border: 1.5px solid transparent;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(79, 25, 117, 0.35);
+}
+
+.filled-purple-card .service-card-number {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.filled-purple-card .service-card-title {
+  color: #ffffff;
+}
+
+.filled-purple-card .service-card-desc {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.filled-purple-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(79, 25, 117, 0.5);
+}
+
+/* Card Titles */
+.service-card-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.015em;
+}
+
+/* Card Description */
+.service-card-desc {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(0.88rem, 1.05vw, 0.98rem);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Explore Link Styling */
+.service-card-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.85rem;
+}
+
+.outlined-card .service-card-explore {
+  color: #4f1975;
+}
+
+.filled-purple-card .service-card-explore {
+  color: #ffffff;
+}
+
+.explore-arrow {
+  transition: transform 0.25s ease;
+}
+
+.medical-service-card:hover .explore-arrow {
+  transform: translateX(4px);
+}
+
+/* Spanning Image Banner Card (Row 2, Cols 2-4) */
+.medical-service-image-card {
+  grid-column: span 3;
+  border-radius: 22px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-image-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.medical-service-image-card:hover .service-image-banner {
+  transform: scale(1.03);
+}
+
+/* ──────────────── Responsive Styles ──────────────── */
+@media (max-width: 1024px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+  }
+
+  .medical-service-card {
+    height: auto;
+    min-height: 240px;
+  }
+
+  .medical-service-image-card {
+    grid-column: span 2;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .medical-services-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .medical-services-subtitle {
+    max-width: 100%;
+  }
+
+  .medical-services-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.15rem;
+  }
+
+  .medical-service-card {
+    height: auto;
+    min-height: 220px;
+    padding: 1.25rem 1.15rem;
+  }
+
+  .service-card-number {
+    font-size: clamp(3.2rem, 12vw, 4.5rem);
+  }
+
+  .medical-service-image-card {
+    grid-column: span 1;
+    min-height: 200px;
+  }
+}
+

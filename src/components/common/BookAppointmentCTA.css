@@ -1,0 +1,176 @@
+.creative-cta-section {
+  background-color: #ffffff;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.creative-cta-container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creative-cta-title {
+  font-size: clamp(1.75rem, 3.6vw, 3.2rem);
+  line-height: 1.35;
+  color: #111827;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.25rem;
+}
+
+/* Font Specifications requested by user */
+.font-plus-jakarta {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  color: #111827;
+}
+
+.font-happy-monkey {
+  font-family: 'Happy Monkey', cursive, sans-serif;
+  font-weight: 400;
+  color: #1e293b;
+}
+
+.font-dm-sans {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.creative-cta-bold {
+  font-weight: 800;
+  color: #0f172a;
+  display: inline-block;
+  margin-top: 0.15rem;
+  letter-spacing: -0.02em;
+}
+
+/* Inline Pill Image Badge */
+.cta-inline-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(65px, 7.5vw, 95px);
+  height: clamp(30px, 3.4vw, 42px);
+  border-radius: 999px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin: 0 0.35rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border: 2px solid #ffffff;
+  transform: translateY(-2px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-inline-pill:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.cta-inline-pill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Inline Overlapping Avatar Badges */
+.cta-inline-avatars {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 0.4rem;
+  padding-left: 0.4rem;
+}
+
+.cta-inline-avatars img {
+  width: clamp(32px, 3.8vw, 44px);
+  height: clamp(32px, 3.8vw, 44px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #ffffff;
+  margin-left: -12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease;
+}
+
+.cta-inline-avatars img:first-child {
+  margin-left: 0;
+}
+
+.cta-inline-avatars:hover img {
+  transform: translateY(-3px);
+}
+
+/* Description Text */
+.creative-cta-desc {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+}
+
+/* CTA Purple Button */
+.creative-cta-btn-wrapper {
+  margin-top: 0.25rem;
+}
+
+.creative-cta-btn {
+  background: linear-gradient(135deg, #9146ff 0%, #7522ff 100%);
+  color: #ffffff;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  font-weight: 600;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(139, 61, 255, 0.32);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creative-cta-btn:hover {
+  background: linear-gradient(135deg, #812cff 0%, #640eff 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(139, 61, 255, 0.45);
+}
+
+.creative-cta-btn:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+@media (max-width: 640px) {
+  .creative-cta-section {
+    padding: 2.75rem 1rem;
+  }
+
+  .creative-cta-title {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    line-height: 1.45;
+  }
+
+  .cta-inline-pill {
+    width: clamp(55px, 14vw, 75px);
+    height: clamp(26px, 7vw, 34px);
+    margin: 0 0.2rem;
+  }
+
+  .cta-inline-avatars img {
+    width: clamp(28px, 7vw, 36px);
+    height: clamp(28px, 7vw, 36px);
+    margin-left: -8px;
+  }
+
+  .creative-cta-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.85rem 1.75rem;
+  }
+}
+
