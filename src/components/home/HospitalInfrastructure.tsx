@@ -579,6 +579,7 @@ export interface HeroCard {
 export interface HospitalHeroProps {
   navLinks?: { label: string; active?: boolean }[];
   cards?: HeroCard[];
+  onCtaClick?: () => void;
 }
 
 const DEFAULT_NAV = [
@@ -641,6 +642,7 @@ const DEFAULT_CARDS: HeroCard[] = [
 export default function HospitalInfrastructure({
   navLinks = DEFAULT_NAV,
   cards = DEFAULT_CARDS,
+  onCtaClick,
 }: HospitalHeroProps) {
   const [active, setActive] = useState(0);
   const navigate = useNavigate();
@@ -707,7 +709,7 @@ export default function HospitalInfrastructure({
             ))}
           </ul>
 
-          <button type="button" className="hh-cta" onClick={() => navigate(cards[active].ctaRoute)}>
+          <button type="button" className="hh-cta" onClick={() => onCtaClick ? onCtaClick() : navigate(cards[active].ctaRoute)}>
             <span>{cards[active].ctaLabel}</span>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
