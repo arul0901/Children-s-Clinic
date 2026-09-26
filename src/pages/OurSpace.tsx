@@ -12,10 +12,10 @@ const OurSpace = () => {
     <div className="our-space-page">
       {/* ──────────────── 1. HERO BANNER (Same as Lactation Support) ──────────────── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/banner.jpg" alt="Our Space & Gallery" />
+        <img className="sd-hero-bg" src="/hero_banner_new.jpg" alt="Our Space & Gallery" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
-            <h2 className="font-plus-jakarta banner-font">Our Space &amp; Gallery</h2>
+            <h2 className="font-plus-jakarta banner-font"> Gallery</h2>
           </div>
         </div>
       </section>
