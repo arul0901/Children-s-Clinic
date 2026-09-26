@@ -103,7 +103,7 @@ const GrowthDevelopment = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/grow2.jpg" alt="Child Growth and Development Monitoring Consultation" />
+              <img src="/assets/home/grow2.jpg" alt="Child Growth and Development Monitoring Consultation" />
             </div>
 
             {/* Overview Intro */}

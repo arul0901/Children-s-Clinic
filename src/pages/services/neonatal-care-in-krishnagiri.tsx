@@ -87,7 +87,7 @@ const NeonatalCare = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/neonatal-banner.jpg" alt="Neonatal Care in Krishnagiri" />
+        <img className="sd-hero-bg" src="/assets/home/neonatal-banner.jpg" alt="Neonatal Care in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h2 className="font-plus-jakarta banner-font">Neonatal Care &amp; Intensive Care </h2>
@@ -103,7 +103,7 @@ const NeonatalCare = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/neonatal1.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
+              <img src="/assets/home/neonatal1.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
             </div>
 
             {/* Overview Intro */}
