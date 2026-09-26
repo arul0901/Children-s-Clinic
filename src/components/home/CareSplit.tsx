@@ -48,8 +48,8 @@ const CareSplit = () => {
             </div>
             <div className="specialty-arch-image-wrapper arch-left">
               <img
-                src="/hero_image_1789986082265.jpg"
-                alt="Neonatal doctor examining baby with stethoscope"
+                src="/pediatric_bg.jpg"
+                alt="Neonatal doctor examining baby"
                 className="arch-img"
               />
             </div>
@@ -175,8 +175,8 @@ const CareSplit = () => {
             </div>
             <div className="specialty-arch-image-wrapper arch-right">
               <img
-                src="/service_preventative_care_1789988969044.jpg"
-                alt="Pediatric doctor examining child with stethoscope"
+                src="/service_editorial_1_1789990863800.jpg"
+                alt="Pediatric doctor examining child"
                 className="arch-img"
               />
             </div>

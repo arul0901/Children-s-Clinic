@@ -264,7 +264,7 @@ const About = () => {
     <div className="abt-page" ref={pageRef}>
       {/* ── Hero Banner (Service Detail Style) ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/banner.png" alt="About The Children's Clinic" />
+        <img className="sd-hero-bg" src="/banner.jpg" alt="About The Children's Clinic" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h1>About Us</h1>
