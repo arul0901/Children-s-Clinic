@@ -3,13 +3,15 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link, useNavigate } from 'react-router-dom';
 import {
-  Activity, ArrowRight, ArrowUpRight, Baby, BadgeCheck, CalendarDays,
-  Check, Clock, Eye, GraduationCap, Handshake,
-  Heart, HeartPulse, MapPin, Phone, Quote,
-  Stethoscope, Target, Trophy, Users,
+  Activity, ArrowRight, ArrowUpRight, Baby, BadgeCheck,
+  ChevronRight, Eye, GraduationCap, Handshake,
+  Heart, HeartPulse, MapPin, Quote,
+  Stethoscope, Target, Users,
 } from 'lucide-react';
 
 import './about.css';
+import './services/ServicePage.css';
+import FeedingBottle from '../components/common/FeedingBottle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,51 +19,52 @@ gsap.registerPlugin(ScrollTrigger);
 
 const DOCTOR = {
   name: 'Dr. Haseen Fathima',
-  creds: 'MBBS · M.D. · DNB (Pediatrics)',
-  role: 'Founder & Consultant Pediatrician',
+  creds: 'MD, DNB (Pediatrics)',
+  tagline: 'Trusted child specialist in Krishnagiri',
   bio: [
-    'Dr. Haseen Fathima founded The Children’s Clinic with one simple belief — every child deserves specialist care that feels personal, unhurried and kind. After years in premier medical institutions, she chose to build a practice where parents are heard and children feel at home.',
-    'Her approach blends evidence-based medicine with gentle, child-friendly care — from a newborn’s very first check-up to the adventures of the growing years.',
+    'Dr. Haseen Fathima, MD, DNB (Pediatrics), is a pediatric doctor with 9+ years of experience in caring for newborns, infants and children. Her areas of focus include newborn and neonatal care, lactation and breastfeeding support, child growth and development monitoring, vaccination and the management of common childhood concerns such as fever, cold and cough.',
+    'Her clinical focus also includes premature baby care, newborn jaundice and phototherapy, seizures or fits in babies and children, neonatal intensive care and newborn ventilator support. At The Children’s Clinic, the emphasis is on understanding each child\'s individual health needs while providing parents with clear and practical guidance throughout their child\'s healthcare journey.',
   ],
-  quote: 'Treat every child as your own, and every worry as your own — the rest of medicine follows.',
+  messageTitle: 'A Message from Dr. Haseen Fathima',
+  quote: 'Every child is unique, and every stage of childhood brings its own healthcare needs. My aim is to provide thoughtful, compassionate care while helping parents understand their child’s health, growth and development with confidence.',
   education: [
-    'MBBS — Government Chengalpattu Medical College',
-    'MD Pediatrics — Pondicherry Institute of Medical Sciences',
-    'DNB (Pediatrics) — Post-doctoral board certification',
-    'Senior Residency, Neonatology — JIPMER, Puducherry',
+    'MBBS',
+    'MD Pediatrics',
+    'DNB (Pediatrics)',
+    '9+ Years of Pediatric Experience',
   ],
-  certifications: [
-    'PALS & NALS certified provider',
-    'BLS Instructor (AHA certified)',
-    'Advanced training — Neonatal Ventilation',
-    'Advanced training — Neonatal POCUS',
-  ],
-  focusAreas: [
+  clinicalExpertise: [
     'Newborn & neonatal care',
+    'Premature baby care',
     'Growth & developmental monitoring',
     'Childhood nutrition & feeding',
-    'Preventive paediatrics & immunisation',
+  ],
+  focusAreas: [
+    'Lactation & breastfeeding support',
+    'Preventive pediatrics & immunisation',
+    'Newborn jaundice & phototherapy',
+    'Seizures & pediatric health concerns',
   ],
 };
 
 const CLINIC_POINTS = [
-  'Paediatric & neonatal specialist care under one roof',
-  'Vaccination, growth & developmental monitoring',
-  'Child-friendly spaces designed for comfort',
-  'Same-day appointments & 24×7 emergency support',
+  'Newborn & Neonatal Care',
+  'Lactation & Breastfeeding Support',
+  'Growth & Development Monitoring',
+  'Pediatric & Preventive Care',
 ];
 
 const STATS = [
-  { icon: Heart, value: 10, suffix: '+', label: 'Years of care' },
-  { icon: Baby, value: 12, suffix: 'k+', label: 'Happy families' },
-  { icon: Stethoscope, value: 24, suffix: '×7', label: 'Emergency ready' },
-  { icon: Users, value: 150, suffix: '+', label: 'New patients every month' },
+  { icon: Heart, value: 9, suffix: '+', label: 'Years of Experience' },
+  { icon: Baby, value: 15, suffix: '+', label: 'Pediatric & Newborn Care Services' },
+  { icon: Stethoscope, value: 100, suffix: '%', label: 'Personalized Attention' },
+  { icon: Users, value: 5, suffix: '+', label: 'Core Pediatric Care Areas' },
 ];
 
 const CREDENTIALS = [
-  { icon: GraduationCap, title: 'Education & Training', count: 'Academic milestones', items: DOCTOR.education },
-  { icon: BadgeCheck, title: 'Certifications', count: 'Credentials & training', items: DOCTOR.certifications },
-  { icon: HeartPulse, title: 'Areas of Focus', count: 'Special clinical interests', items: DOCTOR.focusAreas },
+  { icon: GraduationCap, title: '01 — Education & Training', count: 'Academic Qualifications', items: DOCTOR.education },
+  { icon: Stethoscope, title: '02 — Clinical Expertise', count: 'Pediatric & Newborn Care', items: DOCTOR.clinicalExpertise },
+  { icon: HeartPulse, title: '03 — Areas of Focus', count: 'Special Clinical Interests', items: DOCTOR.focusAreas },
 ];
 
 const TABS = [
@@ -69,32 +72,80 @@ const TABS = [
     id: 'vision',
     label: 'Vision',
     icon: Eye,
-    heading: 'Our Vision',
-    text: 'To be the most trusted children’s clinic in the region — where high-end paediatric and neonatal care is easy to reach, gentle to receive and affordable for every family that walks in.',
+    emoji: '🌱',
+    heading: 'Healthy Childhood, Brighter Futures',
+    items: [
+      'To help children grow healthy, happy and confident through thoughtful healthcare.',
+      'To support their wellbeing at every stage of childhood.',
+    ],
   },
   {
     id: 'mission',
     label: 'Mission',
     icon: Target,
-    heading: 'Our Mission',
-    text: 'To deliver evidence-based paediatric care through unhurried consultations, honest guidance and child-friendly facilities — supporting every child’s growth from the first cry to the first day of school.',
+    emoji: '🎯',
+    heading: 'Care That Supports Every Stage',
+    items: [
+      'To provide personalized pediatric and newborn care for every child.',
+      'To guide parents with clarity, compassion and confidence.',
+    ],
   },
   {
-    id: 'promise',
-    label: 'Our Promise',
+    id: 'values',
+    label: 'Values',
     icon: Handshake,
-    heading: 'Our Promise',
-    text: 'To treat every child as our own and every parent’s worry as our own. No rushed visits, no unnecessary tests — just careful medicine, clearly explained and kindly delivered.',
+    emoji: '❤️',
+    heading: 'Compassion in Every Consultation',
+    items: [
+      'We treat every child with patience, kindness and individual attention.',
+      'We build trust with families through safe and responsible care.',
+    ],
   },
 ];
 
 const JOURNEY = [
-  { year: '2016', icon: MapPin, title: 'The first step', text: 'The Children’s Clinic opens its doors as a small paediatric OPD with a big promise: unhurried consultations, honest advice and care that treats children like children.', tags: ['Founding', 'Paediatric OPD'] },
-  { year: '2018', icon: Heart, title: 'Newborn care unit', text: 'A dedicated newborn & neonatal care unit brings warmer beds, phototherapy and round-the-clock nursing under one roof, so fragile beginnings get strong support.', tags: ['Neonatology', 'Round-the-clock nursing'] },
-  { year: '2020', icon: Clock, title: 'Care beyond the clinic', text: 'Through a challenging year, teleconsultations and home-care guidance keep families connected to their doctor — and remind us why access matters as much as expertise.', tags: ['Teleconsults', 'Home-care guidance'] },
-  { year: '2022', icon: Activity, title: 'Growing services', text: 'Vaccination clinics, developmental screening and a child-friendly procedure room expand the clinic into a complete centre for everyday paediatrics.', tags: ['Immunisation', 'Development screening'] },
-  { year: '2024', icon: Trophy, title: 'Recognition & milestones', text: 'The clinic crosses 10,000 little patients, earns parent-trust awards and expands its specialist network for cardiology, physiotherapy and nutrition referrals.', tags: ['10k+ patients', 'Specialist network'] },
-  { year: '2026', icon: CalendarDays, title: 'The next chapter', text: 'Today we are building proactive, preventive paediatrics — scheduled wellness plans, parenting workshops and same-day slots, so care reaches children before worries do.', tags: ['Wellness plans', 'Workshops'] },
+  {
+    step: '01 — The Beginning',
+    icon: MapPin,
+    title: 'Building a Child-Focused Practice',
+    text: 'The Children’s Clinic begins with a simple purpose: to provide thoughtful, accessible and child-centred pediatric care for families in Krishnagiri.',
+    tags: ['Child-Centred Care', 'Pediatric Care'],
+  },
+  {
+    step: '02 — Growing Expertise',
+    icon: GraduationCap,
+    title: 'Experience Built Around Children',
+    text: 'With 9+ years of pediatric experience, Dr. Haseen Fathima brings dedicated medical care for newborns, infants and growing children.',
+    tags: ['9+ Years', 'Pediatric Expertise'],
+  },
+  {
+    step: '03 — Newborn Care',
+    icon: Baby,
+    title: 'Supporting the First Days of Life',
+    text: 'The focus expands to newborn and neonatal care, including premature baby care and health support during the early stages of life.',
+    tags: ['Newborn Care', 'Neonatal Care'],
+  },
+  {
+    step: '04 — Supporting New Mothers',
+    icon: Heart,
+    title: 'Care Beyond the Consultation',
+    text: 'Lactation and breastfeeding support become an important part of helping mothers and babies navigate feeding and early development.',
+    tags: ['Lactation Support', 'Breastfeeding Care'],
+  },
+  {
+    step: '05 — Growing With Every Child',
+    icon: Activity,
+    title: 'Supporting Health at Every Stage',
+    text: 'From vaccinations and growth monitoring to common childhood illnesses, care continues as children grow and their healthcare needs change.',
+    tags: ['Vaccination', 'Growth & Development'],
+  },
+  {
+    step: '06 — Dedicated Pediatric Care',
+    icon: BadgeCheck,
+    title: 'A Continuing Commitment to Children',
+    text: 'Today, The Children’s Clinic brings together pediatric, newborn and neonatal care with a continued focus on thoughtful support for children and their parents.',
+    tags: ['Pediatric Care', 'Parent Support'],
+  },
 ];
 
 /* ────────────────────────────── Component ────────────────────────────── */
@@ -211,36 +262,81 @@ const About = () => {
 
   return (
     <div className="abt-page" ref={pageRef}>
-      {/* ── 1) Banner — split panel + inset image ── */}
-      <section className="abt-banner">
-        <div className="abt-blob abt-blob--gold" />
-        <div className="abt-blob abt-blob--lav" />
-        <div className="container abt-banner__inner">
-          <div className="abt-banner__content">
-            <span className="abt-banner__eyebrow">The Children’s Clinic — About Us</span>
-            <h1 className="abt-banner__title">
-              <span className="abt-banner__title-line"><span>Where little</span></span>
-              <span className="abt-banner__title-line"><span>hearts come <em>first</em></span></span>
-            </h1>
-            <p className="abt-banner__sub">
-              From first cries to first steps — we’ve grown alongside thousands of families with
-              specialist paediatric and neonatal care that always puts your child at ease.
-            </p>
-            <div className="abt-banner__ctas">
-              <button className="abt-btn-gold" onClick={() => navigate('/appointment')}>
-                Book an Appointment <ArrowRight size={18} />
-              </button>
-              <Link to="/services" className="abt-btn-ghost">Explore our services</Link>
-            </div>
-          </div>
-          <div className="abt-banner__media">
-            <div className="abt-banner__ring" />
-            <div className="abt-banner__frame">
-              <img src="/hero_image.jpg" alt="Care at The Children’s Clinic" />
-            </div>
+      {/* ── Hero Banner (Service Detail Style) ── */}
+      <section className="sd-hero">
+        <img className="sd-hero-bg" src="/banner.png" alt="About The Children's Clinic" />
+        <div className="sd-hero-overlay">
+          <div className="container sd-hero-inner">
+            <h1>About Us</h1>
+            <nav className="sd-breadcrumb" aria-label="Breadcrumb">
+              <Link to="/">Home</Link>
+              <ChevronRight size={14} />
+              <span>About Us</span>
+            </nav>
           </div>
         </div>
-        <div className="abt-scrollhint">Scroll</div>
+      </section>
+
+      {/* ── Doctor Section ── */}
+      <section className="abt-section abt-doctor">
+        <div className="container">
+          <div className="abt-doctor__panel">
+            <div className="abt-doctor__media">
+              <div className="abt-doctor__archwrap">
+                <div className="abt-doctor__arch-outline" />
+                <div className="abt-doctor__arch">
+                  <img src="/doctor_portrait.jpg" alt={DOCTOR.name} />
+                </div>
+                <div className="abt-doctor__exp">
+                  <span className="abt-doctor__exp-num">9+</span>
+                  <span className="abt-doctor__exp-label">Years of Experience</span>
+                </div>
+              </div>
+            </div>
+            <div className="abt-doctor__intro">
+              <span className="abt-eyebrow">Meet</span>
+              <h2 className="abt-doctor__name">{DOCTOR.name}</h2>
+              <h2 className="abt-doctor__h2-tagline">
+                {DOCTOR.tagline}
+              </h2>
+              <div className="abt-doctor__bio">
+                {DOCTOR.bio.map((p, idx) => <p key={idx}>{p}</p>)}
+              </div>
+              <blockquote className="abt-quote">
+                <Quote size={26} />
+                <div className="abt-quote__box">
+                  <h4 className="abt-quote__heading">{DOCTOR.messageTitle}</h4>
+                  <p>“{DOCTOR.quote}”</p>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+
+          <div className="abt-cred__section-head">
+            <h2 className="abt-cred__main-title font-plus-jakarta">Doctor Expertise</h2>
+          </div>
+
+          <div className="abt-cred__panel">
+            {CREDENTIALS.map((cred, i) => {
+              const CredIcon = cred.icon;
+              return (
+                <article className="abt-cred" key={cred.title}>
+                  <div className="abt-cred__head">
+                    <span className="abt-cred__glyph"><CredIcon size={20} /></span>
+                    <span>
+                      <h3 className="abt-cred__title">{cred.title}</h3>
+                      <span className="abt-cred__count">{cred.count}</span>
+                    </span>
+                    <span className="abt-cred__index">0{i + 1}</span>
+                  </div>
+                  <ul className="abt-cred__list">
+                    {cred.items.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                </article>
+              );
+            })}
+          </div>
+        </div>
       </section>
 
       {/* ── 2) About the clinic ── */}
@@ -254,87 +350,35 @@ const About = () => {
           </div>
           <div className="abt-about__copy">
             <span className="abt-eyebrow">About the clinic</span>
-            <h2 className="abt-title">A clinic built around <em>children</em>, not charts</h2>
+            <h2 className="abt-title">About The Children’s Clinic in Krishnagiri</h2>
             <p>
-              The Children’s Clinic began with a simple observation: children needed a place that
-              didn’t feel like a hospital. So we built one — bright, playful and calm, where a
-              stethoscope comes with a smile and no question from a parent is ever too small.
+              The Children’s Clinic in Krishnagiri provides child-focused pediatric and newborn care under the guidance of <span className="font-happy-monkey"> Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span> The clinic focuses on supporting children through different stages of growth, from newborn care and breastfeeding support to vaccination and common childhood health concerns.
             </p>
             <p>
-              From a newborn’s first weigh-in to a teenager’s annual check-up, our clinic brings
-              specialist paediatric and neonatal care together in one warm, family-centred space.
-              We listen first, explain clearly and treat only what needs treating.
+              Care also extends to neonatal care, premature baby care, growth and development monitoring, newborn jaundice and phototherapy, seizures or fits, and neonatal intensive care needs. The focus is on understanding each child's needs while providing parents with clear, practical guidance.
             </p>
+            
+            <h3 className="abt-focus-title font-happy-monkey">
+              What We Focus On
+            </h3>
             <ul className="abt-checklist">
               {CLINIC_POINTS.map((point) => (
-                <li key={point}><Check size={18} /> {point}</li>
+                <li key={point}>
+                  <FeedingBottle size={18} color="var(--color-gold)" />
+                  <span>{point}</span>
+                </li>
               ))}
             </ul>
             <div className="abt-sign">
               <span className="abt-sign__bar" />
-              <p>The Children’s Clinic — care that grows with your child.</p>
+              <p>Every child deserves care that understands their unique needs and every parent deserves guidance they can trust.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── 3) Doctor feature — white panel + arch portrait ── */}
-      <section className="abt-section abt-doctor">
-        <div className="container">
-          <div className="abt-doctor__panel">
-          <div className="abt-doctor__media">
-            <div className="abt-doctor__archwrap">
-              <div className="abt-doctor__arch-outline" />
-              <div className="abt-doctor__arch">
-                <img src="/doctor_portrait.jpg" alt={DOCTOR.name} />
-              </div>
-              <div className="abt-doctor__exp">
-                <span className="abt-doctor__exp-num">10+</span>
-                <span className="abt-doctor__exp-label">Years of Experience</span>
-              </div>
-            </div>
-          </div>
-          <div className="abt-doctor__intro">
-            <span className="abt-eyebrow">Meet the doctor</span>
-            <h2 className="abt-doctor__name">{DOCTOR.name}</h2>
-            <span className="abt-doctor__creds"><GraduationCap size={18} /> {DOCTOR.creds}</span>
-            <div>
-              <span className="abt-doctor__role"><Stethoscope size={14} /> {DOCTOR.role}</span>
-            </div>
-            <div className="abt-doctor__bio">
-              {DOCTOR.bio.map((p) => <p key={p.slice(0, 24)}>{p}</p>)}
-            </div>
-            <blockquote className="abt-quote">
-              <Quote size={26} />
-              <p>“{DOCTOR.quote}”</p>
-            </blockquote>
-            <div className="abt-doctor__sign">
-              <p>Dr. Haseen Fathima — {DOCTOR.role}</p>
-            </div>
-          </div>
-          </div>
-          <div className="abt-cred__panel">
-          {CREDENTIALS.map((cred, i) => {
-            const CredIcon = cred.icon;
-            return (
-              <article className="abt-cred" key={cred.title}>
-                <div className="abt-cred__head">
-                  <span className="abt-cred__glyph"><CredIcon size={20} /></span>
-                  <span>
-                    <h3 className="abt-cred__title">{cred.title}</h3>
-                    <span className="abt-cred__count">{cred.count}</span>
-                  </span>
-                  <span className="abt-cred__index">0{i + 1}</span>
-                </div>
-                <ul className="abt-cred__list">
-                  {cred.items.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-              </article>
-            );
-          })}
-          </div>
-        </div>
-      </section>
+      
 
       {/* ── 4) Vision · Mission · Values ── */}
       <section className="abt-section abt-vmv abt-center">
@@ -343,7 +387,7 @@ const About = () => {
             <span className="abt-eyebrow abt-eyebrow--line">What guides us</span>
             <h2 className="abt-title">Vision, mission & values</h2>
             <p className="abt-lead">
-              Three simple ideas shape every consultation, every protocol and every corner of our clinic.
+              Guided by compassion, trust and child-centred care, we are committed to supporting every child’s health, growth and wellbeing while giving parents clear and thoughtful guidance.
             </p>
           </div>
           <div className="abt-vmv__grid">
@@ -355,9 +399,15 @@ const About = () => {
                   key={tab.id}
                 >
                   <span className="abt-vmvcard__icon"><CardIcon size={26} /></span>
+                  <span className="abt-vmvcard__kicker">{tab.emoji} {tab.label}</span>
                   <h3 className="abt-vmvcard__heading">{tab.heading}</h3>
-                  <span className="abt-vmvcard__kicker">{tab.label}</span>
-                  <p className="abt-vmvcard__text">{tab.text}</p>
+                  <ul className="abt-vmvcard__list">
+                    {tab.items.map((item, idx) => (
+                      <li key={idx} className="abt-vmvcard__item">
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <span className="abt-vmvcard__num">0{i + 1}</span>
                 </article>
               );
@@ -388,22 +438,22 @@ const About = () => {
       <section className="abt-section abt-journey">
         <div className="container">
           <div className="abt-section-head abt-center">
-            <span className="abt-eyebrow abt-eyebrow--line">Our journey</span>
-            <h2 className="abt-title">Every step, <em>growing with you</em></h2>
+            <span className="abt-eyebrow abt-eyebrow--line">Our Journey</span>
+            <h2 className="abt-title">Our Journey</h2>
             <p className="abt-lead">
-              A decade of small wins, big smiles and steady growth — told year by year.
+              From the early days of pediatric care to a growing focus on newborn, neonatal and childhood healthcare, our journey is shaped by experience, compassion and a continued commitment to supporting every child and family.
             </p>
           </div>
           <div className="abt-journey__wrap">
             <div className="abt-journey__rail" />
             <div className="abt-journey__fill" ref={railFillRef} />
             {JOURNEY.map((m, i) => (
-              <div className={`abt-milestone ${i % 2 === 1 ? 'abt-milestone--flip' : ''}`} key={m.year}>
+              <div className={`abt-milestone ${i % 2 === 1 ? 'abt-milestone--flip' : ''}`} key={m.step}>
                 <div className="abt-milestone__node">
                   <div className="abt-milestone__dot"><m.icon size={24} /></div>
                 </div>
                 <div className="abt-milestone__card">
-                  <span className="abt-milestone__year">{m.year}</span>
+                  <span className="abt-milestone__year">{m.step}</span>
                   <h3>{m.title}</h3>
                   <p>{m.text}</p>
                   <div className="abt-milestone__tags">
@@ -422,24 +472,19 @@ const About = () => {
         <div className="container abt-closing__inner abt-center">
           <div className="abt-closing__quote-mark">“</div>
           <p className="abt-closing__text">
-            Children don’t remember the days — they remember how the days <em>made them feel</em>.
-            At The Children’s Clinic, every visit is designed to feel safe, kind and reassuring.
+           Be There for Every Milestone, Every Concern and <em>Every Stage of Your Child’s Growing Years</em>
           </p>
           <p className="abt-closing__note">
-            Whether it’s a first vaccine, a sleepless night or a milestone you’re proud of —
-            we’re here, at every step of your child’s story.
+            Get thoughtful pediatric and newborn care from a team focused on your child’s <span className="font-happy-monkey">health, growth and development,</span> with clear guidance for parents along the way.
           </p>
           <div className="abt-closing__ctas">
             <button className="abt-btn-gold" onClick={() => navigate('/appointment')}>
-              Book an Appointment <ArrowRight size={18} />
+               Book a Consultation <ArrowRight size={18} />
             </button>
             <Link to="/contact" className="abt-btn-ghost abt-btn-ghost--dark">
-              Contact Us <ArrowUpRight size={18} />
+              Contact the Clinic <ArrowUpRight size={18} />
             </Link>
           </div>
-          <p className="abt-closing__contact">
-            <Phone size={15} /> +91 98765 43210 <span className="abt-dot-sep" /> <MapPin size={15} /> 12, Sunshine Street, yourcity
-          </p>
         </div>
       </section>
     </div>

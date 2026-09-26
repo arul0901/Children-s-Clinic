@@ -14,9 +14,9 @@ const ServiceIncludes = ({ includes }: ServiceIncludesProps) => {
   return (
     <section className="service-includes-section">
       <div className="container">
-        <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
+        <div className="service-header-center">
           <span className="eyebrow">Key Offerings</span>
-          <h2 className="serif-heading" style={{ fontSize: '2.5rem' }}>What This Service Includes</h2>
+          <h2 className="serif-heading service-section-title">What This Service Includes</h2>
         </div>
         <div className="service-includes-grid">
           {includes.map((item, idx) => (

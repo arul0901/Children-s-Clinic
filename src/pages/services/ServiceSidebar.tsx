@@ -1,13 +1,15 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { ChevronRight, Download, Headphones } from 'lucide-react';
+import { ChevronRight, Phone } from 'lucide-react';
 import './ServiceSidebar.css';
 
 export const SERVICE_LINKS = [
-  { id: 'newborn-care', label: 'New Born Care' },
-  { id: 'pediatric-care', label: 'Pediatric Care' },
-  { id: 'neonatal-care', label: 'Neonatal Care' },
-  { id: 'vaccination', label: 'Vaccination' },
-  { id: 'lactation-support', label: 'Lactation Support' },
+  { id: 'lactation-support-in-krishnagiri', label: 'Lactation Support' },
+  { id: 'neonatal-care-in-krishnagiri', label: 'Neonatal Care' },  
+  { id: 'newborn-care-jaundice-krishnagiri', label: 'Newborn Care' },
+  { id: 'child-growth-development-krishnagiri', label: 'Growth & Development' },
+  { id: 'pediatric-fever-cold-cough-krishnagiri', label: 'Pediatric Care' },
+  { id: 'child-vaccination-krishnagiri', label: 'Vaccination' },
+  { id: 'seizures-fits-babies-children-krishnagiri', label: 'Seizures & Fits Care' },
 ];
 
 const PHONE = '+91 XXXXX XXXXX';
@@ -36,7 +38,7 @@ const ServiceSidebar = () => {
       </nav>
 
       <div className="service-sidebar-advice">
-        <Headphones size={42} strokeWidth={1.5} />
+        <Phone size={42} strokeWidth={1.5} />
         <h2>Contact with us for any advice</h2>
         <p>Need help? Talk to an expert</p>
         <a href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
@@ -45,10 +47,10 @@ const ServiceSidebar = () => {
       <button
         type="button"
         className="service-sidebar-book"
-        onClick={() => navigate('/appointment')}
+        onClick={() => navigate('/contact')}
       >
-        <Download size={18} />
-        Book a visit
+        <Phone size={18} />
+        Contact us
       </button>
     </aside>
   );

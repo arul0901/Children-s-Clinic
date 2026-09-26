@@ -113,7 +113,7 @@ const CustomCursor = () => {
   if (isTouchDevice) return null;
 
   return (
-    <div ref={cursorRef} className="custom-cursor" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div ref={cursorRef} className="custom-cursor">
       <span ref={textRef} className="cursor-text"></span>
       {activeIcon === 'stethoscope' && <Stethoscope size={24} color="#fff" />}
       {activeIcon === 'users' && <Users size={24} color="#fff" />}

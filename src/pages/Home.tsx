@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Stethoscope, Baby, HeartPulse, Users, Syringe, Droplets } from 'lucide-react';
+import { Baby, HeartPulse, Syringe, Droplets, Thermometer, Activity, Sun, Zap, Shield, AlertCircle, Wind, TrendingUp, Heart } from 'lucide-react';
 import { HeroStatic, HolisticWellness, SpecializedCareShowcase, CareSplit, HospitalInfrastructure, BookAppointmentCTA, Testimonials } from '../components';
 
 import './Home.css';
@@ -10,12 +10,21 @@ import './Home.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const SPECIALTIES = [
-  { name: 'Internal Medicine', Icon: Stethoscope, id: 'stethoscope' },
-  { name: 'Family Medicine', Icon: Users, id: 'users' },
-  { name: 'Pediatrics', Icon: Baby, id: 'baby' },
-  { name: 'Neonatology', Icon: HeartPulse, id: 'heartpulse' },
-  { name: 'Immunisation', Icon: Syringe, id: 'syringe' },
-  { name: 'Lactation', Icon: Droplets, id: 'droplets' }
+  { name: 'Newborn Care',                  Icon: Baby,          id: 'newborn-care' },
+  { name: 'Neonatal Care',                 Icon: HeartPulse,    id: 'neonatal-care' },
+  { name: 'Lactation Support',             Icon: Droplets,      id: 'lactation-support' },
+  { name: 'Breastfeeding Support',         Icon: Heart,         id: 'breastfeeding-support' },
+  { name: 'Premature Baby Care',           Icon: Shield,        id: 'premature-baby-care' },
+  { name: 'Growth & Development',          Icon: TrendingUp,    id: 'growth-development' },
+  { name: 'Vaccination',                   Icon: Syringe,       id: 'vaccination' },
+  { name: 'Fever Care',                    Icon: Thermometer,   id: 'fever-care' },
+  { name: 'Cold & Cough Care',             Icon: Wind,          id: 'cold-cough-care' },
+  { name: 'Newborn Jaundice & Phototherapy', Icon: Sun,         id: 'jaundice-phototherapy' },
+  { name: 'Seizures & Fits Care',          Icon: Zap,           id: 'seizures-fits' },
+  { name: 'Neonatal Intensive Care',       Icon: Activity,      id: 'neonatal-icu' },
+  { name: 'Newborn Ventilator Support',    Icon: Wind,          id: 'ventilator-support' },
+  { name: 'Pediatric Intensive Care',      Icon: AlertCircle,   id: 'pediatric-icu' },
+  { name: 'Pediatric Emergency Care',      Icon: AlertCircle,   id: 'pediatric-emergency' },
 ];
 
 const Home = () => {
@@ -78,7 +87,7 @@ const Home = () => {
       <HolisticWellness />
 
       {/* ─── 2. SPECIALTIES (Horizontal Swipe) ───────────────────────── */}
-      <section className="home-section bg-lavender" style={{ padding: '4rem 0' }}>
+      <section className="home-section bg-lavender home-section-compact">
         <div className="container">
           <div className="specialty-container">
             <div className="specialty-marquee">
@@ -90,7 +99,7 @@ const Home = () => {
                       <div className="specialty-pill-icon">
                         <Icon size={20} />
                       </div>
-                      <span style={{ fontWeight: 500, color: 'var(--color-primary)', whiteSpace: 'nowrap' }}>{spec.name}</span>
+                      <span className="specialty-pill-name">{spec.name}</span>
                     </div>
                   );
                 })}
@@ -104,7 +113,7 @@ const Home = () => {
                       <div className="specialty-pill-icon">
                         <Icon size={20} />
                       </div>
-                      <span style={{ fontWeight: 500, color: 'var(--color-primary)', whiteSpace: 'nowrap' }}>{spec.name}</span>
+                      <span className="specialty-pill-name">{spec.name}</span>
                     </div>
                   );
                 })}
@@ -129,29 +138,29 @@ const Home = () => {
       <section className="home-section trust-metrics-section">
         <div className="container">
           <div className="trust-header fade-up">
-            <h2 className="serif-heading">Our Commitment to Better Care</h2>
+            <h2 className="serif-heading">Dedicated to Your Child’s Wellbeing </h2>
             <hr className="trust-divider" />
           </div>
           <div className="trust-grid fade-up">
             <div className="trust-item">
               <span className="trust-num">01</span>
-              <h4>Experienced Care Team</h4>
-              <p>Specialized neonatology & pediatrics.</p>
+              <h4>Trusted Pediatric Care</h4>
+              <p> Reliable care focused on your child’s wellbeing.</p>
             </div>
             <div className="trust-item">
               <span className="trust-num">02</span>
-              <h4>Child-Centered Approach</h4>
-              <p>Gentle, transparent, and empathetic.</p>
+              <h4>Individual Attention</h4>
+              <p> Personalized care for every child’s needs.</p>
             </div>
             <div className="trust-item">
               <span className="trust-num">03</span>
-              <h4>Advanced Facilities</h4>
-              <p>State-of-the-art diagnostic care.</p>
+              <h4>Safe & Caring Environment</h4>
+              <p> A comfortable setting for children and parents.</p>
             </div>
             <div className="trust-item">
               <span className="trust-num">04</span>
-              <h4>Comprehensive Support</h4>
-              <p>From day one through adolescence.</p>
+              <h4>Support for Parents</h4>
+              <p>Clear guidance to help parents feel confident.</p>
             </div>
           </div>
         </div>

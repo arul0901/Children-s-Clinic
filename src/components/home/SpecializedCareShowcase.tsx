@@ -13,34 +13,34 @@ export interface MedicalService {
 const MEDICAL_SERVICES: MedicalService[] = [
   {
     number: '01',
-    title: 'New born',
-    description: "Specialised monitoring and gentle support for your baby's critical first days and weeks",
-    href: '/services/newborn-care'
+    title: 'Newborn & Infant Care',
+    description: 'Gentle, attentive care for newborns and infants through their early stages.',
+    href: '/services/newborn-care-jaundice-krishnagiri'
   },
   {
     number: '02',
-    title: 'Lactation Support',
-    description: "Specialised monitoring and gentle support for your baby's critical first days and weeks",
-    href: '/services/lactation-support',
+    title: 'Growth & Development Monitoring',
+    description: 'Regular monitoring of your child\'s growth and developmental milestones.',
+    href: '/services/child-growth-development-krishnagiri',
     isFilled: true
   },
   {
     number: '03',
-    title: 'Vaccination',
-    description: "Specialised monitoring and gentle support for your baby's critical first days and weeks",
-    href: '/services/vaccination'
+    title: 'Vaccination & Preventive Care',
+    description: 'Essential vaccinations and preventive pediatric care for growing children.',
+    href: '/services/child-vaccination-krishnagiri'
   },
   {
     number: '04',
-    title: 'Pediatric Consultation',
-    description: "Specialised monitoring and gentle support for your baby's critical first days and weeks",
-    href: '/services/pediatric-care'
+    title: 'Fever, Cold & Cough Care',
+    description: 'Medical support for common childhood illnesses and everyday health concerns.',
+    href: '/services/pediatric-fever-cold-cough-krishnagiri'
   },
   {
     number: '05',
-    title: 'Neonatal Care',
-    description: "Specialised monitoring and gentle support for your baby's critical first days and weeks",
-    href: '/services/neonatal-care'
+    title: 'Seizure & Pediatric Health Support',
+    description: 'Care and clinical assessment for seizures, fits and other pediatric health concerns.',
+    href: '/services/seizures-fits-babies-children-krishnagiri'
   }
 ];
 
@@ -53,10 +53,10 @@ const SpecializedCareShowcase = () => {
         {/* Header with Title on Left, Subtitle on Right */}
         <div className="medical-services-header">
           <h2 className="medical-services-title">
-            Our Medical<br />Services
+            Five Key Areas<br />of Child Support
           </h2>
           <p className="medical-services-subtitle">
-            Expert pediatric care, advanced facilities, and a child-friendly environment designed to keep your little ones safe, comfortable, and healthy.
+            Personalized pediatric care focused on keeping children healthy, supporting their development and addressing their healthcare needs at every stage.
           </p>
         </div>
 

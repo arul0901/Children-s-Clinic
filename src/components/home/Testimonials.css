@@ -1,6 +1,6 @@
 .testimonials-section {
   background-color: #ffffff;
-  padding: clamp(3.5rem, 6vw, 5.5rem) 1.5rem;
+  padding: 22px 1.5rem;
   overflow: hidden;
 }
 
@@ -260,7 +260,7 @@
 
 @media (max-width: 640px) {
   .testimonials-section {
-    padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+    padding: 22px 1rem;
   }
 
   .testimonial-card-wrapper {
@@ -281,4 +281,3 @@
     transform: rotate(2deg);
   }
 }
-

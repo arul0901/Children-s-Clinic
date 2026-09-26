@@ -22,9 +22,8 @@ const HOSPITAL_HERO_CSS = `
   color: var(--hh-ink);
 
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  padding: 0 clamp(16px, 3.5vw, 48px) clamp(32px, 4vw, 56px);
+  padding: 22px clamp(16px, 3.5vw, 48px) 48px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .hh-root *,
@@ -226,11 +225,37 @@ const HOSPITAL_HERO_CSS = `
   transform: translateX(5px);
 }
 
+/* ---------- Bullets ---------- */
+
+.hh-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hh-bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--hh-ink);
+}
+
+.hh-bullet-item svg {
+  flex-shrink: 0;
+  color: var(--hh-accent);
+}
+
 /* ---------- Stack ---------- */
 
 .hh-stack {
   position: relative;
   height: calc(var(--hh-h-active) + (2 * var(--hh-h-collapsed)) + (2 * var(--hh-gap)));
+  margin-bottom: 55px;
 }
 
 .hh-stack::before {
@@ -252,6 +277,7 @@ const HOSPITAL_HERO_CSS = `
   cursor: pointer;
   overflow: hidden;
   background-color: #cfc7de;
+  background-image: var(--bg-img);
   background-size: cover;
   background-position: center;
   box-shadow: 0 12px 28px -14px rgba(26, 12, 46, 0.3);
@@ -538,60 +564,81 @@ const HOSPITAL_HERO_CSS = `
 
 export interface HeroCard {
   id: string;
-  index: string; // "01", "02", "03"
+  index: string;
   label: string;
   image: string;
   alt: string;
+  // per-card copy
+  headline: string;
+  body: string;
+  bullets: string[];
+  ctaLabel: string;
+  ctaRoute: string;
 }
 
 export interface HospitalHeroProps {
-  eyebrowIndex?: string;
-  eyebrowLabel?: string;
-  headline?: string;
-  body?: string;
-  ctaLabel?: string;
-  onCtaClick?: () => void;
   navLinks?: { label: string; active?: boolean }[];
   cards?: HeroCard[];
 }
 
 const DEFAULT_NAV = [
-  { label: "Level III NICU" },
-  { label: "Pediatric Emergency" },
-  { label: "Cold-Chain Vaccines" },
+  { label: "Newborn & Neonatal Care" },
+  { label: "Pediatric Care" },
+  { label: "Lactation & Infant Care" },
 ];
 
 const DEFAULT_CARDS: HeroCard[] = [
   {
     id: "nicu",
     index: "01",
-    label: "Level III Neonatal Intensive Care Unit",
-    image: "/service_neonatal_care_1789988898999.jpg",
-    alt: "Level III NICU with advanced incubators and vital monitoring",
+    label: "Specialised Care for Newborns From the Very Beginning",
+    image: "/src/assets/home/infra1.jpeg",
+    alt: "Specialised Care for Newborns From the Very Beginning",
+    headline: "Specialised Care for Newborns From the Very Beginning",
+    body: "Comprehensive newborn and neonatal support, including premature baby care, newborn jaundice, phototherapy and intensive care needs when medically required.",
+    bullets: [
+      "Newborn & Premature Baby Care",
+      "Newborn Jaundice & Phototherapy",
+      "Neonatal Intensive & Ventilator Support",
+    ],
+    ctaLabel: "Explore Newborn Care Services",
+    ctaRoute: "/services/neonatal-care-in-krishnagiri",
   },
   {
     id: "emergency",
     index: "02",
-    label: "24/7 Pediatric Emergency Care",
-    image: "/service_emergency_care_1789988990048.jpg",
-    alt: "Rapid response pediatric triage and emergency setup",
-  },
+    label: "Complete Healthcare for Growing Children",
+    image: "/src/assets/home/infra2.jpeg",
+    alt: "Complete Healthcare for Growing Children",
+    headline: "Complete Healthcare for Growing Children",
+    body: "Child-focused care covering vaccinations, growth and development monitoring, fever, cold, cough, seizures and other common pediatric concerns.",
+    bullets: [
+      "Childhood Vaccination",
+      "Growth & Development Monitoring",
+      "Fever, Cold & Cough Care",
+    ],
+    ctaLabel: "Explore Pediatric Care",
+    ctaRoute: "/services/child-growth-and-development-in-krishnagiri",
+  },  
   {
-    id: "vaccines",
+    id: "lactation",
     index: "03",
-    label: "WHO-Standard Vaccine Cold-Chain",
-    image: "/service_preventative_care_1789988969044.jpg",
-    alt: "Digital temperature controlled vaccine refrigeration unit",
+    label: "Support for Healthy Feeding & Early Development",
+    image: "/src/assets/home/infra3.jpeg",
+    alt: "Support for Healthy Feeding & Early Development",
+    headline: "Support for Healthy Feeding & Early Development",
+    body: "Personalized lactation and breastfeeding support alongside guidance for infant feeding, growth and the early stages of your child's development.",
+    bullets: [
+      "Lactation Support",
+      "Breastfeeding Guidance",
+      "Infant Feeding & Early Development",
+    ],
+    ctaLabel: "Explore Infant Care",
+    ctaRoute: "/services/lactation-support-in-krishnagiri",
   },
 ];
 
 export default function HospitalInfrastructure({
-  eyebrowIndex = "01",
-  eyebrowLabel = "Purpose-built pediatric care",
-  headline = "Advanced hospital infrastructure built for children.",
-  body = "A modern, child-centric facility where advanced neonatal technology, sterile environments, and soothing pediatric spaces come together.",
-  ctaLabel = "Explore facilities",
-  onCtaClick,
   navLinks = DEFAULT_NAV,
   cards = DEFAULT_CARDS,
 }: HospitalHeroProps) {
@@ -641,16 +688,27 @@ export default function HospitalInfrastructure({
       <div className="hh-grid">
         <div className="hh-copy">
           <div className="hh-eyebrow">
-            <span className="hh-eyebrow-index">{eyebrowIndex}</span>
+            <span className="hh-eyebrow-index">{cards[active].index}</span>
             <span className="hh-eyebrow-rule" aria-hidden="true" />
-            <span className="hh-eyebrow-label">{eyebrowLabel}</span>
+            <span className="hh-eyebrow-label">{navLinks[active]?.label}</span>
           </div>
 
-          <h1 className="hh-headline">{headline}</h1>
-          <p className="hh-body">{body}</p>
+          <h2 className="hh-headline">{cards[active].headline}</h2>
+          <p className="hh-body">{cards[active].body}</p>
 
-          <button type="button" className="hh-cta" onClick={onCtaClick || (() => navigate('/gallery'))}>
-            <span>{ctaLabel}</span>
+          <ul className="hh-bullets">
+            {cards[active].bullets.map(b => (
+              <li key={b} className="hh-bullet-item">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="16" height="16">
+                  <path d="M5 12l5 5L20 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {b}
+              </li>
+            ))}
+          </ul>
+
+          <button type="button" className="hh-cta" onClick={() => navigate(cards[active].ctaRoute)}>
+            <span>{cards[active].ctaLabel}</span>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
                 d="M4 12h15M13 6l6 6-6 6"
@@ -671,7 +729,7 @@ export default function HospitalInfrastructure({
                 type="button"
                 key={card.id}
                 className={`hh-card hh-card--pos-${offset}`}
-                style={{ backgroundImage: `url(${card.image})` }}
+                style={{ '--bg-img': `url(${card.image})` } as React.CSSProperties}
                 onClick={() => setActive(i)}
                 aria-label={`Show ${card.label}`}
                 aria-current={offset === 0}

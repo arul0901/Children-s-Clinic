@@ -1,145 +1,438 @@
-.home-service-hero {
+/* =============================================
+   HERO SPLIT – Full-Width Split Layout
+   ============================================= */
+
+.hero-split {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   min-height: 100vh;
   width: 100%;
+  padding: 140px 5vw 80px 5vw;
+  box-sizing: border-box;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg) 0%,
+    var(--color-lavender-light) 40%,
+    var(--color-lavender) 100%
+  );
+  overflow: hidden;
+}
+
+/* ---- Background Decoration ---- */
+
+.hero-bg-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =============================================
+   LEFT COLUMN – Text Content
+   ============================================= */
+
+.hero-split-left {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 48%;
+  max-width: 600px;
+  padding-right: 2rem;
+}
+
+.hero-split-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title-highlight {
+  color: var(--color-primary-light);
+  display: inline;
+}
+
+.hero-split-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  letter-spacing: -0.3px;
+}
+
+.hero-split-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+/* ---- CTA Button ---- */
+
+.hero-split-cta {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-cta-btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 2.25rem;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), 0.35);
+  transition: var(--transition-smooth);
+  position: relative;
   overflow: hidden;
-  padding: 130px 1.5rem 80px 1.5rem;
-  box-sizing: border-box;
 }
 
-.home-hero-img-container {
+.hero-cta-btn::before {
+  content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.home-hero-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  filter: brightness(0.65) contrast(1.1);
-}
-
-.home-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    180deg,
-    rgba(20, 10, 35, 0.72) 0%,
-    rgba(38, 15, 60, 0.78) 50%,
-    rgba(15, 8, 28, 0.85) 100%
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
   );
-  z-index: 2;
-  pointer-events: none;
+  transition: left 0.5s ease;
 }
 
-.home-hero-content {
+.hero-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(var(--color-primary-rgb), 0.45);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+
+.hero-cta-btn:hover::before {
+  left: 100%;
+}
+
+.hero-cta-btn:active {
+  transform: translateY(-1px);
+}
+
+/* =============================================
+   RIGHT COLUMN – Image Composition
+   ============================================= */
+
+.hero-split-right {
   position: relative;
-  z-index: 3;
-  text-align: center;
-  color: #ffffff;
-  max-width: 900px;
-  width: 100%;
-  margin: auto 0;
-  padding: 1.5rem 1rem;
-  box-sizing: border-box;
-}
-
-.home-hero-eyebrow {
-  font-family: var(--font-body);
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  color: #f4c430;
-  margin-bottom: 1.25rem;
-  display: inline-block;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-.home-hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  color: #ffffff;
-  margin-bottom: 1.25rem;
-  line-height: 1.15;
-  font-weight: 500;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.home-hero-desc {
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  font-family: var(--font-body);
-  max-width: 680px;
-  margin: 0 auto 2.5rem;
-  color: rgba(255, 255, 255, 0.95);
-  line-height: 1.7;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.home-hero-cta-group {
+  z-index: 1;
+  flex: 0 0 48%;
+  height: 520px;
   display: flex;
-  gap: 1.25rem;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.home-hero-floating-info {
+/* Purple decorative arc */
+.hero-decor-arc {
   position: absolute;
-  bottom: 2rem;
-  right: 2.5rem;
+  width: 420px;
+  height: 420px;
+  border: 55px solid rgba(var(--color-primary-rgb), 0.35);
+  border-radius: 50%;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  z-index: 0;
+  clip-path: inset(5% 0 5% 35%);
+}
+
+
+/* Main baby image – front, larger */
+.hero-img-main {
+  position: absolute;
+  width: 320px;
+  height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  z-index: 2;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 20px 50px rgba(var(--color-primary-rgb), 0.18);
+}
+
+.hero-img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Secondary baby image – smaller, behind/left-overlapping */
+.hero-img-secondary {
+  position: absolute;
+  width: 260px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+  left: 5%;
+  bottom: 5%;
+  box-shadow: 0 16px 40px rgba(var(--color-primary-rgb), 0.15);
+  border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero-img-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =============================================
+   FLOATING INFO CARDS
+   ============================================= */
+
+.hero-float-card {
+  position: absolute;
   z-index: 4;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 0.75rem 1.4rem;
-  border-radius: 999px;
-  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-white);
+  padding: 12px 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(var(--color-primary-rgb), 0.12);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.06);
+  min-width: 210px;
+}
+
+.hero-float-card-top {
+  top: 12%;
+  right: -2%;
+}
+
+.hero-float-card-bottom {
+  bottom: 10%;
+  right: 2%;
+}
+
+.hero-float-card-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-float-card-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.hero-float-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.hero-float-card-title {
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: var(--color-text);
+  line-height: 1.2;
 }
 
-@media (max-width: 900px) {
-  .home-hero-floating-info {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 0.8rem;
-    z-index: 3;
+.hero-float-card-sub {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.2;
+}
+
+/* =============================================
+   RESPONSIVE – TABLET
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .hero-split {
+    padding: 130px 4vw 60px 4vw;
+  }
+
+  .hero-split-left {
+    flex: 0 0 52%;
+  }
+
+  .hero-split-right {
+    flex: 0 0 44%;
+    height: 450px;
+  }
+
+  .hero-img-main {
+    width: 260px;
+    height: 340px;
+  }
+
+  .hero-img-secondary {
+    width: 210px;
+    height: 260px;
+  }
+
+  .hero-decor-arc {
+    width: 300px;
+    height: 300px;
+    border-width: 40px;
   }
 }
 
-@media (max-width: 640px) {
-  .home-service-hero {
-    padding-top: 100px;
-    min-height: 85vh;
-  }
-  
-  .home-hero-cta-group {
+/* =============================================
+   RESPONSIVE – MOBILE
+   ============================================= */
+
+@media (max-width: 768px) {
+  .hero-split {
     flex-direction: column;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    padding: 120px 1.5rem 40px 1.5rem;
+    min-height: auto;
+    gap: 2.5rem;
+    text-align: center;
+    align-items: center;
   }
 
-  .home-hero-cta-group button {
+  .hero-split-left {
+    flex: none;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .hero-split-title {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+  }
+
+  .hero-split-desc {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-split-cta {
+    justify-content: center;
+  }
+
+  .hero-split-right {
+    flex: none;
     width: 100%;
+    height: 380px;
+    max-width: 420px;
+  }
+
+  .hero-img-main {
+    width: 200px;
+    height: 270px;
+    right: 5%;
+  }
+
+  .hero-img-secondary {
+    width: 170px;
+    height: 220px;
+    left: 5%;
+  }
+
+  .hero-decor-arc {
+    width: 240px;
+    height: 240px;
+    border-width: 32px;
+    left: 60%;
+  }
+
+  .hero-float-card {
+    min-width: 170px;
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+
+  .hero-float-card-top {
+    top: 5%;
+    right: -5%;
+  }
+
+  .hero-float-card-bottom {
+    bottom: 5%;
+    right: -2%;
+  }
+
+  .hero-float-card-title {
+    font-size: 0.75rem;
+  }
+
+  .hero-float-card-sub {
+    font-size: 0.68rem;
+  }
+
+  .hero-float-card-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-split {
+    padding: 110px 1rem 30px 1rem;
+  }
+
+  .hero-split-right {
+    height: 320px;
+    max-width: 340px;
+  }
+
+  .hero-img-main {
+    width: 170px;
+    height: 230px;
+  }
+
+  .hero-img-secondary {
+    width: 140px;
+    height: 180px;
+  }
+
+  .hero-decor-arc {
+    width: 200px;
+    height: 200px;
+    border-width: 26px;
+  }
+
+  .hero-float-card {
+    min-width: 150px;
+    padding: 8px 12px;
+  }
+
+  .hero-float-card-top {
+    top: 2%;
+    right: -8%;
+  }
+
+  .hero-float-card-bottom {
+    bottom: 2%;
+    right: -5%;
   }
 }

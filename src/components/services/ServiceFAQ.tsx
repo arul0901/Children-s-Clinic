@@ -21,9 +21,9 @@ const ServiceFAQ = ({ faqs }: ServiceFAQProps) => {
   return (
     <section className="service-faq-section">
       <div className="container">
-        <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
+        <div className="service-header-center">
           <span className="eyebrow">Got Questions?</span>
-          <h2 className="serif-heading" style={{ fontSize: '2.5rem' }}>Frequently Asked Questions</h2>
+          <h2 className="serif-heading service-section-title">Frequently Asked Questions</h2>
         </div>
         
         <div className="faq-accordion">

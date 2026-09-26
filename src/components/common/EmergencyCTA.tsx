@@ -11,7 +11,7 @@ const EmergencyCTA = () => {
             <h2>When your child needs care, every moment matters.</h2>
             <p>Expert neonatal and pediatric emergency support when you need it most.</p>
             <button className="btn-primary emergency-btn">
-              <PhoneCall size={18} style={{ marginRight: '10px' }} />
+              <PhoneCall size={18} className="btn-icon-left" />
               Contact the Clinic
             </button>
           </div>

@@ -13,46 +13,39 @@ export interface TestimonialItem {
 const TESTIMONIAL_DATA: TestimonialItem[] = [
   {
     id: 1,
-    author: 'Aravind Kumar',
-    category: 'Neonatal Care',
-    quote: "Specialised monitoring and gentle support for your baby's critical first days and weeks.",
+    author: 'Fahimae Fathima',
+    category: 'Pediatric Care',
+    quote: "Doctor Haseen was so empathetic and understanding. These are invaluable qualities. I didn't feel rushed and definitely felt heard and I can blindly trust her and the transparency in her staff is one of the best things about the Clinic. Doctors are life savers... As parents all we need is patience. Thank you Doctor.",
     accentColor: 'lime'
   },
   {
     id: 2,
-    author: 'Priya S.',
-    category: 'Neonatal Care',
-    quote: "Dr. Fathima and her team made us feel completely confident from our very first visit. Our newborn received the most attentive care.",
+    author: 'Shakthi sri S.',
+    category: 'Parent',
+    quote: "We felt heard and supported throughout our child's consultation. The explanations were clear and reassuring.",
     accentColor: 'purple'
   },
   {
     id: 3,
-    author: 'Ramesh K.',
-    category: 'Newborn Care',
-    quote: "We heard so much about the expertise here. Every visit reassured us that our child was in the most capable hands.",
+    author: 'Karthik R.',
+    category: 'Parent',
+    quote: "The consultation was handled with patience and care. We appreciated the guidance provided for our baby's health needs.",
     accentColor: 'blue'
   },
   {
     id: 4,
-    author: 'Meena L.',
-    category: 'Lactational Support',
-    quote: "The doctors explained everything so clearly. I never felt rushed or dismissed. I finally felt truly understood as a parent.",
+    author: 'Merlyn M.',
+    category: 'Parent',
+    quote: "Our concerns were explained clearly, and we felt comfortable discussing our child's health and development.",
     accentColor: 'lime'
   },
   {
     id: 5,
-    author: 'Kavitha M.',
-    category: 'Vaccination',
-    quote: "Gentle, stress-free vaccination experience. The staff went out of their way to make my toddler feel safe and relaxed.",
+    author: 'Arun Kumar',
+    category: 'Parent',
+    quote: "A caring approach and helpful guidance made the consultation a comfortable experience for both us and our child.",
     accentColor: 'purple'
   },
-  {
-    id: 6,
-    author: 'Rajesh & Divya',
-    category: 'Pediatric Emergency',
-    quote: "Immediate attention, warm empathetic staff, and top-tier facilities when we needed urgent pediatric support.",
-    accentColor: 'blue'
-  }
 ];
 
 const Testimonials = () => {
@@ -117,10 +110,10 @@ const Testimonials = () => {
 
         {/* Main Title & Subtitle */}
         <h2 className="testimonials-title font-lato">
-          What Parent Says
+          What Parents Say About Our Care
         </h2>
         <p className="testimonials-subtitle font-dm-sans">
-          Specialised monitoring and gentle support for your baby's critical first days and weeks
+          Hear from parents about their experiences with The Children’s Clinic and the care provided for their little ones.
         </p>
 
         {/* Scrollable Carousel Container */}

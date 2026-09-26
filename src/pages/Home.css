@@ -193,6 +193,7 @@
   padding: var(--spacing-section-y) 0;
   background-color: var(--color-white);
   border-top: 1px solid var(--glass-border);
+  margin-left:12px;
 }
 
 .trust-header {
@@ -341,7 +342,7 @@
 /* Specialty Horizontal Swipe */
 .specialty-container {
   overflow-x: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 5px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -365,7 +366,7 @@
   width: 100%;
   overflow: hidden;
   padding: 1rem 0;
-  margin: -1rem 0;
+  margin: 1rem 0;
 }
 
 .specialty-marquee:hover .specialty-track {
@@ -377,7 +378,7 @@
   gap: 1.5rem;
   width: max-content;
   padding-right: 1.5rem;
-  animation: scroll-track 20s linear infinite;
+  animation: scroll-track 55s linear infinite;
 }
 
 .specialty-pill {
@@ -893,4 +894,35 @@
   padding: 0.35rem 0.75rem;
   border-radius: 20px;
   border: 1px solid rgba(10, 37, 64, 0.06);
+}
+
+/* Home Section Helpers */
+.home-section-compact {
+  padding: 0rem 0;
+}
+.specialty-pill-name {
+  font-weight: 500;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+.philosophy-section-bg {
+  background-color: var(--color-blue-soft);
+  text-align: center;
+}
+.philosophy-container-width {
+  max-width: 900px;
+}
+.philosophy-heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+.philosophy-desc {
+  font-size: 1.2rem;
+  color: var(--color-navy);
+  opacity: 0.9;
+  line-height: 1.8;
+}
+.vision-bg-img {
+  opacity: 0.15;
 }

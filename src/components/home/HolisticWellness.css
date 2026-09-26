@@ -4,7 +4,7 @@
 
 .holistic-wellness-section {
   background-color: #ffffff;
-  padding: clamp(4rem, 7vw, 6.5rem) 1.5rem;
+  padding: 22px 1.5rem;
   overflow: hidden;
 }
 
@@ -150,29 +150,38 @@
   margin-bottom: 2rem;
 }
 
-/* 4 Outlined Stat Pills Grid */
-.holistic-pills-row {
-  display: flex;
+/* 5 Outlined Stat Pills Grid Layout (2-2-1) */
+.holistic-pills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 .holistic-stat-pill {
   background: #ffffff;
   border: 1.5px solid #d97706; /* Golden-amber thin border match */
   border-radius: 12px;
-  padding: 0.5rem 0.85rem;
+  padding: 0.55rem 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.55rem;
   box-shadow: 0 4px 12px rgba(217, 119, 6, 0.06);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
 }
 
 .holistic-stat-pill:hover {
   transform: translateY(-2px);
   border-color: #b45309;
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.12);
+}
+
+/* 5th Pill Centered on 3rd Row */
+.holistic-stat-pill:nth-child(5) {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 .holistic-pill-icon-box {
@@ -191,12 +200,13 @@
   display: flex;
   flex-direction: column;
   line-height: 1.15;
+  min-width: 0;
 }
 
 .holistic-pill-title {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
-  font-size: 0.78rem;
+  font-size: clamp(0.7rem, 0.9vw, 0.78rem);
   color: #4c1d95;
   white-space: nowrap;
 }
@@ -214,7 +224,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
+  align-self: center;
+  margin-top: 10px;
   background: #8b5cf6;
   background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
   color: #ffffff;
@@ -255,22 +266,27 @@
 
 @media (max-width: 640px) {
   .holistic-wellness-section {
-    padding: 3rem 1rem;
+    padding: 22px 1rem;
   }
 
-  .holistic-pills-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
+  .holistic-pills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
     width: 100%;
   }
 
   .holistic-stat-pill {
-    padding: 0.5rem 0.65rem;
+    padding: 0.5rem 0.55rem;
+  }
+
+  .holistic-pill-title {
+    white-space: normal;
   }
 
   .holistic-cta-btn {
     width: 100%;
     max-width: 320px;
+    align-self: center;
+    margin-top: 10px;
   }
 }

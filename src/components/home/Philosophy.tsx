@@ -43,12 +43,12 @@ const Philosophy = () => {
   }, []);
 
   return (
-    <section className="section philosophy-section" ref={sectionRef} style={{ backgroundColor: 'var(--color-blue-soft)', textAlign: 'center' }}>
-      <div className="container" style={{ maxWidth: '900px' }}>
-        <h2 ref={textRef} style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', color: 'var(--color-primary)', marginBottom: '2rem' }}>
+    <section className="section philosophy-section philosophy-section-bg" ref={sectionRef}>
+      <div className="container philosophy-container-width">
+        <h2 ref={textRef} className="philosophy-heading">
           Because the smallest patients deserve the highest level of care.
         </h2>
-        <p ref={descRef} style={{ fontSize: '1.2rem', color: 'var(--color-navy)', opacity: 0.9, lineHeight: 1.8 }}>
+        <p ref={descRef} className="philosophy-desc">
           A comprehensive clinic aimed at addressing lactational support, expert newborn care, vaccination, management of common childhood illness, and neonatal and pediatric emergency care.
         </p>
       </div>

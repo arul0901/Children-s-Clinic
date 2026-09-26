@@ -3,19 +3,19 @@ import FeedingBottle from '../common/FeedingBottle';
 import './CareSplit.css';
 
 const NEONATAL_PILLS = [
-  { title: 'New Born Care', subtitle: 'Always here for you' },
-  { title: 'Neonatal Emergency', subtitle: 'Always here for you' },
-  { title: 'Lactational Support', subtitle: 'Always here for you' },
-  { title: 'Neonatal Ventilation Expertise', subtitle: 'Always here for you' },
-  { title: 'Neonatal POCUS', subtitle: 'Always here for you' }
+  { title: 'Age-appropriate care',      subtitle: 'Personalised for every child' },
+  { title: 'Individual attention',      subtitle: 'Personalised for every child' },
+  { title: 'Growth-focused support',    subtitle: 'Personalised for every child' },
+  { title: 'Gentle consultations',      subtitle: 'Personalised for every child' },
+  { title: 'Child-specific guidance',   subtitle: 'Personalised for every child' },
 ];
 
 const PEDIATRIC_PILLS = [
-  { title: 'Vaccination', subtitle: 'Always here for you' },
-  { title: 'Common Childhood Illnesses', subtitle: 'Always here for you' },
-  { title: 'Pediatric Emergency', subtitle: 'Always here for you' },
-  { title: 'Preventive Care', subtitle: 'Always here for you' },
-  { title: 'Growth & Development', subtitle: 'Always here for you' }
+  { title: 'Clear health advice',       subtitle: 'Supporting confident parents' },
+  { title: 'Feeding guidance',          subtitle: 'Supporting confident parents' },
+  { title: 'Developmental support',     subtitle: 'Supporting confident parents' },
+  { title: 'Vaccination guidance',      subtitle: 'Supporting confident parents' },
+  { title: 'Practical parenting tips',  subtitle: 'Supporting confident parents' },
 ];
 
 const CareSplit = () => {
@@ -25,11 +25,11 @@ const CareSplit = () => {
         {/* Main Section Header */}
         <div className="care-split-main-header">
           <h2 className="care-split-main-title font-plus-jakarta">
-            Two Dedicated Specialties.<br />
-            One Co- ordinated Experience
+            Caring for Children,<br />
+            Supporting Parents
           </h2>
           <p className="care-split-main-subtitle">
-            Specialised monitoring and gentle support for your baby's critical first days and weeks
+            Personalized pediatric care combined with clear, practical guidance to support your child's health, growth and development at every stage.
           </p>
         </div>
 
@@ -42,8 +42,8 @@ const CareSplit = () => {
                 <UserCheck size={18} />
               </div>
               <div className="badge-text-box">
-                <span className="badge-title">Neonatal Care</span>
-                <span className="badge-sub">Always here for you</span>
+                <span className="badge-title">Personalized Child Care</span>
+                <span className="badge-sub">Focused on every child</span>
               </div>
             </div>
             <div className="specialty-arch-image-wrapper arch-left">
@@ -57,9 +57,9 @@ const CareSplit = () => {
 
           {/* Right Content & Staggered Pill Cards */}
           <div className="specialty-info-container">
-            <h3 className="specialty-row-title font-plus-jakarta">Neonatal Care</h3>
+            <h3 className="specialty-row-title font-plus-jakarta">Personalized Child Care</h3>
             <p className="specialty-row-desc">
-              Specialised monitoring and gentle support for your baby's critical first days and weeks
+              Personalized attention for every child, based on their age, health needs and development.
             </p>
 
             <div className="staggered-pills-wrapper">
@@ -112,9 +112,9 @@ const CareSplit = () => {
         <div className="specialty-experience-row">
           {/* Left Content & Staggered Pill Cards */}
           <div className="specialty-info-container">
-            <h3 className="specialty-row-title font-plus-jakarta">Pediatric Care</h3>
+            <h3 className="specialty-row-title font-plus-jakarta">Guidance for Parents</h3>
             <p className="specialty-row-desc">
-              Specialised monitoring and gentle support for your baby's critical first days and weeks
+              Clear, practical guidance to help parents make informed decisions about their child's health.
             </p>
 
             <div className="staggered-pills-wrapper">
@@ -169,8 +169,8 @@ const CareSplit = () => {
                 <UserCheck size={18} />
               </div>
               <div className="badge-text-box">
-                <span className="badge-title">Pediatric Care</span>
-                <span className="badge-sub">Always here for you</span>
+                <span className="badge-title">Guidance for Parents</span>
+                <span className="badge-sub">Supporting confident parents</span>
               </div>
             </div>
             <div className="specialty-arch-image-wrapper arch-right">

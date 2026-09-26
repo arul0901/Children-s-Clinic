@@ -13,9 +13,9 @@ const ServiceProcess = ({ process }: ServiceProcessProps) => {
   return (
     <section className="service-process-section">
       <div className="container">
-        <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
+        <div className="service-header-center">
           <span className="eyebrow">Step by Step</span>
-          <h2 className="serif-heading" style={{ fontSize: '2.5rem' }}>Our Care Process</h2>
+          <h2 className="serif-heading service-section-title">Our Care Process</h2>
         </div>
         <div className="service-process-grid">
           {process.map((step, idx) => (

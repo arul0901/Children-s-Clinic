@@ -32,7 +32,7 @@ const Vision = () => {
     <section className="section vision-section" ref={sectionRef}>
       <div className="vision-bg">
         <div className="img-placeholder-wrapper">
-           <img src="/vision_bg.jpg" alt="Vision Background" style={{ opacity: 0.15 }} />
+           <img src="/vision_bg.jpg" alt="Vision Background" className="vision-bg-img" />
         </div>
       </div>
       <div className="container">

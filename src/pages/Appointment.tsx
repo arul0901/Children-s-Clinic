@@ -7,7 +7,7 @@ const Appointment = () => {
   }, []);
 
   return (
-    <div style={{ paddingTop: '80px', minHeight: '80vh' }}>
+    <div className="appointment-page-wrapper">
       <AppointmentComponent />
     </div>
   );

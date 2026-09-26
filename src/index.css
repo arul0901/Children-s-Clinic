@@ -63,7 +63,15 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
 
 body {
@@ -205,6 +213,15 @@ button {
   color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+.btn-secondary-white {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.btn-icon-left {
+  margin-right: 10px;
 }
 
 /* Utilities */

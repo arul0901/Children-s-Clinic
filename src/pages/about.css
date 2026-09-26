@@ -9,6 +9,7 @@
 .abt-page {
   overflow-x: clip;
   background: var(--color-bg);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* ─────────────────────────── Shared bits ─────────────────────────── */
@@ -18,11 +19,11 @@
 }
 .abt-center { text-align: center; }
 .abt-eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  font-size: 0.88rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   color: var(--color-gold);
   display: inline-flex;
   align-items: center;
@@ -37,17 +38,22 @@
   border-radius: 2px;
 }
 .abt-title {
-  font-family: var(--font-serif);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-size: clamp(2.1rem, 4.5vw, 3.4rem);
-  line-height: 1.12;
+  font-weight: 800;
+  line-height: 1.15;
   color: var(--color-primary-dark);
   margin-top: 1.1rem;
+  letter-spacing: -0.02em;
 }
 .abt-title em {
   font-style: italic;
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
   color: var(--color-primary);
+  font-weight: 400;
 }
 .abt-lead {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-size: 1.06rem;
   color: var(--color-text-muted);
   max-width: 640px;
@@ -385,10 +391,39 @@
   padding: 0 0.75rem;
 }
 .abt-doctor__name {
-  font-family: var(--font-serif);
-  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  font-weight: 800;
   color: var(--color-primary-dark);
   margin-top: 0.75rem;
+  letter-spacing: -0.02em;
+}
+.abt-doctor__h1-tagline {
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 400;
+  color: #7e22ce;
+  margin-top: 0.35rem;
+  letter-spacing: 0.01em;
+}
+.abt-quote__heading {
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #7e22ce;
+  margin-bottom: 0.4rem;
+}
+.abt-cred__section-head {
+  text-align: center;
+  margin-top: clamp(2.5rem, 4.5vw, 4rem);
+  margin-bottom: 1.5rem;
+}
+.abt-cred__main-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  letter-spacing: -0.02em;
 }
 .abt-doctor__role {
   display: inline-flex;
@@ -397,6 +432,7 @@
   background: var(--color-lavender);
   color: var(--color-primary);
   border: 1px solid rgba(214, 168, 95, 0.5);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -411,12 +447,19 @@
   gap: 0.5rem;
   margin-top: 0.6rem;
   color: var(--color-gold);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   letter-spacing: 1.5px;
   font-size: 0.9rem;
 }
 .abt-doctor__bio { margin-top: 1.4rem; }
-.abt-doctor__bio p { margin-top: 1rem; }
+.abt-doctor__bio p {
+  margin-top: 1rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
 .abt-quote {
   margin-top: 1.75rem;
   display: flex;
@@ -429,11 +472,11 @@
 }
 .abt-quote svg { color: var(--color-gold); flex-shrink: 0; }
 .abt-quote p {
-  font-family: var(--font-serif);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-style: italic;
   color: var(--color-primary-dark);
-  font-size: 1.08rem;
-  line-height: 1.55;
+  font-size: 1.04rem;
+  line-height: 1.6;
 }
 .abt-doctor__sign {
   margin-top: 1.75rem;
@@ -506,25 +549,24 @@
 }
 .abt-cred:hover .abt-cred__glyph { background: var(--color-primary); color: var(--color-white); transform: rotate(-8deg) scale(1.06); }
 .abt-cred__title {
-  font-family: var(--font-serif);
-  font-size: 1.22rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--color-primary-dark);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 .abt-cred__count {
   display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: var(--color-gold);
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: #7e22ce;
   margin-top: 0.3rem;
 }
 .abt-cred__index {
   margin-left: auto;
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: rgba(79, 25, 117, 0.16);
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  color: rgba(79, 25, 117, 0.2);
   font-size: 1.4rem;
   line-height: 1;
 }
@@ -612,39 +654,68 @@
   background: rgba(214, 168, 95, 0.16);
   color: var(--color-gold);
 }
+.abt-vmvcard__kicker {
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #7e22ce;
+  margin-top: 0.75rem;
+  display: block;
+}
+.abt-vmvcard--feature .abt-vmvcard__kicker {
+  color: #EBD9A9;
+}
 .abt-vmvcard__heading {
-  font-family: var(--font-serif);
-  font-size: 1.55rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.35rem;
+  font-weight: 800;
   color: var(--color-primary-dark);
-  margin-top: 1.5rem;
+  margin-top: 0.35rem;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
 }
 .abt-vmvcard--feature .abt-vmvcard__heading { color: var(--color-white); }
-.abt-vmvcard__kicker {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
+
+.abt-vmvcard__list {
+  list-style: none;
+  margin-top: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+}
+.abt-vmvcard__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+.abt-vmvcard__item::before {
+  content: "•";
   color: var(--color-gold);
-  margin-top: 0.35rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
-.abt-vmvcard__text {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-top: 1rem;
+.abt-vmvcard--feature .abt-vmvcard__item {
+  color: rgba(255, 255, 255, 0.9);
 }
-.abt-vmvcard--feature .abt-vmvcard__text { color: rgba(255, 255, 255, 0.85); }
 .abt-vmvcard__num {
   position: absolute;
   bottom: 1.25rem;
   right: 1.5rem;
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: rgba(79, 25, 117, 0.14);
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  color: rgba(79, 25, 117, 0.18);
   font-size: 2.2rem;
   line-height: 1;
   transition: var(--transition-smooth);
 }
-.abt-vmvcard--feature .abt-vmvcard__num { color: rgba(255, 255, 255, 0.14); }
+.abt-vmvcard--feature .abt-vmvcard__num { color: rgba(255, 255, 255, 0.22); }
 
 /* VMV hover effects — glow, shine sweep, animated corner */
 .abt-vmvcard::after {
@@ -828,10 +899,10 @@
 }
 .abt-milestone:hover .abt-milestone__card { box-shadow: var(--shadow-hover); border-color: rgba(214, 168, 95, 0.55); transform: translateX(6px); }
 .abt-milestone__year {
-  font-family: var(--font-display);
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
   font-size: 1.5rem;
-  letter-spacing: 2px;
-  color: var(--color-gold);
+  letter-spacing: 1px;
+  color: #7e22ce;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -844,17 +915,25 @@
   background: rgba(214, 168, 95, 0.5);
 }
 .abt-milestone__card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.35rem;
+  font-weight: 700;
   color: var(--color-primary-dark);
   margin-top: 0.75rem;
+  letter-spacing: -0.01em;
 }
-.abt-milestone__card p { margin-top: 0.7rem; max-width: 640px; }
+.abt-milestone__card p {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  margin-top: 0.7rem;
+  max-width: 640px;
+  line-height: 1.65;
+}
 .abt-milestone__tags { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .abt-tag {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--color-primary);
   background: var(--color-lavender);
@@ -923,14 +1002,28 @@
   opacity: 0.85;
 }
 .abt-closing__text {
-  font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 3.6vw, 2.6rem);
-  line-height: 1.4;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.45;
   color: var(--color-primary-dark);
   margin-top: 1.75rem;
+  letter-spacing: -0.015em;
 }
-.abt-closing__text em { color: var(--color-primary); }
-.abt-closing__note { margin-top: 1.5rem; max-width: 620px; margin-left: auto; margin-right: auto; }
+.abt-closing__text em {
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  color: #7e22ce;
+  font-style: normal;
+}
+.abt-closing__note {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  margin-top: 1.5rem;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
 .abt-closing__ctas { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
 .abt-closing .abt-scrollhint { display: none; }
 
@@ -976,4 +1069,12 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.abt-focus-title {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--color-gold);
+  letter-spacing: 1px;
 }

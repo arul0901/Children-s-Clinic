@@ -129,7 +129,7 @@ const Gallery = () => {
                 <img src={item.image} alt={item.title} loading="lazy" />
                 <div className="gallery-card-overlay">
                   <span className="gallery-zoom-badge">
-                    <ZoomIn size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }} /> Click to View
+                    <ZoomIn size={14} className="gallery-zoom-icon" /> Click to View
                   </span>
                 </div>
               </div>
@@ -159,10 +159,10 @@ const Gallery = () => {
             </div>
             <div className="lightbox-info-col">
               <span className="gallery-card-tag">{selectedItem.categoryLabel}</span>
-              <h2 style={{ color: 'var(--color-primary)', fontSize: '1.8rem', marginBottom: '1rem' }}>
+              <h2 className="lightbox-info-title">
                 {selectedItem.title}
               </h2>
-              <p style={{ color: 'var(--color-navy)', opacity: 0.85, lineHeight: 1.7, marginBottom: '2rem' }}>
+              <p className="lightbox-info-desc">
                 {selectedItem.description}
               </p>
               <button
@@ -180,17 +180,16 @@ const Gallery = () => {
       )}
 
       {/* CTA Section */}
-      <section style={{ backgroundColor: 'var(--color-primary)', color: '#fff', padding: '5rem 2rem', textAlign: 'center', margin: '2rem 2rem 5rem', borderRadius: '30px' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', marginBottom: '1.25rem', color: '#fff' }}>
+      <section className="gallery-cta-section">
+        <div className="container gallery-cta-container">
+          <h2 className="gallery-cta-title">
             Experience World-Class Care in Person
           </h2>
-          <p style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '2.5rem', lineHeight: 1.8 }}>
+          <p className="gallery-cta-desc">
             Visit Dr. Haseen Fathima at The Children's Clinic, Krishnagiri. We are dedicated to delivering compassionate, expert medical care for your child.
           </p>
           <button
-            className="btn-primary"
-            style={{ backgroundColor: '#fff', color: 'var(--color-primary)' }}
+            className="btn-primary gallery-cta-btn"
             onClick={() => navigate('/appointment')}
           >
             Book an Appointment

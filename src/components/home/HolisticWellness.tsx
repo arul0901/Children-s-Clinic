@@ -46,28 +46,33 @@ export default function HolisticWellness() {
 
         {/* ── Right Side: Content Column ── */}
         <div className="holistic-content-col">
-          <h2 className="holistic-main-heading">
-            Thoughtful <span className="text-lime">Care</span> at every stage of <span className="text-purple">Childhood</span>
-          </h2>
+          <h1 className="holistic-main-heading">
+            Pediatrician <span className="text-lime">in</span> <span className="text-purple">Krishnagiri</span>
+          </h1>
 
           <p className="holistic-desc-paragraph">
-            Specialised monitoring and gentle support for your baby’s critial first days and weeks
+           <strong>The Children’s Clinic is dedicated to providing thoughtful, child-focused healthcare for newborns, infants and growing children.</strong>Led by <strong>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</strong>, the clinic focuses on newborn care, neonatal support, lactation, vaccination, growth monitoring and common childhood health concerns.
           </p>
 
           <p className="holistic-desc-paragraph">
-            Specialised monitoring and gentle support for your baby’s critial first days and weeks
+            What Makes Our Care Child-Focused?
           </p>
 
-          {/* 4 Outlined Stat Pills */}
-          <div className="holistic-pills-row">
-            {[1, 2, 3, 4].map((index) => (
-              <div key={index} className="holistic-stat-pill">
+          {/* 5 Outlined Stat Pills (Row 1: 1, 2 | Row 2: 3, 4 | Row 3: 5 centered) */}
+          <div className="holistic-pills-grid">
+            {[
+              { id: 1, title: 'Newborn & Neonatal Care' },
+              { id: 2, title: 'Lactation & Breastfeeding Support' },
+              { id: 3, title: 'Growth & Development Monitoring' },
+              { id: 4, title: 'Vaccination & Immunization' },
+              { id: 5, title: 'Complete Pediatric Care' },
+            ].map((pill) => (
+              <div key={pill.id} className="holistic-stat-pill">
                 <div className="holistic-pill-icon-box">
                   <Stethoscope size={15} />
                 </div>
                 <div className="holistic-pill-text">
-                  <span className="holistic-pill-title">50+ Expects</span>
-                  <span className="holistic-pill-sub">Doctors</span>
+                  <span className="holistic-pill-title">{pill.title}</span>
                 </div>
               </div>
             ))}
@@ -79,7 +84,7 @@ export default function HolisticWellness() {
             className="holistic-cta-btn" 
             onClick={() => navigate('/about')}
           >
-            Explore About us
+            Meet Our Pediatrician
           </button>
         </div>
 

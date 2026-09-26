@@ -95,3 +95,8 @@
     padding: 1.5rem;
   }
 }
+
+.appointment-page-wrapper {
+  padding-top: 80px;
+  min-height: 80vh;
+}

@@ -1,50 +1,76 @@
 .creative-cta-section {
-  background-color: #ffffff;
-  padding: 3.5rem 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 22px 1.5rem;
   text-align: center;
   overflow: hidden;
   position: relative;
 }
 
 .creative-cta-container {
-  max-width: 980px;
+  max-width: 1040px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
-.creative-cta-title {
-  font-size: clamp(1.75rem, 3.6vw, 3.2rem);
-  line-height: 1.35;
-  color: #111827;
-  letter-spacing: -0.015em;
+/* Top Outlined Badge */
+.creative-cta-badge-wrapper {
   margin-bottom: 1.25rem;
 }
 
-/* Font Specifications requested by user */
+.creative-cta-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1.35rem;
+  border-radius: 999px;
+  border: 1.5px solid #a3e635;
+  color: #4d7c0f;
+  font-family: 'Happy Monkey', cursive, sans-serif !important;
+  font-size: 0.95rem;
+  font-weight: 400;
+  background: #f7fee7;
+  box-shadow: 0 4px 14px rgba(163, 230, 53, 0.2);
+  letter-spacing: 0.01em;
+}
+
+.badge-sparkle {
+  color: #65a30d;
+}
+
+/* Main Title & Fonts */
+.creative-cta-title {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.4;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  max-width: 980px;
+}
+
 .font-plus-jakarta {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 700;
-  color: #111827;
+  font-weight: 800;
+  color: #0f172a;
 }
 
 .font-happy-monkey {
   font-family: 'Happy Monkey', cursive, sans-serif;
   font-weight: 400;
-  color: #1e293b;
+}
+
+.cta-purple-accent {
+  color: #9333ea;
+  display: inline-block;
+  transform: rotate(-0.5deg);
+  transition: color 0.3s ease;
 }
 
 .font-dm-sans {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.creative-cta-bold {
-  font-weight: 800;
-  color: #0f172a;
-  display: inline-block;
-  margin-top: 0.15rem;
-  letter-spacing: -0.02em;
 }
 
 /* Inline Pill Image Badge */
@@ -52,21 +78,21 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(65px, 7.5vw, 95px);
-  height: clamp(30px, 3.4vw, 42px);
+  width: clamp(70px, 8vw, 100px);
+  height: clamp(32px, 3.6vw, 44px);
   border-radius: 999px;
   overflow: hidden;
   vertical-align: middle;
   margin: 0 0.35rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.18);
   border: 2px solid #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-inline-pill:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 10px 24px rgba(147, 51, 234, 0.28);
 }
 
 .cta-inline-pill img {
@@ -80,18 +106,18 @@
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
-  margin: 0 0.4rem;
-  padding-left: 0.4rem;
+  margin: 0 0.45rem;
+  padding-left: 0.3rem;
 }
 
 .cta-inline-avatars img {
-  width: clamp(32px, 3.8vw, 44px);
-  height: clamp(32px, 3.8vw, 44px);
+  width: clamp(34px, 4vw, 46px);
+  height: clamp(34px, 4vw, 46px);
   border-radius: 50%;
   object-fit: cover;
   border: 2.5px solid #ffffff;
-  margin-left: -12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.14);
+  margin-left: -14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
   transition: transform 0.3s ease;
 }
 
@@ -100,45 +126,53 @@
 }
 
 .cta-inline-avatars:hover img {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.05);
 }
 
 /* Description Text */
 .creative-cta-desc {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
-  color: #4b5563;
-  line-height: 1.6;
-  max-width: 720px;
-  margin: 0 auto 1.75rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(0.98rem, 1.25vw, 1.12rem) !important;
+  color: #475569 !important;
+  line-height: 1.65 !important;
+  max-width: 760px !important;
+  margin: 0 auto 2rem auto !important;
 }
 
 /* CTA Purple Button */
 .creative-cta-btn-wrapper {
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 .creative-cta-btn {
-  background: linear-gradient(135deg, #9146ff 0%, #7522ff 100%);
+  background: linear-gradient(135deg, #9333ea 0%, #6b21a8 100%);
   color: #ffffff;
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
-  font-weight: 600;
-  padding: 0.9rem 2.4rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem) !important;
+  font-weight: 700 !important;
+  padding: 0.95rem 2.5rem;
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(139, 61, 255, 0.32);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(147, 51, 234, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.6rem;
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
 }
 
 .creative-cta-btn:hover {
-  background: linear-gradient(135deg, #812cff 0%, #640eff 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 14px 32px rgba(139, 61, 255, 0.45);
+  box-shadow: 0 14px 34px rgba(147, 51, 234, 0.48);
+}
+
+.creative-cta-btn:hover .btn-icon {
+  transform: translateX(4px);
 }
 
 .creative-cta-btn:active {
@@ -147,30 +181,29 @@
 
 @media (max-width: 640px) {
   .creative-cta-section {
-    padding: 2.75rem 1rem;
+    padding: 1rem 1rem;
   }
 
   .creative-cta-title {
-    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-size: clamp(1.6rem, 5.5vw, 2.3rem);
     line-height: 1.45;
   }
 
   .cta-inline-pill {
-    width: clamp(55px, 14vw, 75px);
-    height: clamp(26px, 7vw, 34px);
+    width: clamp(58px, 14vw, 78px);
+    height: clamp(28px, 7vw, 36px);
     margin: 0 0.2rem;
   }
 
   .cta-inline-avatars img {
-    width: clamp(28px, 7vw, 36px);
-    height: clamp(28px, 7vw, 36px);
-    margin-left: -8px;
+    width: clamp(30px, 7.5vw, 38px);
+    height: clamp(30px, 7.5vw, 38px);
+    margin-left: -10px;
   }
 
   .creative-cta-btn {
     width: 100%;
     max-width: 320px;
-    padding: 0.85rem 1.75rem;
+    padding: 0.9rem 1.8rem;
   }
 }
-

@@ -95,6 +95,13 @@
   margin-top: 2px;
 }
 
+.footer-btn-full {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+}
+
 /* Bottom Bar */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);

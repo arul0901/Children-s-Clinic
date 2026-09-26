@@ -15,11 +15,10 @@ const AppointmentCTA = ({ serviceName }: AppointmentCTAProps) => {
         <h2>Schedule Your {serviceName} Visit Today</h2>
         <p>Expert, compassionate pediatric and neonatal healthcare for your family in Krishnagiri.</p>
         <button 
-          className="btn-primary" 
-          style={{ backgroundColor: '#fff', color: 'var(--color-primary)' }}
+          className="btn-primary service-btn-white" 
           onClick={() => navigate('/appointment')}
         >
-          <Calendar size={18} style={{ marginRight: '8px' }} />
+          <Calendar size={18} className="btn-icon-right" />
           Book Appointment
         </button>
       </div>

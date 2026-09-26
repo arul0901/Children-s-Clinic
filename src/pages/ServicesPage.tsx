@@ -103,7 +103,7 @@ const ServicePage = () => {
             </h2>
             <ul className="sd-points" data-reveal>
               {data.includes.map((point, index) => (
-                <li key={point.title} style={{ animationDelay: `${index * 0.28}s` }}>
+                <li key={point.title} style={{ '--animation-delay': `${index * 0.28}s` } as React.CSSProperties}>
                   <span className="sd-bullet" aria-hidden="true" />
                   <div>
                     <strong>{point.title}</strong>

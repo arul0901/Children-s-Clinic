@@ -11,15 +11,15 @@ interface ServiceInformationProps {
 
 const ServiceInformation = ({ information }: ServiceInformationProps) => {
   return (
-    <section className="service-includes-section" style={{ backgroundColor: '#fff' }}>
+    <section className="service-includes-section service-bg-white">
       <div className="container">
-        <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
+        <div className="service-header-center">
           <span className="eyebrow">Important Details</span>
-          <h2 className="serif-heading" style={{ fontSize: '2.5rem' }}>Patient Information</h2>
+          <h2 className="serif-heading service-section-title">Patient Information</h2>
         </div>
-        <div className="service-includes-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
+        <div className="service-includes-grid service-info-grid">
           {information.map((info, idx) => (
-            <div key={idx} className="service-include-card" style={{ backgroundColor: 'var(--color-bg)' }}>
+            <div key={idx} className="service-include-card service-card-bg">
               <h4>{info.title}</h4>
               <p>{info.content}</p>
             </div>
