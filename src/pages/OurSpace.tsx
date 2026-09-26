@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
 import './OurSpace.css';
+import './services/ServicePage.css';
 
 const OurSpace = () => {
   useEffect(() => {
@@ -11,67 +10,13 @@ const OurSpace = () => {
 
   return (
     <div className="our-space-page">
-      {/* ──────────────── 1. HERO SECTION ──────────────── */}
-      <section className="space-hero">
-        <motion.div 
-          className="space-hero-bg-wrapper"
-          initial={{ scale: 1.08 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <img 
-            src="/banner.png" 
-            alt="The Children's Clinic Reception" 
-            className="space-hero-bg-img" 
-          />
-          <div className="space-hero-overlay" />
-        </motion.div>
-
-        <div className="space-hero-content">
-          {/* Breadcrumb */}
-          <motion.nav 
-            className="space-breadcrumb" 
-            aria-label="Breadcrumb"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <Link to="/">Home</Link>
-            <span className="space-breadcrumb-sep" aria-hidden="true">
-              <ChevronRight size={14} />
-            </span>
-            <span className="space-breadcrumb-current">Our Space</span>
-          </motion.nav>
-
-          {/* Eyebrow */}
-          <motion.span 
-            className="space-hero-eyebrow"
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35 }}
-          >
-            OUR SPACE
-          </motion.span>
-
-          {/* Heading */}
-          <motion.h1 
-            className="space-hero-title"
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          >
-            A Space Designed Around Your Child
-          </motion.h1>
-
-          {/* Description */}
-          <motion.p 
-            className="space-hero-desc"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
-          >
-            Step inside a warm, welcoming environment thoughtfully designed to make every child and family feel comfortable, safe, and cared for.
-          </motion.p>
+      {/* ──────────────── 1. HERO BANNER (Same as Lactation Support) ──────────────── */}
+      <section className="sd-hero">
+        <img className="sd-hero-bg" src="/banner.jpg" alt="Our Space & Gallery" />
+        <div className="sd-hero-overlay">
+          <div className="container sd-hero-inner">
+            <h2 className="font-plus-jakarta banner-font">Our Space &amp; Gallery</h2>
+          </div>
         </div>
       </section>
 

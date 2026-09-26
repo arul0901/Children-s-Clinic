@@ -88,6 +88,10 @@ const HeroStatic = () => {
 
   return (
     <section className="hero-split" ref={comp} id="home">
+      {/* ── Background Image & Dark Overlay (Matching Lactation Support Page) ── */}
+      <img className="home-sd-hero-bg" src="/banner.jpg" alt="The Children's Clinic Banner" />
+      <div className="home-sd-hero-overlay"></div>
+
       {/* Left Content */}
       <div className="hero-split-left">
         <h1 className="hero-split-title hero-anim">
