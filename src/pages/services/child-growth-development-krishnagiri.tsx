@@ -87,7 +87,7 @@ const GrowthDevelopment = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/src/assets/services/grow-banner.png" alt="Child Growth & Development Monitoring in Krishnagiri" />
+        <img className="sd-hero-bg" src="/grow-banner.png" alt="Child Growth & Development Monitoring in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h2 className="font-plus-jakarta banner-font">Child Growth &amp; Development Monitoring </h2>
@@ -103,7 +103,7 @@ const GrowthDevelopment = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/src/assets/services/grow2.jpg" alt="Child Growth and Development Monitoring Consultation" />
+              <img src="/grow2.jpg" alt="Child Growth and Development Monitoring Consultation" />
             </div>
 
             {/* Overview Intro */}
@@ -236,7 +236,7 @@ const GrowthDevelopment = () => {
               <span className="sp-span">Regular growth monitoring helps track how a child is progressing over time and can provide useful information when there are concerns about nutrition, growth or general health.</span>
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              A single height or weight measurement does not always tell the complete story. 
+              A single height or weight measurement does not always tell the complete story.
             </p>
             <p>For example, a child may naturally be smaller or larger than another child while still following an appropriate growth pattern. What matters is understanding the child's measurements over time in the context of age, sex, health and other relevant factors.</p>
             <p className="sd-copy sd-reveal sd-text sd-note-italic-muted" data-reveal>
@@ -248,9 +248,9 @@ const GrowthDevelopment = () => {
               <span className="sd-mark" />
               What Does Developmental Monitoring Include?
             </h2>
-            
+
             <p className="sd-copy sd-reveal sd-text sp-span" data-reveal>
-              Developmental monitoring looks at how a child is acquiring skills appropriate to their stage of development. 
+              Developmental monitoring looks at how a child is acquiring skills appropriate to their stage of development.
             </p>
             <p className="ls-guidance-title">Depending on the child's age, a pediatric consultation may consider areas such as:</p>
             <div className="ls-cards-stack">
@@ -303,7 +303,7 @@ const GrowthDevelopment = () => {
               </ul>
             </div>
             <p className="sd-copy sd-reveal sd-text sd-note-italic-primary" data-reveal>
-               A pediatric assessment can help determine whether the concern represents a normal variation or requires closer evaluation.
+              A pediatric assessment can help determine whether the concern represents a normal variation or requires closer evaluation.
             </p>
 
             {/* ── Section: Growth vs Development: What Is the Difference? ── */}
@@ -408,7 +408,7 @@ const GrowthDevelopment = () => {
             <div className="ls-cta-banner sd-reveal" data-reveal>
               <h3>When Should Parents Discuss a Developmental Concern?</h3>
               <p>
-                Parents should consider a pediatric assessment when they have a persistent concern about their child's development, particularly if the child is not progressing in an expected area or has lost a skill they previously had. 
+                Parents should consider a pediatric assessment when they have a persistent concern about their child's development, particularly if the child is not progressing in an expected area or has lost a skill they previously had.
               </p>
               <p><strong>Parents may want to discuss concerns involving:</strong></p>
               <div className="ls-guidance-grid service-neo">
@@ -515,7 +515,7 @@ const GrowthDevelopment = () => {
               When Is a Growth Concern Different From a Developmental Concern?
             </h2>
             <div className="sd-feature">
-              <img src="/src/assets/services/grow1.jpg" alt="Child Growth and Development Monitoring Consultation" />
+              <img src="/grow1.jpg" alt="Child Growth and Development Monitoring Consultation" />
             </div>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Understanding the difference can help parents know what they are observing.

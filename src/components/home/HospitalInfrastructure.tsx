@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import infra1 from "../../assets/home/infra1.jpeg";
+import infra2 from "../../assets/home/infra2.jpeg";
+import infra3 from "../../assets/home/infra3.jpeg";
 
 const HOSPITAL_HERO_CSS = `
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340..600&family=Inter:wght@400;500;600&display=swap");
@@ -593,7 +596,7 @@ const DEFAULT_CARDS: HeroCard[] = [
     id: "nicu",
     index: "01",
     label: "Specialised Care for Newborns From the Very Beginning",
-    image: "./src/assets/home/infra1.jpeg",
+    image: infra1,
     alt: "Specialised Care for Newborns From the Very Beginning",
     headline: "Specialised Care for Newborns From the Very Beginning",
     body: "Comprehensive newborn and neonatal support, including premature baby care, newborn jaundice, phototherapy and intensive care needs when medically required.",
@@ -609,7 +612,7 @@ const DEFAULT_CARDS: HeroCard[] = [
     id: "emergency",
     index: "02",
     label: "Complete Healthcare for Growing Children",
-    image: "./src/assets/home/infra2.jpeg",
+    image: infra2,
     alt: "Complete Healthcare for Growing Children",
     headline: "Complete Healthcare for Growing Children",
     body: "Child-focused care covering vaccinations, growth and development monitoring, fever, cold, cough, seizures and other common pediatric concerns.",
@@ -619,13 +622,13 @@ const DEFAULT_CARDS: HeroCard[] = [
       "Fever, Cold & Cough Care",
     ],
     ctaLabel: "Explore Pediatric Care",
-    ctaRoute: "/services/child-growth-and-development-in-krishnagiri",
+    ctaRoute: "/services/child-growth-development-krishnagiri",
   },  
   {
     id: "lactation",
     index: "03",
     label: "Support for Healthy Feeding & Early Development",
-    image: "./src/assets/home/infra3.jpeg",
+    image: infra3,
     alt: "Support for Healthy Feeding & Early Development",
     headline: "Support for Healthy Feeding & Early Development",
     body: "Personalized lactation and breastfeeding support alongside guidance for infant feeding, growth and the early stages of your child's development.",

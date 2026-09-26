@@ -87,7 +87,7 @@ const NewbornCare = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/src/assets/services/newborn-banner.jpg" alt="Newborn Care in Krishnagiri" />
+        <img className="sd-hero-bg" src="/newborn-banner.jpg" alt="Newborn Care in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h2 className="font-plus-jakarta banner-font">Newborn Care &amp; Jaundice Treatment</h2>
@@ -103,7 +103,7 @@ const NewbornCare = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/src/assets/services/newborn1.jpg" alt="Newborn Care and Jaundice Treatment Consultation" />
+              <img src="/newborn1.jpg" alt="Newborn Care and Jaundice Treatment Consultation" />
             </div>
 
             {/* Overview Intro */}
@@ -379,7 +379,7 @@ const NewbornCare = () => {
               Newborn Care for Premature Babies
             </h2>
             <div className="sd-feature">
-              <img src="/src/assets/services/newborn2.jpg" alt="Newborn Care and Jaundice Treatment Consultation" />
+              <img src="/newborn2.jpg" alt="Newborn Care and Jaundice Treatment Consultation" />
             </div>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Premature babies may have different healthcare needs from babies born at term.

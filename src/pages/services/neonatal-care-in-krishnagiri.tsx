@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
-   Minus, Plus,
+  Minus, Plus,
   MapPin, ArrowRight, AlertCircle,
   ExternalLink
 } from 'lucide-react';
@@ -87,7 +87,7 @@ const NeonatalCare = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/src/assets/services/neonatal-banner.jpg" alt="Neonatal Care in Krishnagiri" />
+        <img className="sd-hero-bg" src="/neonatal-banner.jpg" alt="Neonatal Care in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h2 className="font-plus-jakarta banner-font">Neonatal Care &amp; Intensive Care </h2>
@@ -103,7 +103,7 @@ const NeonatalCare = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/src/assets/services/neonatal1.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
+              <img src="/neonatal1.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
             </div>
 
             {/* Overview Intro */}
@@ -314,7 +314,7 @@ const NeonatalCare = () => {
               Premature Baby Care and Neonatal Support
             </h2>
             <div className="sd-feature">
-              <img src="/src/assets/services/neonatal2.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
+              <img src="/neonatal2.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
             </div>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Premature babies can have different healthcare needs depending on how early they were born and their individual health condition.

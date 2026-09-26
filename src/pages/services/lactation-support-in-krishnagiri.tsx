@@ -103,7 +103,7 @@ const LactationSupport = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/src/assets/services/lactationsupport.jpg" alt="Lactation and Breastfeeding Support Consultation" />
+              <img src="/lactationsupport.jpg" alt="Lactation and Breastfeeding Support Consultation" />
             </div>
 
             {/* Overview Intro */}
@@ -282,7 +282,7 @@ const LactationSupport = () => {
               Lactation Support for Newborns and Premature Babies
             </h2>
             <div className="sd-feature">
-              <img src="/src/assets/services/lactationsupport1.jpg" alt="Lactation and Breastfeeding Support Consultation" />
+              <img src="/lactationsupport1.jpg" alt="Lactation and Breastfeeding Support Consultation" />
             </div>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Premature babies can have different feeding requirements depending on their gestational age, maturity and health.
