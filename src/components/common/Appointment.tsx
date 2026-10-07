@@ -1,4 +1,5 @@
 import { useState, useId } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, CheckCircle2, Calendar, Phone, User, Baby, MessageSquare, AlertCircle, Loader2, Mail } from 'lucide-react';
 import { submitAppointmentForm } from '../../config/api';
 import './Appointment.css';
@@ -104,6 +105,8 @@ const Appointment = () => {
     setIsSubmitting(true);
     setErrorMsg('');
 
+    const startTime = Date.now();
+
     const res = await submitAppointmentForm({
       parent_name: form.parentName,
       child_name: form.childName,
@@ -113,6 +116,11 @@ const Appointment = () => {
       time: form.timeSlot,
       message: form.reason,
     });
+
+    const elapsed = Date.now() - startTime;
+    if (elapsed < 500) {
+      await new Promise(resolve => setTimeout(resolve, 500 - elapsed));
+    }
 
     setIsSubmitting(false);
 
@@ -147,139 +155,155 @@ const Appointment = () => {
           </div>
 
           <div className="appointment-form-container">
-            {submitted ? (
-              <div className="appointment-success-state">
-                <CheckCircle2 size={54} className="app-success-icon" />
-                <h3>Appointment Request Submitted!</h3>
-                <p>
-                  Thank you <strong>{form.parentName || 'Parent'}</strong>. Your appointment request for <strong>{form.childName || 'your child'}</strong> has been registered.
-                </p>
-                <div className="app-summary-card">
-                  <p>📅 <strong>Date:</strong> {form.date}</p>
-                  <p>⏰ <strong>Booking Time:</strong> {form.timeSlot}</p>
-                  {form.email && <p>✉️ <strong>Email:</strong> {form.email}</p>}
-                  <p>📞 <strong>Phone:</strong> {form.phone}</p>
-                </div>
-                <button
-                  type="button"
-                  className="btn-primary submit-btn"
-                  onClick={() => setSubmitted(false)}
+            <AnimatePresence mode="wait">
+              {submitted ? (
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, scale: 0.95, y: 15 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: -15 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                  className="appointment-success-state"
                 >
-                  Book Another Appointment
-                </button>
-              </div>
-            ) : (
-              <form className="appointment-form" onSubmit={handleSubmit}>
-                {errorMsg && (
-                  <div className="appointment-error-box" style={{ background: '#fee2e2', color: '#991b1b', padding: '0.8rem 1rem', borderRadius: '8px', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <AlertCircle size={18} />
-                    <span>{errorMsg}</span>
+                  <CheckCircle2 size={54} className="app-success-icon" />
+                  <h3>Appointment Request Submitted!</h3>
+                  <p>
+                    Thank you <strong>{form.parentName || 'Parent'}</strong>. Your appointment request for <strong>{form.childName || 'your child'}</strong> has been registered.
+                  </p>
+                  <div className="app-summary-card">
+                    <p>📅 <strong>Date:</strong> {form.date}</p>
+                    <p>⏰ <strong>Booking Time:</strong> {form.timeSlot}</p>
+                    {form.email && <p>✉️ <strong>Email:</strong> {form.email}</p>}
+                    <p>📞 <strong>Phone:</strong> {form.phone}</p>
                   </div>
-                )}
-
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor={parentNameId}><User size={15} /> Parent / Guardian Name</label>
-                    <input
-                      id={parentNameId}
-                      type="text"
-                      placeholder="Parent Name"
-                      value={form.parentName}
-                      onChange={(e) => setForm({ ...form, parentName: e.target.value })}
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor={childNameId}><Baby size={15} /> Child's Name</label>
-                    <input
-                      id={childNameId}
-                      type="text"
-                      placeholder="Child's Name"
-                      value={form.childName}
-                      onChange={(e) => setForm({ ...form, childName: e.target.value })}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor={emailId}><Mail size={15} /> Email Address</label>
-                    <input
-                      id={emailId}
-                      type="email"
-                      placeholder="parent@example.com"
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor={phoneId}><Phone size={15} /> Phone Number</label>
-                    <input
-                      id={phoneId}
-                      type="tel"
-                      placeholder="+91 98765 43210"
-                      value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="form-row">
-                  <div className="form-group full-width">
-                    <label htmlFor={dateId}><Calendar size={15} /> Preferred Date</label>
-                    <input
-                      id={dateId}
-                      type="date"
-                      min={todayStr}
-                      value={form.date}
-                      onChange={handleDateChange}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="form-group full-width">
-                  <label htmlFor={timeId}><Clock size={15} /> Booking Time Slot</label>
-                  <select
-                    id={timeId}
-                    className="time-slot-select"
-                    value={form.timeSlot}
-                    onChange={(e) => setForm({ ...form, timeSlot: e.target.value })}
-                    required
+                  <button
+                    type="button"
+                    className="btn-primary submit-btn"
+                    onClick={() => setSubmitted(false)}
                   >
-                    {timingInfo.slots.map((slot, index) => (
-                      <option key={index} value={slot.value} disabled={slot.value.startsWith('---')}>
-                        {slot.label}
-                      </option>
-                    ))}
-                  </select>
-                  <span className="timing-hint-tag">{timingInfo.dayLabel}</span>
-                </div>
-
-                <div className="form-group full-width">
-                  <label htmlFor={reasonId}><MessageSquare size={15} /> Reason for Visit</label>
-                  <textarea
-                    id={reasonId}
-                    placeholder="Please briefly describe the reason for your visit..."
-                    rows={3}
-                    value={form.reason}
-                    onChange={(e) => setForm({ ...form, reason: e.target.value })}
-                  />
-                </div>
-
-                <button type="submit" className="btn-primary submit-btn" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <Loader2 size={18} className="animate-spin" /> Submitting Request...
-                    </span>
-                  ) : (
-                    'Request Appointment'
+                    Book Another Appointment
+                  </button>
+                </motion.div>
+              ) : (
+                <motion.form
+                  key="form"
+                  initial={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.96, y: -10 }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  className="appointment-form"
+                  onSubmit={handleSubmit}
+                >
+                  {errorMsg && (
+                    <div className="appointment-error-box" style={{ background: '#fee2e2', color: '#991b1b', padding: '0.8rem 1rem', borderRadius: '8px', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <AlertCircle size={18} />
+                      <span>{errorMsg}</span>
+                    </div>
                   )}
-                </button>
-              </form>
-            )}
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor={parentNameId}><User size={15} /> Parent / Guardian Name</label>
+                      <input
+                        id={parentNameId}
+                        type="text"
+                        placeholder="Parent Name"
+                        value={form.parentName}
+                        onChange={(e) => setForm({ ...form, parentName: e.target.value })}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor={childNameId}><Baby size={15} /> Child's Name</label>
+                      <input
+                        id={childNameId}
+                        type="text"
+                        placeholder="Child's Name"
+                        value={form.childName}
+                        onChange={(e) => setForm({ ...form, childName: e.target.value })}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor={emailId}><Mail size={15} /> Email Address</label>
+                      <input
+                        id={emailId}
+                        type="email"
+                        placeholder="parent@example.com"
+                        value={form.email}
+                        onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor={phoneId}><Phone size={15} /> Phone Number</label>
+                      <input
+                        id={phoneId}
+                        type="tel"
+                        placeholder="+91 98765 43210"
+                        value={form.phone}
+                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-row">
+                    <div className="form-group full-width">
+                      <label htmlFor={dateId}><Calendar size={15} /> Preferred Date</label>
+                      <input
+                        id={dateId}
+                        type="date"
+                        min={todayStr}
+                        value={form.date}
+                        onChange={handleDateChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label htmlFor={timeId}><Clock size={15} /> Booking Time Slot</label>
+                    <select
+                      id={timeId}
+                      className="time-slot-select"
+                      value={form.timeSlot}
+                      onChange={(e) => setForm({ ...form, timeSlot: e.target.value })}
+                      required
+                    >
+                      {timingInfo.slots.map((slot, index) => (
+                        <option key={index} value={slot.value} disabled={slot.value.startsWith('---')}>
+                          {slot.label}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="timing-hint-tag">{timingInfo.dayLabel}</span>
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label htmlFor={reasonId}><MessageSquare size={15} /> Reason for Visit</label>
+                    <textarea
+                      id={reasonId}
+                      placeholder="Please briefly describe the reason for your visit..."
+                      rows={3}
+                      value={form.reason}
+                      onChange={(e) => setForm({ ...form, reason: e.target.value })}
+                    />
+                  </div>
+
+                  <button type="submit" className="btn-primary submit-btn" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <Loader2 size={18} className="animate-spin" /> Submitting Request...
+                      </span>
+                    ) : (
+                      'Request Appointment'
+                    )}
+                  </button>
+                </motion.form>
+              )}
+            </AnimatePresence>
           </div>
 
         </div>

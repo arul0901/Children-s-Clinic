@@ -1,5 +1,6 @@
 import { useState, useId } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, CheckCircle2, User, Phone, Baby, AlertCircle, Loader2, Mail } from 'lucide-react';
 import { submitAppointmentForm } from '../../config/api';
 import './ServiceComponents.css';
@@ -107,6 +108,8 @@ const AppointmentCTA = ({ serviceName }: AppointmentCTAProps) => {
     setIsSubmitting(true);
     setErrorMsg('');
 
+    const startTime = Date.now();
+
     const res = await submitAppointmentForm({
       parent_name: form.parentName,
       child_name: form.childName,
@@ -116,6 +119,11 @@ const AppointmentCTA = ({ serviceName }: AppointmentCTAProps) => {
       time: form.timeSlot,
       message: `Requested via ${serviceName} page`,
     });
+
+    const elapsed = Date.now() - startTime;
+    if (elapsed < 500) {
+      await new Promise(resolve => setTimeout(resolve, 500 - elapsed));
+    }
 
     setIsSubmitting(false);
 
@@ -155,128 +163,144 @@ const AppointmentCTA = ({ serviceName }: AppointmentCTAProps) => {
 
         {/* Right Side: Interactive Appointment Form */}
         <div className="service-cta-form-wrapper">
-          {submitted ? (
-            <div className="cta-success-box">
-              <CheckCircle2 size={48} className="cta-success-icon" />
-              <h3>Appointment Requested!</h3>
-              <p>
-                Thank you <strong>{form.parentName || 'Parent'}</strong>. We have received your booking request for <strong>{serviceName}</strong>.
-              </p>
-              <div className="cta-success-details">
-                <p><strong>Date:</strong> {form.date}</p>
-                <p><strong>Selected Time:</strong> {form.timeSlot}</p>
-                {form.email && <p><strong>Email:</strong> {form.email}</p>}
-              </div>
-              <button 
-                className="btn-primary service-btn-white"
-                onClick={() => { setSubmitted(false); navigate('/appointment'); }}
+          <AnimatePresence mode="wait">
+            {submitted ? (
+              <motion.div
+                key="cta-success"
+                initial={{ opacity: 0, scale: 0.95, y: 15 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: -15 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                className="cta-success-box"
               >
-                View Details on Booking Page
-              </button>
-            </div>
-          ) : (
-            <form className="service-cta-form" onSubmit={handleSubmit}>
-              <h3 className="cta-form-title">Quick Booking Form</h3>
-
-              {errorMsg && (
-                <div style={{ background: '#fee2e2', color: '#991b1b', padding: '0.8rem 1rem', borderRadius: '8px', fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <AlertCircle size={18} />
-                  <span>{errorMsg}</span>
+                <CheckCircle2 size={48} className="cta-success-icon" />
+                <h3>Appointment Requested!</h3>
+                <p>
+                  Thank you <strong>{form.parentName || 'Parent'}</strong>. We have received your booking request for <strong>{serviceName}</strong>.
+                </p>
+                <div className="cta-success-details">
+                  <p><strong>Date:</strong> {form.date}</p>
+                  <p><strong>Selected Time:</strong> {form.timeSlot}</p>
+                  {form.email && <p><strong>Email:</strong> {form.email}</p>}
                 </div>
-              )}
+                <button 
+                  className="btn-primary service-btn-white"
+                  onClick={() => { setSubmitted(false); navigate('/appointment'); }}
+                >
+                  View Details on Booking Page
+                </button>
+              </motion.div>
+            ) : (
+              <motion.form
+                key="cta-form"
+                initial={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.96, y: -10 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="service-cta-form"
+                onSubmit={handleSubmit}
+              >
+                <h3 className="cta-form-title">Quick Booking Form</h3>
 
-              <div className="cta-form-grid">
-                <div className="cta-form-group">
-                  <label htmlFor={parentNameId}><User size={15} /> Parent Name</label>
-                  <input
-                    id={parentNameId}
-                    type="text"
-                    placeholder="Your Name"
-                    value={form.parentName}
-                    onChange={(e) => setForm({ ...form, parentName: e.target.value })}
-                    required
-                  />
-                </div>
-
-                <div className="cta-form-group">
-                  <label htmlFor={childNameId}><Baby size={15} /> Child's Name</label>
-                  <input
-                    id={childNameId}
-                    type="text"
-                    placeholder="Child's Name"
-                    value={form.childName}
-                    onChange={(e) => setForm({ ...form, childName: e.target.value })}
-                    required
-                  />
-                </div>
-
-                <div className="cta-form-group">
-                  <label htmlFor={emailId}><Mail size={15} /> Email Address</label>
-                  <input
-                    id={emailId}
-                    type="email"
-                    placeholder="parent@example.com"
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  />
-                </div>
-
-                <div className="cta-form-group">
-                  <label htmlFor={phoneId}><Phone size={15} /> Phone Number</label>
-                  <input
-                    id={phoneId}
-                    type="tel"
-                    placeholder="+91 98765 43210"
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    required
-                  />
-                </div>
-
-                <div className="cta-form-group full-width">
-                  <label htmlFor={dateId}><Calendar size={15} /> Preferred Date</label>
-                  <input
-                    id={dateId}
-                    type="date"
-                    min={todayStr}
-                    value={form.date}
-                    onChange={handleDateChange}
-                    required
-                  />
-                </div>
-
-                <div className="cta-form-group full-width">
-                  <label htmlFor={timeId}><Clock size={15} /> Booking Time Slot</label>
-                  <select
-                    id={timeId}
-                    value={form.timeSlot}
-                    onChange={(e) => setForm({ ...form, timeSlot: e.target.value })}
-                    required
-                  >
-                    {timingInfo.slots.map((slot, idx) => (
-                      <option key={idx} value={slot.value} disabled={slot.value.startsWith('---')}>
-                        {slot.label}
-                      </option>
-                    ))}
-                  </select>
-                  <small className="cta-day-hint">{timingInfo.dayLabel}</small>
-                </div>
-              </div>
-
-              <button type="submit" className="btn-primary cta-submit-btn" disabled={isSubmitting}>
-                {isSubmitting ? (
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <Loader2 size={18} className="animate-spin" /> Submitting Request...
-                  </span>
-                ) : (
-                  <>
-                    <Calendar size={18} className="btn-icon-right" />
-                    Confirm Booking Request
-                  </>
+                {errorMsg && (
+                  <div style={{ background: '#fee2e2', color: '#991b1b', padding: '0.8rem 1rem', borderRadius: '8px', fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <AlertCircle size={18} />
+                    <span>{errorMsg}</span>
+                  </div>
                 )}
-              </button>
-            </form>
-          )}
+
+                <div className="cta-form-grid">
+                  <div className="cta-form-group">
+                    <label htmlFor={parentNameId}><User size={15} /> Parent Name</label>
+                    <input
+                      id={parentNameId}
+                      type="text"
+                      placeholder="Your Name"
+                      value={form.parentName}
+                      onChange={(e) => setForm({ ...form, parentName: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="cta-form-group">
+                    <label htmlFor={childNameId}><Baby size={15} /> Child's Name</label>
+                    <input
+                      id={childNameId}
+                      type="text"
+                      placeholder="Child's Name"
+                      value={form.childName}
+                      onChange={(e) => setForm({ ...form, childName: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="cta-form-group">
+                    <label htmlFor={emailId}><Mail size={15} /> Email Address</label>
+                    <input
+                      id={emailId}
+                      type="email"
+                      placeholder="parent@example.com"
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    />
+                  </div>
+
+                  <div className="cta-form-group">
+                    <label htmlFor={phoneId}><Phone size={15} /> Phone Number</label>
+                    <input
+                      id={phoneId}
+                      type="tel"
+                      placeholder="+91 98765 43210"
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="cta-form-group full-width">
+                    <label htmlFor={dateId}><Calendar size={15} /> Preferred Date</label>
+                    <input
+                      id={dateId}
+                      type="date"
+                      min={todayStr}
+                      value={form.date}
+                      onChange={handleDateChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="cta-form-group full-width">
+                    <label htmlFor={timeId}><Clock size={15} /> Booking Time Slot</label>
+                    <select
+                      id={timeId}
+                      value={form.timeSlot}
+                      onChange={(e) => setForm({ ...form, timeSlot: e.target.value })}
+                      required
+                    >
+                      {timingInfo.slots.map((slot, idx) => (
+                        <option key={idx} value={slot.value} disabled={slot.value.startsWith('---')}>
+                          {slot.label}
+                        </option>
+                      ))}
+                    </select>
+                    <small className="cta-day-hint">{timingInfo.dayLabel}</small>
+                  </div>
+                </div>
+
+                <button type="submit" className="btn-primary cta-submit-btn" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <Loader2 size={18} className="animate-spin" /> Submitting Request...
+                    </span>
+                  ) : (
+                    <>
+                      <Calendar size={18} className="btn-icon-right" />
+                      Confirm Booking Request
+                    </>
+                  )}
+                </button>
+              </motion.form>
+            )}
+          </AnimatePresence>
         </div>
 
       </div>

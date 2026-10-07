@@ -1,363 +1,111 @@
 /* ─────────────────────────────────────────────────────────────
-   OUR SPACE / GALLERY - PREMIUM INTERACTIVE CLINIC GALLERY
+   OUR SPACE / AMBIENCE PAGE - CLEAN & NEAT LAYOUT
+   Fonts: Happy Monkey (Headings), Plus Jakarta Sans (Body & UI)
    ───────────────────────────────────────────────────────────── */
 
 :root {
   --space-page-bg: #F4ECF8;          /* Soft lavender / lilac background */
-  --space-card-bg: #DDD6E2;          /* Light gray-purple placeholder fill */
+  --space-card-bg: #DDD6E2;          /* Light placeholder fill */
   --space-title-color: #3D1B54;       /* Deep purple title text */
   --space-text-color: #484054;        /* Dark indigo body text */
   --space-accent: #6B2A91;            /* Accent purple */
-  --space-card-radius: 18px;         /* Smooth rounded corners */
-  --font-space-title: 'Fredoka', 'Comfortaa', 'Plus Jakarta Sans', sans-serif;
-  --font-space-body: 'DM Sans', 'Plus Jakarta Sans', sans-serif;
+  --space-card-radius: 20px;         /* Smooth rounded corners */
+  --font-happy-monkey: 'Happy Monkey', cursive, sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.font-jakarta {
+  font-family: var(--font-jakarta) !important;
 }
 
 .our-space-page {
   background-color: var(--space-page-bg);
   min-height: 100vh;
   color: var(--space-text-color);
-  font-family: var(--font-space-body);
-  padding-top: 90px;
-  padding-bottom: 80px;
+  font-family: var(--font-jakarta);
+  padding-top: 100px;
+  padding-bottom: 90px;
   overflow-x: hidden;
 }
 
 .our-space-container {
-  max-width: 1020px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ──────────────── 1. OUR HOSPITALITIES ──────────────── */
+/* ──────────────── 1. HEADER SECTION ──────────────── */
 
-.hosp-section {
+.ambience-header {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
-.hosp-header {
-  max-width: 740px;
-  margin: 0 auto 32px auto;
-}
-
-.hosp-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--space-accent);
-  margin-bottom: 12px;
-}
-
-.hosp-main-title {
-  font-family: var(--font-space-title);
-  font-size: clamp(2.1rem, 3.8vw, 3rem);
+.ambience-main-title {
+  font-family: var(--font-happy-monkey);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 700;
   color: var(--space-title-color);
   margin-bottom: 14px;
   letter-spacing: -0.01em;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
-.hosp-subtitle {
-  font-family: var(--font-space-body);
-  font-size: clamp(0.95rem, 1.15vw, 1.04rem);
-  line-height: 1.65;
+.ambience-main-subtitle {
+  font-family: var(--font-jakarta);
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  line-height: 1.68;
   color: var(--space-text-color);
   opacity: 0.9;
+  max-width: 680px;
   margin: 0 auto;
 }
 
-.mobile-touch-hint {
-  display: none;
-}
-
-/* Bento Grid Container */
-.hosp-bento-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-  position: relative;
-}
-
-/* Top Row (2 Cards) */
-.hosp-grid-top-row {
-  display: flex;
-  gap: 16px;
-  width: 100%;
-}
-
-.card-top-left {
-  flex: 1.55;
-  height: 200px;
-}
-
-.card-top-right {
-  flex: 1;
-  height: 200px;
-}
-
-/* Main Grid (3 Columns) */
-.hosp-grid-main {
-  display: grid;
-  grid-template-columns: 1.05fr 1.65fr 1.05fr;
-  gap: 16px;
-  height: 400px;
-}
-
-.hosp-col-left,
-.hosp-col-right {
-  height: 100%;
-}
-
-.card-tall {
-  height: 100%;
-}
-
-.hosp-col-mid {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  height: 100%;
-}
-
-.card-mid-top {
-  height: 192px;
-}
-
-.hosp-mid-split {
-  display: flex;
-  gap: 16px;
-  height: 192px;
-}
-
-.card-split-left {
-  flex: 0.85;
-  height: 100%;
-}
-
-.card-split-right {
-  flex: 1.15;
-  height: 100%;
-}
-
-/* ──────────────── INDIVIDUAL BENTO CARD STYLING ──────────────── */
-
-.hosp-card {
-  position: relative;
-  background-color: var(--space-card-bg);
-  border-radius: var(--space-card-radius);
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(61, 27, 84, 0.06);
-  cursor: pointer;
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  transition:
-    transform 400ms var(--ease-smooth),
-    opacity 400ms var(--ease-smooth),
-    filter 400ms var(--ease-smooth),
-    box-shadow 400ms var(--ease-smooth),
-    border-color 400ms var(--ease-smooth);
-}
-
-.hosp-card-img-wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: var(--space-card-bg);
-}
-
-.hosp-card-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 600ms var(--ease-smooth), filter 400ms var(--ease-smooth);
-}
-
-.hosp-card-placeholder-bg {
-  position: absolute;
-  inset: 0;
-  background-color: var(--space-card-bg);
-  z-index: 0;
-}
-
-/* Floating Corner Tag */
-.hosp-card-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background-color: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--space-title-color);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 5px 12px;
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  z-index: 3;
-  transition: opacity 300ms ease, transform 300ms ease;
-  pointer-events: none;
-}
-
-/* Overlay Badge Inside Focused Overlay */
-.hosp-overlay-badge {
-  display: inline-block;
-  align-self: flex-start;
-  font-family: var(--font-space-body);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background-color: rgba(255, 255, 255, 0.22);
-  color: rgba(255, 255, 255, 0.95);
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-bottom: 8px;
-  backdrop-filter: blur(4px);
-}
-
-/* ──────────────── RICH CONTENT OVERLAY ──────────────── */
-
-.hosp-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(38, 14, 56, 0.94) 0%,
-    rgba(61, 27, 84, 0.7) 50%,
-    rgba(61, 27, 84, 0.25) 100%
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px 20px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 400ms var(--ease-smooth);
-  z-index: 4;
-}
-
-.hosp-card-title {
-  color: #FFFFFF;
-  font-family: var(--font-space-title);
-  font-size: clamp(1rem, 1.3vw, 1.15rem);
-  font-weight: 600;
-  margin-bottom: 6px;
-  line-height: 1.3;
-  transform: translateY(12px);
-  transition: transform 400ms var(--ease-smooth);
-}
-
-.hosp-card-desc {
-  color: rgba(255, 255, 255, 0.92);
-  font-family: var(--font-space-body);
-  font-size: clamp(0.82rem, 1vw, 0.92rem);
-  line-height: 1.5;
-  transform: translateY(16px);
-  opacity: 0;
-  transition: transform 400ms var(--ease-smooth), opacity 400ms var(--ease-smooth);
-}
-
-/* ──────────────── 2. INTERACTIVE FOCUS & DIMMING STATES ──────────────── */
-
-/* When user hovers / focuses a specific card */
-.hosp-card.is-focused {
-  transform: scale(1.028) translateY(-4px);
-  z-index: 10;
-  box-shadow: 0 16px 36px rgba(61, 27, 84, 0.22);
-  border-color: rgba(255, 255, 255, 0.85);
-}
-
-.hosp-card.is-focused .hosp-card-img-wrapper img {
-  transform: scale(1.06);
-}
-
-.hosp-card.is-focused .hosp-card-badge {
-  opacity: 0;
-  transform: translateY(-6px);
-}
-
-.hosp-card.is-focused .hosp-card-overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.hosp-card.is-focused .hosp-card-title {
-  transform: translateY(0);
-}
-
-.hosp-card.is-focused .hosp-card-desc {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* Non-focused cards dim gracefully */
-.hosp-card.is-dimmed {
-  opacity: 0.55;
-  filter: blur(1.5px) contrast(0.92);
-  transform: scale(0.985);
-}
-
-.hosp-card.is-dimmed:hover {
-  opacity: 0.75;
-  filter: blur(0.5px);
-}
-
-/* Keyboard accessibility outline */
-.hosp-card:focus-visible {
-  outline: 3px solid var(--space-accent);
-  outline-offset: 3px;
-}
-
-/* ──────────────── 3. VIEW OUR AMBIENCE SECTION ──────────────── */
+/* ──────────────── 2. VIEW OUR AMBIENCE LIST ──────────────── */
 
 .ambience-section {
-  padding-top: 30px;
-}
-
-.ambience-main-title {
-  font-family: var(--font-space-title);
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  font-weight: 700;
-  color: var(--space-title-color);
-  text-align: center;
-  margin-bottom: 45px;
-  letter-spacing: -0.01em;
+  padding-top: 10px;
 }
 
 .ambience-list {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 55px;
 }
 
 .ambience-item {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 44px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 30px rgba(61, 27, 84, 0.05);
+  transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth);
+}
+
+.ambience-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(61, 27, 84, 0.09);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .ambience-item.reverse {
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
+/* Image Container */
 .ambience-image-box {
-  flex: 1.1;
-  height: 260px;
+  flex: 1.15;
+  height: 290px;
   border-radius: var(--space-card-radius);
   background-color: var(--space-card-bg);
   overflow: hidden;
   position: relative;
-  box-shadow: 0 8px 24px rgba(61, 27, 84, 0.07);
+  box-shadow: 0 8px 24px rgba(61, 27, 84, 0.08);
 }
 
 .ambience-image-box img {
@@ -369,345 +117,120 @@
   transition: transform 0.6s var(--ease-smooth);
 }
 
-.ambience-image-box:hover img {
-  transform: scale(1.035);
+.ambience-item:hover .ambience-image-box img {
+  transform: scale(1.04);
 }
 
-.ambience-img-placeholder {
+/* Corner Floating Badge */
+.ambience-badge {
   position: absolute;
-  inset: 0;
-  background-color: var(--space-card-bg);
-  z-index: 0;
+  top: 14px;
+  left: 14px;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--space-title-color);
+  font-family: var(--font-jakarta);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 3;
 }
 
+/* Content Box */
 .ambience-content-box {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 12px 8px;
 }
 
 .ambience-heading {
-  font-family: var(--font-space-title);
-  font-size: clamp(1.3rem, 1.8vw, 1.55rem);
-  font-weight: 600;
+  font-family: var(--font-happy-monkey);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-weight: 700;
   color: var(--space-title-color);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   line-height: 1.3;
 }
 
 .ambience-text {
-  font-family: var(--font-space-body);
-  font-size: clamp(0.92rem, 1.05vw, 1rem);
-  line-height: 1.68;
+  font-family: var(--font-jakarta);
+  font-size: clamp(0.94rem, 1.08vw, 1.04rem);
+  line-height: 1.7;
   color: var(--space-text-color);
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
-/* ──────────────── 4. RESPONSIVE LAYOUT BREAKPOINTS ──────────────── */
+/* ──────────────── 3. RESPONSIVE BREAKPOINTS ──────────────── */
 
-/* Desktop (> 1199px) & Tablet (768px – 1199px) REMAIN UNCHANGED */
-@media (max-width: 1199px) and (min-width: 768px) {
-  .our-space-container {
-    max-width: 100%;
-    padding: 0 28px;
-  }
-
-  .hosp-grid-top-row {
-    gap: 16px;
-  }
-
-  .card-top-left,
-  .card-top-right {
-    height: 190px;
-  }
-
-  .hosp-grid-main {
-    grid-template-columns: 1fr 1.5fr 1fr;
-    gap: 16px;
-    height: 390px;
-  }
-
-  .card-mid-top,
-  .hosp-mid-split {
-    height: 187px;
-  }
-
-  .hosp-card-overlay {
-    padding: 16px;
-  }
-
-  .ambience-item {
-    gap: 28px;
+@media (max-width: 992px) {
+  .ambience-item,
+  .ambience-item.reverse {
+    gap: 32px;
+    padding: 20px;
   }
 
   .ambience-image-box {
-    height: 230px;
+    height: 250px;
   }
 }
 
-@media (max-width: 992px) and (min-width: 768px) {
-  .hosp-grid-main {
-    grid-template-columns: 1fr 1fr;
-    height: auto;
-  }
-
-  .hosp-col-left {
-    height: 230px;
-  }
-
-  .hosp-col-right {
-    height: 230px;
-    grid-column: span 2;
-  }
-
-  .hosp-col-mid {
-    height: auto;
-  }
-}
-
-/* ──────────────── 5. MOBILE ENHANCEMENT (< 768px) ──────────────── */
 @media (max-width: 767px) {
-  .mobile-touch-hint {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--space-title-color);
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 6px 14px;
-    border-radius: 999px;
-    margin-top: 14px;
-    border: 1px solid rgba(107, 42, 145, 0.18);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 8px rgba(61, 27, 84, 0.05);
-  }
-
-  .hint-pulse {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: var(--space-accent);
-    animation: hintPulse 1.8s infinite ease-in-out;
-  }
-
-  @keyframes hintPulse {
-    0%, 100% { opacity: 0.35; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.35); }
-  }
-
   .our-space-page {
-    padding-top: 75px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 
   .our-space-container {
     padding: 0 16px;
   }
 
-  .hosp-section {
-    margin-bottom: 50px;
-  }
-
-  .hosp-header {
-    margin-bottom: 24px;
-  }
-
-  /* Mobile Bento Grid Layout */
-  .hosp-grid-top-row {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .card-top-left,
-  .card-top-right {
-    width: 100%;
-    height: 180px;
-  }
-
-  .hosp-grid-main {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    gap: 14px;
-  }
-
-  .hosp-col-left,
-  .hosp-col-right {
-    width: 100%;
-    height: 190px;
-  }
-
-  .card-mid-top {
-    height: 180px;
-  }
-
-  .hosp-mid-split {
-    flex-direction: column;
-    gap: 14px;
-    height: auto;
-  }
-
-  .card-split-left,
-  .card-split-right {
-    width: 100%;
-    height: 170px;
-  }
-
-  /* Mobile Tap & Active Focus Overlay Styling */
-  .hosp-card.is-focused {
-    transform: scale(1.02);
-    box-shadow: 0 12px 28px rgba(61, 27, 84, 0.18);
-    border-color: rgba(255, 255, 255, 0.95);
-    z-index: 10;
-  }
-
-  .hosp-card.is-dimmed {
-    opacity: 0.5;
-    filter: blur(1.5px) contrast(0.95);
-    transform: scale(0.98);
-  }
-
-  .hosp-card-badge {
-    top: 10px;
-    left: 10px;
-    font-size: 0.72rem;
-    padding: 4px 10px;
-  }
-
-  .hosp-card-overlay {
-    padding: 14px 14px;
-    background: linear-gradient(
-      to top,
-      rgba(38, 14, 56, 0.92) 0%,
-      rgba(61, 27, 84, 0.65) 55%,
-      rgba(61, 27, 84, 0.15) 100%
-    );
-  }
-
-  .hosp-card-title {
-    font-size: 0.98rem;
-    margin-bottom: 4px;
-  }
-
-  .hosp-card-desc {
-    font-size: 0.82rem;
-    line-height: 1.45;
+  .ambience-header {
+    margin-bottom: 36px;
   }
 
   .ambience-item,
   .ambience-item.reverse {
     flex-direction: column !important;
-    gap: 18px;
-    text-align: left;
+    gap: 20px;
+    padding: 16px;
+    border-radius: 20px;
   }
 
   .ambience-image-box {
     width: 100%;
-    height: 200px;
-  }
-}
-
-/* Small Phones: 320px – 374px */
-@media (max-width: 374px) {
-  .our-space-container {
-    padding: 0 12px;
+    height: 220px;
   }
 
-  .card-top-left,
-  .card-top-right,
-  .hosp-col-left,
-  .hosp-col-right,
-  .card-mid-top {
-    height: 160px;
-  }
-
-  .card-split-left,
-  .card-split-right {
-    height: 150px;
-  }
-
-  .hosp-card-title {
-    font-size: 0.92rem;
-  }
-
-  .hosp-card-desc {
-    font-size: 0.78rem;
-    line-height: 1.35;
-  }
-
-  .ambience-image-box {
-    height: 175px;
+  .ambience-content-box {
+    padding: 4px;
   }
 
   .ambience-heading {
-    font-size: 1.15rem;
+    font-size: 1.28rem;
+    margin-bottom: 10px;
+  }
+
+  .ambience-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 374px) {
+  .ambience-image-box {
+    height: 185px;
+  }
+
+  .ambience-heading {
+    font-size: 1.18rem;
   }
 
   .ambience-text {
     font-size: 0.86rem;
-  }
-}
-
-/* Standard Phones: 375px – 430px */
-@media (min-width: 375px) and (max-width: 430px) {
-  .card-top-left,
-  .card-top-right,
-  .hosp-col-left,
-  .hosp-col-right,
-  .card-mid-top {
-    height: 175px;
-  }
-
-  .card-split-left,
-  .card-split-right {
-    height: 160px;
-  }
-
-  .hosp-card-title {
-    font-size: 0.96rem;
-  }
-
-  .hosp-card-desc {
-    font-size: 0.8rem;
-    line-height: 1.4;
-  }
-}
-
-/* Large Phones: 431px – 767px */
-@media (min-width: 431px) and (max-width: 767px) {
-  .card-top-left,
-  .card-top-right,
-  .hosp-col-left,
-  .hosp-col-right,
-  .card-mid-top {
-    height: 195px;
-  }
-
-  .card-split-left,
-  .card-split-right {
-    height: 175px;
-  }
-}
-
-/* ──────────────── ACCESSIBILITY & PREFERS REDUCED MOTION ──────────────── */
-@media (prefers-reduced-motion: reduce) {
-  .hosp-card,
-  .hosp-card-img-wrapper img,
-  .hosp-card-overlay,
-  .hosp-card-title,
-  .hosp-card-desc,
-  .hosp-card-badge,
-  .hint-pulse {
-    transition: none !important;
-    transform: none !important;
-    animation: none !important;
-  }
-
-  .hosp-card.is-dimmed {
-    filter: none !important;
-    opacity: 0.7 !important;
   }
 }

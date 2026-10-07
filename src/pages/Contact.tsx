@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, MessageCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { submitContactForm } from '../config/api';
 import './Contact.css';
@@ -25,6 +26,8 @@ const Contact = () => {
     setIsSubmitting(true);
     setErrorMsg('');
 
+    const startTime = Date.now();
+
     const payloadMessage = form.subject
       ? `Subject: ${form.subject}\n\n${form.message}`
       : form.message;
@@ -36,11 +39,16 @@ const Contact = () => {
       message: payloadMessage,
     });
 
+    const elapsed = Date.now() - startTime;
+    if (elapsed < 500) {
+      await new Promise(resolve => setTimeout(resolve, 500 - elapsed));
+    }
+
     setIsSubmitting(false);
 
     if (res.success) {
       setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 5000);
+      setTimeout(() => setSubmitted(false), 6000);
       setForm({ name: '', email: '', phone: '', subject: '', message: '' });
     } else {
       setErrorMsg(res.error || 'Failed to send message. Please try again.');
@@ -166,11 +174,19 @@ const Contact = () => {
                 <em>Reach</em> &amp; Get In Touch<br />With Us!
               </h2>
 
-              {submitted && (
-                <div className="contact-success-msg">
-                  ✓ Message sent! We'll get back to you shortly.
-                </div>
-              )}
+              <AnimatePresence>
+                {submitted && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.98 }}
+                    transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                    className="contact-success-msg"
+                  >
+                    ✓ Message sent! We'll get back to you shortly.
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               {errorMsg && (
                 <div style={{ background: '#fee2e2', color: '#991b1b', padding: '0.8rem 1rem', borderRadius: '8px', fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

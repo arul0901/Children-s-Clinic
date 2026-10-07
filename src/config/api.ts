@@ -1,8 +1,10 @@
+/// <reference types="vite/client" />
+
 /**
  * API Configuration & Helper Functions for PHP Backend integration
  */
 
-const BASE_URL = import.meta.env.VITE_API_URL || '/api';
+const BASE_URL = (import.meta as unknown as { env: Record<string, string> }).env?.VITE_API_URL || '/api';
 
 export const API_ENDPOINTS = {
   appointment: `${BASE_URL}/appointment.php`,
