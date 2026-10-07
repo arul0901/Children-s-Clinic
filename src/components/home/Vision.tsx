@@ -32,13 +32,13 @@ const Vision = () => {
     <section className="section vision-section" ref={sectionRef}>
       <div className="vision-bg">
         <div className="img-placeholder-wrapper">
-           <img src="/vision_bg.jpg" alt="Vision Background" className="vision-bg-img" />
+          <img src="/vision_bg.jpg" alt="Vision Background" className="vision-bg-img" />
         </div>
       </div>
       <div className="container">
         <h2 className="vision-subtitle">Our Vision</h2>
         <div className="vision-statement">
-          To establish <span ref={(el) => { textRefs.current[0] = el; }}>high-end neonatal care</span> and pediatric intensive care with <span ref={(el) => { textRefs.current[1] = el; }}>easy access</span> and <span ref={(el) => { textRefs.current[2] = el; }}>affordable care</span> for <span ref={(el) => { textRefs.current[3] = el; }}>everyone</span>.
+          To establish <span ref={(el) => { textRefs.current[0] = el; }}>high-end Neonatal Intensive Care</span> and pediatric intensive care with <span ref={(el) => { textRefs.current[1] = el; }}>easy access</span> and <span ref={(el) => { textRefs.current[2] = el; }}>affordable care</span> for <span ref={(el) => { textRefs.current[3] = el; }}>everyone</span>.
         </div>
       </div>
     </section>

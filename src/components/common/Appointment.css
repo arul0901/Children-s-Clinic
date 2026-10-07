@@ -20,8 +20,59 @@
   font-size: 1.2rem;
   color: var(--color-navy);
   opacity: 0.8;
+  margin-bottom: 2rem;
 }
 
+/* Appointment Timings Card */
+.appointment-timings-card {
+  background: #ffffff;
+  border: 1px solid rgba(38, 70, 83, 0.12);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-timings-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.app-timing-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.app-timing-row:last-child {
+  border-bottom: none;
+}
+
+.app-timing-days {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.app-timing-badge {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--color-mint-light);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* Form Styles */
 .appointment-form-container {
   background: white;
   padding: 3rem;
@@ -52,31 +103,83 @@
 }
 
 .form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-navy);
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.time-slot-select {
   padding: 0.8rem 1rem;
   border: 1px solid var(--color-mint-dark);
   border-radius: var(--radius-md);
   font-family: inherit;
   font-size: 1rem;
+  color: var(--color-navy);
+  background-color: #f8fafc;
   transition: var(--transition-fast);
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.time-slot-select:focus {
   outline: none;
   border-color: var(--color-primary);
+  background-color: #ffffff;
   box-shadow: 0 0 0 3px rgba(38, 70, 83, 0.1);
+}
+
+.timing-hint-tag {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 0.2rem;
 }
 
 .submit-btn {
   margin-top: 1rem;
   width: 100%;
+}
+
+/* Success state */
+.appointment-success-state {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.app-success-icon {
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+.appointment-success-state h3 {
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.appointment-success-state p {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.app-summary-card {
+  background: #f1f5f9;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.app-summary-card p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: var(--color-navy);
 }
 
 @media (max-width: 968px) {
@@ -100,3 +203,4 @@
   padding-top: 80px;
   min-height: 80vh;
 }
+

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { submitContactForm } from '../config/api';
 import './Contact.css';
 
 const Contact = () => {
@@ -7,6 +8,8 @@ const Contact = () => {
     name: '', email: '', phone: '', subject: '', message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -17,11 +20,31 @@ const Contact = () => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: '', email: '', phone: '', subject: '', message: '' });
+    setIsSubmitting(true);
+    setErrorMsg('');
+
+    const payloadMessage = form.subject
+      ? `Subject: ${form.subject}\n\n${form.message}`
+      : form.message;
+
+    const res = await submitContactForm({
+      name: form.name,
+      email: form.email,
+      phone_no: form.phone,
+      message: payloadMessage,
+    });
+
+    setIsSubmitting(false);
+
+    if (res.success) {
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 5000);
+      setForm({ name: '', email: '', phone: '', subject: '', message: '' });
+    } else {
+      setErrorMsg(res.error || 'Failed to send message. Please try again.');
+    }
   };
 
   return (
@@ -73,8 +96,7 @@ const Contact = () => {
               </div>
               <h3 className="contact-card-title">Call Us On</h3>
               <p className="contact-card-detail">
-                Tel: +91-XXXXX-XXXXX<br />
-                Mob: +91-XXXXX-XXXXX
+                Mob: +91-80566-29061
               </p>
             </div>
 
@@ -103,8 +125,8 @@ const Contact = () => {
               </div>
               <h3 className="contact-card-title">Opening Time</h3>
               <p className="contact-card-detail">
-                Mon – Fri: 9am – 6pm<br />
-                Sunday (Closed)
+                Mon – Sat: 12pm – 4pm &amp; 6:30pm – 8:30pm<br />
+                Sunday: 12pm – 2pm
               </p>
             </div>
           </div>
@@ -147,6 +169,13 @@ const Contact = () => {
               {submitted && (
                 <div className="contact-success-msg">
                   ✓ Message sent! We'll get back to you shortly.
+                </div>
+              )}
+
+              {errorMsg && (
+                <div style={{ background: '#fee2e2', color: '#991b1b', padding: '0.8rem 1rem', borderRadius: '8px', fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <AlertCircle size={18} />
+                  <span>{errorMsg}</span>
                 </div>
               )}
 
@@ -198,8 +227,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
-                <button type="submit" className="contact-submit-btn">
-                  Send Message
+                <button type="submit" className="contact-submit-btn" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <Loader2 size={18} className="animate-spin" /> Sending Message...
+                    </span>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             </div>

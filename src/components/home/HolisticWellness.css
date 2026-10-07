@@ -179,10 +179,10 @@
 }
 
 /* 5th Pill Centered on 3rd Row */
-.holistic-stat-pill:nth-child(5) {
+/* .holistic-stat-pill:nth-child(5) {
   grid-column: 1 / -1;
   justify-self: center;
-}
+} */
 
 .holistic-pill-icon-box {
   width: 28px;
@@ -226,8 +226,8 @@
   justify-content: center;
   align-self: center;
   margin-top: 10px;
-  background: #8b5cf6;
-  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  background: #4F1975;
+  background: linear-gradient(135deg, #4F1975 0%, #4F1975 100%);
   color: #ffffff;
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.05rem;
@@ -241,7 +241,7 @@
 }
 
 .holistic-cta-btn:hover {
-  background: linear-gradient(135deg, #9333ea 0%, #6d28d9 100%);
+  background: linear-gradient(135deg, #32104B 0%, #32104B 100%);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 14px 34px rgba(139, 61, 255, 0.5);
 }

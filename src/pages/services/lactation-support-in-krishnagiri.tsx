@@ -110,10 +110,10 @@ const LactationSupport = () => {
             <div className="sd-reveal" data-reveal>
               <h1 className="sd-heading h1-font">Lactation Support in Krishnagiri for Breastfeeding Mothers</h1>
               <p className="sd-copy sd-text">
-                Breastfeeding can be an important part of newborn care, but every mother and baby may have a different feeding experience. Questions about positioning, attachment, feeding frequency, milk supply, or whether a baby is feeding well are common, particularly during the early weeks.
+                Breastfeeding can be an important part of Expert Newborn Care, but every mother and baby may have a different feeding experience. Questions about positioning, attachment, feeding frequency, milk supply, or whether a baby is feeding well are common, particularly during the early weeks.
               </p>
               <p className="sd-copy sd-text">
-                At <span className='sp-span'>The Children’s Clinic in Krishnagiri</span>, lactation and breastfeeding support is provided as part of child-focused pediatric and newborn care. <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, provides guidance for mothers and families dealing with breastfeeding and infant-feeding concerns.
+                At <span className='sp-span'>The Children’s Clinic in Krishnagiri</span>, lactation and breastfeeding support is provided as part of child-focused pediatric and Expert Newborn Care. <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, provides guidance for mothers and families dealing with breastfeeding and infant-feeding concerns.
               </p>
             </div>
 
@@ -467,7 +467,7 @@ const LactationSupport = () => {
             <div className="ls-clinic-card sd-reveal" data-reveal>
               <h2>Know about Lactation Support in Krishnagiri at The Children's Clinic</h2>
               <p>
-                The Children's Clinic provides lactation and breastfeeding support as part of its focus on newborn and pediatric care in Krishnagiri. The clinic is led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics)</span>, with 9+ years of experience. Her areas of focus include newborn care, neonatal care, lactation support, vaccination, growth and development monitoring and common pediatric concerns.
+                The Children's Clinic provides lactation and breastfeeding support as part of its focus on newborn and pediatric care in Krishnagiri. The clinic is led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics)</span>, with 9+ years of experience. Her areas of focus include Expert Newborn Care, Neonatal Intensive Care, lactation support, vaccination, growth and development monitoring and common pediatric concerns.
               </p>
 
               <div className="ls-clinic-address">
@@ -512,7 +512,7 @@ const LactationSupport = () => {
                   <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>
                   <p className="ls-doctor-creds">MD, DNB (Pediatrics) • 9+ Years of Experience</p>
                   <p className="ls-doctor-bio">
-                    <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), has 9+ years of experience caring for newborns, infants and children.</span> Her areas of focus include lactation support, breastfeeding concerns, newborn care, neonatal care, premature baby care, vaccination, and child growth and development.
+                    <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), has 9+ years of experience caring for newborns, infants and children.</span> Her areas of focus include lactation support, breastfeeding concerns, Expert Newborn Care, Neonatal Intensive Care, premature baby care, vaccination, and child growth and development.
                   </p>
                 </div>
               </div>
@@ -566,7 +566,7 @@ const LactationSupport = () => {
                 Breastfeeding can come with questions, adjustments and concerns, particularly during the early weeks. Getting appropriate guidance can help parents understand their baby's feeding needs and know when further assessment may be useful.
               </p>
               <p className="ls-highlight">
-                At The Children's Clinic in Krishnagiri, lactation and breastfeeding support is provided alongside pediatric and newborn care.
+                At The Children's Clinic in Krishnagiri, lactation and breastfeeding support is provided alongside pediatric and Expert Newborn Care.
               </p>
               <p className="ls-question">
                 Concerned about breastfeeding, feeding or your baby's growth?

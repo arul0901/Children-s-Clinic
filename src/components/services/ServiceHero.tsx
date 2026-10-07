@@ -18,7 +18,7 @@ const ServiceHero = ({ title, subtitle, image }: ServiceHeroProps) => {
           <span className="eyebrow service-hero-eyebrow">
             Specialized Pediatric Care
           </span>
-          <h1 className="serif-heading service-hero-title">{title}</h1>
+          <h2 className="serif-heading service-hero-title">{title}</h2>
           <p className="service-hero-subtitle">{subtitle}</p>
           <div className="service-hero-btn-group">
             <button 

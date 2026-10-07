@@ -12,8 +12,8 @@ import './ServiceSidebar.css';
 
 const FAQS = [
   {
-    question: "Where can I get newborn care in Krishnagiri?",
-    answer: "The Children's Clinic provides newborn care in Krishnagiri, including support for newborn health concerns, premature babies, feeding concerns and jaundice."
+    question: "Where can I get Expert Newborn Care in Krishnagiri?",
+    answer: "The Children's Clinic provides Expert Newborn Care in Krishnagiri, including support for newborn health concerns, premature babies, feeding concerns and jaundice."
   },
   {
     question: "What causes newborn jaundice?",
@@ -36,7 +36,7 @@ const FAQS = [
     answer: "Yes. Premature babies can develop jaundice and may require individualized monitoring depending on their gestational age, bilirubin level and overall health."
   },
   {
-    question: "Can breastfeeding difficulties affect newborn care?",
+    question: "Can breastfeeding difficulties affect Expert Newborn Care?",
     answer: "Feeding concerns can be relevant when assessing a newborn's overall health. If breastfeeding is difficult, parents may benefit from appropriate lactation and pediatric guidance."
   },
   {
@@ -87,10 +87,10 @@ const NewbornCare = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/newborn-banner.jpg" alt="Newborn Care in Krishnagiri" />
+        <img className="sd-hero-bg" src="/newborn-banner.jpg" alt="Expert Newborn Care in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
-            <h2 className="font-plus-jakarta banner-font">Newborn Care &amp; Jaundice Treatment</h2>
+            <h2 className="font-plus-jakarta banner-font">Expert Newborn Care &amp; Jaundice Treatment</h2>
           </div>
         </div>
       </section>
@@ -103,17 +103,17 @@ const NewbornCare = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/newborn1.jpg" alt="Newborn Care and Jaundice Treatment Consultation" />
+              <img src="/newborn1.jpg" alt="Expert Newborn Care and Jaundice Treatment Consultation" />
             </div>
 
             {/* Overview Intro */}
             <div className="sd-reveal" data-reveal>
-              <h1 className='sd-heading'>Newborn Care &amp; Jaundice Treatment in Krishnagiri</h1>
+              <h1 className='sd-heading'>Expert Newborn Care &amp; Jaundice Treatment in Krishnagiri</h1>
               <p className="sd-copy sd-text">
                 Newborn babies go through important changes during the first days and weeks of life. Parents may have questions about feeding, jaundice, sleep, weight, general behaviour and whether something they notice is part of normal newborn adjustment or needs medical attention.
               </p>
               <p className="sd-copy sd-text">
-                <span className='sp-span'>The Children’s Clinic in Krishnagiri provides newborn care with attention to the individual health and developmental needs of babies.</span> The clinic is led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, with a focus that includes newborn care, neonatal care, premature baby care and newborn jaundice management.
+                <span className='sp-span'>The Children’s Clinic in Krishnagiri provides Expert Newborn Care with attention to the individual health and developmental needs of babies.</span> The clinic is led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, with a focus that includes Expert Newborn Care, Neonatal Intensive Care, premature baby care and newborn jaundice management.
               </p>
             </div>
 
@@ -131,23 +131,23 @@ const NewbornCare = () => {
               </div>
             </div>
 
-            {/* ── Section: What Is Newborn Care? ── */}
+            {/* ── Section: What Is Expert Newborn Care? ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              What Is Newborn Care?
+              What Is Expert Newborn Care?
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              <span className="sp-span">Newborn care involves monitoring and supporting a baby's health during the early period after birth, including feeding, growth, general wellbeing and common newborn health concerns.</span>
+              <span className="sp-span">Expert Newborn Care involves monitoring and supporting a baby's health during the early period after birth, including feeding, growth, general wellbeing and common newborn health concerns.</span>
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              The first days of life can involve significant changes as a baby adapts to life outside the womb. Some babies require only routine newborn care, while others may need closer pediatric or neonatal assessment.
+              The first days of life can involve significant changes as a baby adapts to life outside the womb. Some babies require only routine Expert Newborn Care, while others may need closer pediatric or neonatal assessment.
             </p>
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
               <div className="ls-guidance-circle" />
               <h3 className=" ls-guidance-title">
                 <FeedingBottle size={24} color="var(--color-gold)" />
-                Newborn care may involve attention to:
+                Expert Newborn Care may involve attention to:
               </h3>
               <div className="ls-guidance-grid">
                 {[
@@ -174,10 +174,10 @@ const NewbornCare = () => {
               The appropriate level of care depends on the individual baby.
             </p>
 
-            {/* ── Section: Newborn Care in Krishnagiri for the Early Days of Life ── */}
+            {/* ── Section: Expert Newborn Care in Krishnagiri for the Early Days of Life ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              Newborn Care in Krishnagiri for the Early Days of Life
+              Expert Newborn Care in Krishnagiri for the Early Days of Life
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               The early newborn period can be reassuring but also stressful for parents, particularly when they are unsure whether a change in feeding, sleep or appearance is expected.
@@ -187,7 +187,7 @@ const NewbornCare = () => {
             </p>
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
-              <h3 className="ls-guidance-title">At The Children's Clinic, newborn care can include consideration of:</h3>
+              <h3 className="ls-guidance-title">At The Children's Clinic, Expert Newborn Care can include consideration of:</h3>
               <div className="ls-guidance-circle" />
               <div className="ls-guidance-grid">
                 {[
@@ -268,6 +268,7 @@ const NewbornCare = () => {
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               <span className="sp-span">The Children's Clinic provides newborn jaundice care and phototherapy</span> as part of its newborn and pediatric services.
             </p>
+            
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Treatment is not automatically required for every baby with jaundice. The need for treatment depends on the baby's bilirubin level, age and other clinical factors.
             </p>
@@ -283,6 +284,7 @@ const NewbornCare = () => {
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               <span className="sp-span">Phototherapy is a treatment that uses specific light to help reduce bilirubin levels in a newborn when treatment is clinically indicated.</span>
             </p>
+            <p className="sd-copy sd-reveal sd-text">When bilirubin value is beyond phototherapy ranges- a procedure called double volume exchange transfusion is done at NICU.</p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Whether a newborn needs phototherapy depends on the baby's individual assessment.
             </p>
@@ -373,22 +375,23 @@ const NewbornCare = () => {
               </button>
             </div>
 
-            {/* ── Section: Newborn Care for Premature Babies ── */}
+            {/* ── Section: Expert Newborn Care for Premature Babies ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              Newborn Care for Premature Babies
+              Expert Newborn Care for Premature Babies
             </h2>
             <div className="sd-feature">
-              <img src="/newborn2.jpg" alt="Newborn Care and Jaundice Treatment Consultation" />
+              <img src="/newborn2.jpg" alt="Expert Newborn Care and Jaundice Treatment Consultation" />
             </div>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Premature babies may have different healthcare needs from babies born at term.
             </p>
+            <p className="sd-copy sd-reveal sd-text" data-reveal>Management of Extreme preterm with developmental supportive care practices ensures possibility of normal development in a preterm baby. Developmental assessment and follow up ensures we keep track of their growth and development</p>
 
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
               <div className="ls-guidance-circle" />
-              <h3 className="ls-guidance-title"><h3 className="ls-guidance-title">At The Children's Clinic, newborn care can include consideration of:</h3></h3>
+              <h3 className="ls-guidance-title"><h3 className="ls-guidance-title">At The Children's Clinic, Expert Newborn Care can include consideration of:</h3></h3>
               <div className="ls-guidance-grid">
                 {[
                   'Feeding',
@@ -411,7 +414,7 @@ const NewbornCare = () => {
               <span className="sp-span">Premature baby care should be individualized because the health and developmental needs of one premature baby may differ from another.</span>
             </p>
             <p className="sd-copy sd-reveal sd-text sd-note-italic" data-reveal>
-              Parents should discuss concerns about feeding, growth, jaundice or other symptoms with the baby's pediatric or neonatal care team.
+              Parents should discuss concerns about feeding, growth, jaundice or other symptoms with the baby's pediatric or Neonatal Intensive Care team.
             </p>
 
             {/* ── Section: How Is a Newborn Evaluated? ── */}
@@ -551,13 +554,13 @@ const NewbornCare = () => {
                   <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>
                   <p className="ls-doctor-creds">MD, DNB (Pediatrics) • 9+ Years of Experience</p>
                   <p className="ls-doctor-bio">
-                    <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), has 9+ years of experience caring for newborns, infants and children.</span> Her areas of focus include newborn care, neonatal care, premature baby care, lactation support, vaccination and child growth and development.
+                    <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), has 9+ years of experience caring for newborns, infants and children.</span> Her areas of focus include Expert Newborn Care, Neonatal Intensive Care, premature baby care, lactation support, vaccination and child growth and development.
                   </p>
                 </div>
               </div>
 
               <p className="ls-doctor-paragraph">
-                Her approach to newborn care focuses on understanding each baby's individual needs while helping parents understand health concerns that may arise during the early stages of life, including feeding difficulties, jaundice and other newborn conditions requiring medical attention.
+                Her approach to Expert Newborn Care focuses on understanding each baby's individual needs while helping parents understand health concerns that may arise during the early stages of life, including feeding difficulties, jaundice and other newborn conditions requiring medical attention.
               </p>
 
               <blockquote className="sd-quote ls-doctor-quote sp-span">
@@ -574,22 +577,22 @@ const NewbornCare = () => {
               </div>
             </div>
 
-            {/* ── Section: Newborn Care With Pediatric & Neonatal Support ── */}
+            {/* ── Section: Expert Newborn Care With Pediatric & Neonatal Support ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              Newborn Care With Pediatric &amp; Neonatal Support
+              Expert Newborn Care With Pediatric &amp; Neonatal Support
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              <span className="sp-span">Newborn care sometimes overlaps with neonatal services</span> when a baby requires closer observation or additional medical support.
+              <span className="sp-span">Expert Newborn Care sometimes overlaps with neonatal services</span> when a baby requires closer observation or additional medical support.
             </p>
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
               <div className="ls-guidance-circle" />
-              <h3 className="ls-guidance-title"><h3 className="ls-guidance-title">At The Children's Clinic, newborn care can include consideration of:</h3></h3>
+              <h3 className="ls-guidance-title"><h3 className="ls-guidance-title">At The Children's Clinic, Expert Newborn Care can include consideration of:</h3></h3>
               <div className="ls-guidance-grid">
                 {[
-                  'Newborn care',
-                  'Neonatal care',
+                  'Expert Newborn Care',
+                  'Neonatal Intensive Care',
                   'Premature baby care',
                   'Newborn jaundice care',
                   'Phototherapy',
@@ -612,9 +615,9 @@ const NewbornCare = () => {
 
             {/* ── Section: Clinic Info & Address ── */}
             <div className="ls-clinic-card sd-reveal" data-reveal>
-              <h2>Newborn Care &amp; Jaundice Treatment in Krishnagiri</h2>
+              <h2>Expert Newborn Care &amp; Jaundice Treatment in Krishnagiri</h2>
               <p>
-                <span className="sp-span">The Children's Clinic provides newborn care and newborn jaundice management in Krishnagiri,</span> including phototherapy when clinically indicated.
+                <span className="sp-span">The Children's Clinic provides Expert Newborn Care and newborn jaundice management in Krishnagiri,</span> including phototherapy when clinically indicated.
               </p>
               <p>The clinic is led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span></p>
 
@@ -655,10 +658,10 @@ const NewbornCare = () => {
 
             {/* ── Section: Frequently Asked Questions ── */}
             <h2 className="sd-heading sd-faq-title sd-reveal" data-reveal>
-              Frequently Asked Questions About Newborn Care &amp; Jaundice
+              Frequently Asked Questions About Expert Newborn Care &amp; Jaundice
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              Common questions families ask about newborn care and jaundice treatment in Krishnagiri, with clear answers from our care team.
+              Common questions families ask about Expert Newborn Care and jaundice treatment in Krishnagiri, with clear answers from our care team.
             </p>
             <div className="sd-faq">
               {FAQS.map((faq, index) => {
@@ -684,7 +687,7 @@ const NewbornCare = () => {
                 The first days of a baby's life can bring important questions about feeding, jaundice, growth and general health. Understanding what may require routine monitoring and what should be medically assessed can help parents respond appropriately.
               </p>
               <p className="ls-highlight">
-                The Children's Clinic in Krishnagiri provides newborn care, premature baby care and newborn jaundice management, including phototherapy when clinically indicated.
+                The Children's Clinic in Krishnagiri provides Expert Newborn Care, premature baby care and newborn jaundice management, including phototherapy when clinically indicated.
               </p>
               <p className="ls-question">
                 Concerned about your baby's health or jaundice?

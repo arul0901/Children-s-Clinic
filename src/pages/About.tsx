@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   Activity, ArrowRight, ArrowUpRight, Baby, BadgeCheck,
-  ChevronRight, Eye, GraduationCap, Handshake,
+  Eye, GraduationCap, Handshake,
   Heart, HeartPulse, MapPin, Quote,
   Stethoscope, Target, Users,
 } from 'lucide-react';
@@ -22,33 +22,36 @@ const DOCTOR = {
   creds: 'MD, DNB (Pediatrics)',
   tagline: 'Trusted child specialist in Krishnagiri',
   bio: [
-    'Dr. Haseen Fathima, MD, DNB (Pediatrics), is a pediatric doctor with 9+ years of experience in caring for newborns, infants and children. Her areas of focus include newborn and neonatal care, lactation and breastfeeding support, child growth and development monitoring, vaccination and the management of common childhood concerns such as fever, cold and cough.',
-    'Her clinical focus also includes premature baby care, newborn jaundice and phototherapy, seizures or fits in babies and children, neonatal intensive care and newborn ventilator support. At The Children’s Clinic, the emphasis is on understanding each child\'s individual health needs while providing parents with clear and practical guidance throughout their child\'s healthcare journey.',
+    'Dr. Haseen Fathima, MD, DNB (Pediatrics), is a pediatric doctor with 9+ years of experience in caring for newborns, infants and children. Her areas of focus include newborn and Neonatal Intensive Care, lactation and breastfeeding support, child growth and development monitoring, vaccination and the management of common childhood concerns such as fever, cold and cough.',
+    'Her clinical focus also includes expert newborn care, care of preterm and low birth weight babies, POCUS- point of care ultrasound in newborn, management of neonatal jaundice, seizures, breathing difficulties and other neonatal emergency care, premature baby care, newborn jaundice and phototherapy, seizures or fits in babies and children, neonatal intensive care and newborn ventilator support. At The Children’s Clinic, the emphasis is on understanding each child\'s individual health needs while providing parents with clear and practical guidance throughout their child\'s healthcare journey.',
   ],
   messageTitle: 'A Message from Dr. Haseen Fathima',
   quote: 'Every child is unique, and every stage of childhood brings its own healthcare needs. My aim is to provide thoughtful, compassionate care while helping parents understand their child’s health, growth and development with confidence.',
   education: [
-    'MBBS',
-    'MD Pediatrics',
-    'DNB (Pediatrics)',
-    '9+ Years of Pediatric Experience',
+    'MBBS - Govt. Chengalpattu medical College',
+    'MD Pediatrics - Pondicherry Institute of Medical sciences',
+    'DNB',
+    'Senior resident in Neonatology from JIPMER, Puducherry ',
+    'Has under gone many online fellowship programs like Neopocus, Neopearls, Advanced Asthma course.',
   ],
   clinicalExpertise: [
-    'Newborn & neonatal care',
-    'Premature baby care',
+    ' Newborn care',
+    ' Neonatal emergency care',
     'Growth & developmental monitoring',
     'Childhood nutrition & feeding',
+    'Allergy & Asthma',
   ],
   focusAreas: [
     'Lactation & breastfeeding support',
     'Preventive pediatrics & immunisation',
     'Newborn jaundice & phototherapy',
     'Seizures & pediatric health concerns',
+    
   ],
 };
 
 const CLINIC_POINTS = [
-  'Newborn & Neonatal Care',
+  'Newborn & Neonatal Intensive Care',
   'Lactation & Breastfeeding Support',
   'Growth & Development Monitoring',
   'Pediatric & Preventive Care',
@@ -56,14 +59,14 @@ const CLINIC_POINTS = [
 
 const STATS = [
   { icon: Heart, value: 9, suffix: '+', label: 'Years of Experience' },
-  { icon: Baby, value: 15, suffix: '+', label: 'Pediatric & Newborn Care Services' },
+  { icon: Baby, value: 15, suffix: '+', label: 'Pediatric & Expert Newborn Care Services' },
   { icon: Stethoscope, value: 100, suffix: '%', label: 'Personalized Attention' },
   { icon: Users, value: 5, suffix: '+', label: 'Core Pediatric Care Areas' },
 ];
 
 const CREDENTIALS = [
   { icon: GraduationCap, title: '01 — Education & Training', count: 'Academic Qualifications', items: DOCTOR.education },
-  { icon: Stethoscope, title: '02 — Clinical Expertise', count: 'Pediatric & Newborn Care', items: DOCTOR.clinicalExpertise },
+  { icon: Stethoscope, title: '02 — Clinical Expertise', count: 'Pediatric & Expert Newborn Care', items: DOCTOR.clinicalExpertise },
   { icon: HeartPulse, title: '03 — Areas of Focus', count: 'Special Clinical Interests', items: DOCTOR.focusAreas },
 ];
 
@@ -77,6 +80,7 @@ const TABS = [
     items: [
       'To help children grow healthy, happy and confident through thoughtful healthcare.',
       'To support their wellbeing at every stage of childhood.',
+      'To Provide Neonatal and pediatric emergency care at affordable cost',
     ],
   },
   {
@@ -86,7 +90,7 @@ const TABS = [
     emoji: '🎯',
     heading: 'Care That Supports Every Stage',
     items: [
-      'To provide personalized pediatric and newborn care for every child.',
+      'To provide personalized pediatric and Expert Newborn Care for every child.',
       'To guide parents with clarity, compassion and confidence.',
     ],
   },
@@ -119,11 +123,11 @@ const JOURNEY = [
     tags: ['9+ Years', 'Pediatric Expertise'],
   },
   {
-    step: '03 — Newborn Care',
+    step: '03 — Expert Newborn Care',
     icon: Baby,
     title: 'Supporting the First Days of Life',
-    text: 'The focus expands to newborn and neonatal care, including premature baby care and health support during the early stages of life.',
-    tags: ['Newborn Care', 'Neonatal Care'],
+    text: 'The focus expands to newborn and Neonatal Intensive Care, including premature baby care and health support during the early stages of life.',
+    tags: ['Expert Newborn Care', 'Neonatal Intensive Care'],
   },
   {
     step: '04 — Supporting New Mothers',
@@ -143,7 +147,7 @@ const JOURNEY = [
     step: '06 — Dedicated Pediatric Care',
     icon: BadgeCheck,
     title: 'A Continuing Commitment to Children',
-    text: 'Today, The Children’s Clinic brings together pediatric, newborn and neonatal care with a continued focus on thoughtful support for children and their parents.',
+    text: 'Today, The Children’s Clinic brings together pediatric, newborn and Neonatal Intensive Care with a continued focus on thoughtful support for children and their parents.',
     tags: ['Pediatric Care', 'Parent Support'],
   },
 ];
@@ -268,11 +272,7 @@ const About = () => {
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h1>About Us</h1>
-            <nav className="sd-breadcrumb" aria-label="Breadcrumb">
-              <Link to="/">Home</Link>
-              <ChevronRight size={14} />
-              <span>About Us</span>
-            </nav>
+
           </div>
         </div>
       </section>
@@ -285,7 +285,7 @@ const About = () => {
               <div className="abt-doctor__archwrap">
                 <div className="abt-doctor__arch-outline" />
                 <div className="abt-doctor__arch">
-                  <img src="/doctor_portrait.jpg" alt={DOCTOR.name} />
+                  <img src="dr.fathima.png" alt={DOCTOR.name} />
                 </div>
                 <div className="abt-doctor__exp">
                   <span className="abt-doctor__exp-num">9+</span>
@@ -352,12 +352,12 @@ const About = () => {
             <span className="abt-eyebrow">About the clinic</span>
             <h2 className="abt-title">About The Children’s Clinic in Krishnagiri</h2>
             <p>
-              The Children’s Clinic in Krishnagiri provides child-focused pediatric and newborn care under the guidance of <span className="font-happy-monkey"> Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span> The clinic focuses on supporting children through different stages of growth, from newborn care and breastfeeding support to vaccination and common childhood health concerns.
+              The Children’s Clinic in Krishnagiri provides child-focused pediatric and Expert Newborn Care under the guidance of <span className="font-happy-monkey"> Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span> The clinic focuses on supporting children through different stages of growth, from Expert Newborn Care and breastfeeding support to vaccination and common childhood health concerns.
             </p>
             <p>
-              Care also extends to neonatal care, premature baby care, growth and development monitoring, newborn jaundice and phototherapy, seizures or fits, and neonatal intensive care needs. The focus is on understanding each child's needs while providing parents with clear, practical guidance.
+              Care also extends to Neonatal Intensive Care, premature baby care, growth and development monitoring, newborn jaundice and phototherapy, seizures or fits, and neonatal intensive care needs. The focus is on understanding each child's needs while providing parents with clear, practical guidance.
             </p>
-            
+
             <h3 className="abt-focus-title font-happy-monkey">
               What We Focus On
             </h3>
@@ -378,7 +378,7 @@ const About = () => {
       </section>
 
       {/* ── 3) Doctor feature — white panel + arch portrait ── */}
-      
+
 
       {/* ── 4) Vision · Mission · Values ── */}
       <section className="abt-section abt-vmv abt-center">
@@ -472,14 +472,14 @@ const About = () => {
         <div className="container abt-closing__inner abt-center">
           <div className="abt-closing__quote-mark">“</div>
           <p className="abt-closing__text">
-           Be There for Every Milestone, Every Concern and <em>Every Stage of Your Child’s Growing Years</em>
+            Be There for Every Milestone, Every Concern and <em>Every Stage of Your Child’s Growing Years</em>
           </p>
           <p className="abt-closing__note">
-            Get thoughtful pediatric and newborn care from a team focused on your child’s <span className="font-happy-monkey">health, growth and development,</span> with clear guidance for parents along the way.
+            Get thoughtful pediatric and Expert Newborn Care from a team focused on your child’s <span className="font-happy-monkey">health, growth and development,</span> with clear guidance for parents along the way.
           </p>
           <div className="abt-closing__ctas">
             <button className="abt-btn-gold" onClick={() => navigate('/appointment')}>
-               Book a Consultation <ArrowRight size={18} />
+              Book a Consultation <ArrowRight size={18} />
             </button>
             <Link to="/contact" className="abt-btn-ghost abt-btn-ghost--dark">
               Contact the Clinic <ArrowUpRight size={18} />

@@ -111,11 +111,11 @@ export const servicesData: Record<string, ServiceContent> = {
   },
   'neonatal-care': {
     id: 'neonatal-care',
-    title: 'Neonatal Care',
+    title: 'Neonatal Intensive Care',
     subtitle: 'Advanced NICU Support For The Most Delicate Beginnings',
     heroImage: '/service_neonatal_care_1789988898999.jpg',
     overview: {
-      title: 'Understanding Neonatal Care',
+      title: 'Understanding Neonatal Intensive Care',
       paragraphs: [
         "Premature babies and newborns with complex medical conditions require the highest level of specialized attention. Our Level III Neonatal Intensive Care Unit (NICU) provides round-the-clock, life-saving care using advanced medical technology in a gentle, nurturing environment.",
         "We believe parents are an essential part of the healing process. Our multidisciplinary team of neonatologists and specialized nurses work closely with you, providing transparent communication and emotional support during this critical time."
@@ -257,13 +257,13 @@ export const servicesData: Record<string, ServiceContent> = {
   },
   'newborn-care': {
     id: 'newborn-care',
-    title: 'Newborn Care',
+    title: 'Expert Newborn Care',
     subtitle: 'Gentle Support For Your Baby’s Critical First Weeks',
     heroImage: '/doctor_portrait_1789986143658.jpg',
     overview: {
-      title: 'Understanding Newborn Care',
+      title: 'Understanding Expert Newborn Care',
       paragraphs: [
-        "Bringing a new baby home is an overwhelming mix of joy and anxiety. The first few weeks of life are a period of rapid transition for both baby and parents. Our dedicated newborn care program provides gentle, specialized monitoring to ensure a healthy start.",
+        "Bringing a new baby home is an overwhelming mix of joy and anxiety. The first few weeks of life are a period of rapid transition for both baby and parents. Our dedicated Expert Newborn Care program provides gentle, specialized monitoring to ensure a healthy start.",
         "From weight checks and jaundice screening to answering your middle-of-the-night questions about sleep and feeding, we offer comprehensive support designed to build your confidence as a parent."
       ]
     },

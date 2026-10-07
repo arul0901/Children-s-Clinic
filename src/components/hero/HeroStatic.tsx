@@ -94,14 +94,14 @@ const HeroStatic = () => {
 
       {/* Left Content */}
       <div className="hero-split-left">
-        <h1 className="hero-split-title hero-anim">
-          <span className="hero-title-highlight">Trusted Pediatric & Newborn Care</span> in Krishnagiri
-        </h1>
-        <h2 className="hero-split-subtitle hero-anim">
-          Caring for Little Ones at Every Stage
+        <h2 className="hero-split-title hero-anim">
+          <span className="hero-title-highlight">Trusted Pediatric & Expert Newborn Care</span> in Krishnagiri
         </h2>
+        <h3 className="hero-split-subtitle hero-anim">
+          Caring for Little Ones at Every Stage
+        </h3>
         <p className="hero-split-desc hero-anim">
-         From newborn care and lactation support to vaccinations, growth monitoring and childhood illnesses, The Children’s Clinic provides personalized care for your child’s changing healthcare needs.
+          From Newborn Care and lactation support to vaccinations, growth monitoring and childhood illnesses, The Children’s Clinic provides personalized care for your child’s changing healthcare needs.
         </p>
         <div className="hero-split-cta hero-anim">
           <button className="hero-cta-btn" onClick={() => navigate('/appointment')}>
@@ -129,13 +129,13 @@ const HeroStatic = () => {
         <div className="hero-float-card hero-float-card-top">
           <div className="hero-float-card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="24" height="24" rx="6" fill="#4F1975"/>
-              <path d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z" fill="white"/>
+              <rect width="24" height="24" rx="6" fill="#4F1975" />
+              <path d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z" fill="white" />
             </svg>
           </div>
           <div className="hero-float-card-text">
-            <span className="hero-float-card-title">Neonatal Ventilation</span>
-            <span className="hero-float-card-sub">Expertise</span>
+            <span className="hero-float-card-title">Neonatal Emergency</span>
+            <span className="hero-float-card-sub">Available 24/7</span>
           </div>
         </div>
 
@@ -143,8 +143,8 @@ const HeroStatic = () => {
         <div className="hero-float-card hero-float-card-bottom">
           <div className="hero-float-card-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="24" height="24" rx="6" fill="#4F1975"/>
-              <path d="M12 4L14.5 9.5L20 10L16 14L17 20L12 17L7 20L8 14L4 10L9.5 9.5L12 4Z" fill="white"/>
+              <rect width="24" height="24" rx="6" fill="#4F1975" />
+              <path d="M12 4L14.5 9.5L20 10L16 14L17 20L12 17L7 20L8 14L4 10L9.5 9.5L12 4Z" fill="white" />
             </svg>
           </div>
           <div className="hero-float-card-text">

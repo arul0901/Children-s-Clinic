@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Baby, HeartPulse, Syringe, Droplets, Thermometer, Activity, Sun, Zap, Shield, AlertCircle, Wind, TrendingUp, Heart } from 'lucide-react';
@@ -10,26 +9,25 @@ import './Home.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const SPECIALTIES = [
-  { name: 'Newborn Care',                  Icon: Baby,          id: 'newborn-care' },
-  { name: 'Neonatal Care',                 Icon: HeartPulse,    id: 'neonatal-care' },
-  { name: 'Lactation Support',             Icon: Droplets,      id: 'lactation-support' },
-  { name: 'Breastfeeding Support',         Icon: Heart,         id: 'breastfeeding-support' },
-  { name: 'Premature Baby Care',           Icon: Shield,        id: 'premature-baby-care' },
-  { name: 'Growth & Development',          Icon: TrendingUp,    id: 'growth-development' },
-  { name: 'Vaccination',                   Icon: Syringe,       id: 'vaccination' },
-  { name: 'Fever Care',                    Icon: Thermometer,   id: 'fever-care' },
-  { name: 'Cold & Cough Care',             Icon: Wind,          id: 'cold-cough-care' },
-  { name: 'Newborn Jaundice & Phototherapy', Icon: Sun,         id: 'jaundice-phototherapy' },
-  { name: 'Seizures & Fits Care',          Icon: Zap,           id: 'seizures-fits' },
-  { name: 'Neonatal Intensive Care',       Icon: Activity,      id: 'neonatal-icu' },
-  { name: 'Newborn Ventilator Support',    Icon: Wind,          id: 'ventilator-support' },
-  { name: 'Pediatric Intensive Care',      Icon: AlertCircle,   id: 'pediatric-icu' },
-  { name: 'Pediatric Emergency Care',      Icon: AlertCircle,   id: 'pediatric-emergency' },
+  { name: 'Expert Newborn Care', Icon: Baby, id: 'newborn-care' },
+  { name: 'Neonatal Intensive Care', Icon: HeartPulse, id: 'neonatal-care' },
+  { name: 'Lactation Support', Icon: Droplets, id: 'lactation-support' },
+  { name: 'Breastfeeding Support', Icon: Heart, id: 'breastfeeding-support' },
+  { name: 'Premature Baby Care', Icon: Shield, id: 'premature-baby-care' },
+  { name: 'Growth & Development', Icon: TrendingUp, id: 'growth-development' },
+  { name: 'Vaccination', Icon: Syringe, id: 'vaccination' },
+  { name: 'Fever Care', Icon: Thermometer, id: 'fever-care' },
+  { name: 'Cold & Cough Care', Icon: Wind, id: 'cold-cough-care' },
+  { name: 'Newborn Jaundice & Phototherapy', Icon: Sun, id: 'jaundice-phototherapy' },
+  { name: 'Seizures & Fits Care', Icon: Zap, id: 'seizures-fits' },
+  { name: 'Neonatal Intensive Care', Icon: Activity, id: 'neonatal-icu' },
+  { name: 'Newborn Ventilator Support', Icon: Wind, id: 'ventilator-support' },
+  { name: 'Pediatric Intensive Care', Icon: AlertCircle, id: 'pediatric-icu' },
+  { name: 'Pediatric Emergency Care', Icon: AlertCircle, id: 'pediatric-emergency' },
 ];
 
 const Home = () => {
   const pageRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
 
   // GSAP Animations
   useEffect(() => {
@@ -124,7 +122,7 @@ const Home = () => {
       </section>
 
       {/* ─── 3. HOSPITAL INFRASTRUCTURE & FACILITIES ───────────────────────── */}
-      <HospitalInfrastructure onCtaClick={() => navigate('/gallery')} />
+      <HospitalInfrastructure />
 
 
       {/* ─── 4. TRUST / KEY METRICS ───────────────────────── */}
@@ -170,7 +168,7 @@ const Home = () => {
       {/* ─── 7. CARESPLIT (Preserved & Upgraded) ───────────────── */}
       <CareSplit />
 
-      
+
 
       {/* ─── 8. TESTIMONIALS ───────────────────────── */}
       <Testimonials />

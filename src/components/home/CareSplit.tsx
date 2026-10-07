@@ -3,19 +3,19 @@ import FeedingBottle from '../common/FeedingBottle';
 import './CareSplit.css';
 
 const NEONATAL_PILLS = [
-  { title: 'Age-appropriate care',      subtitle: 'Personalised for every child' },
-  { title: 'Individual attention',      subtitle: 'Personalised for every child' },
-  { title: 'Growth-focused support',    subtitle: 'Personalised for every child' },
-  { title: 'Gentle consultations',      subtitle: 'Personalised for every child' },
-  { title: 'Child-specific guidance',   subtitle: 'Personalised for every child' },
+  { title: 'Age-appropriate care', subtitle: 'Personalised for every child' },
+  { title: 'Individual attention', subtitle: 'Personalised for every child' },
+  { title: 'Growth-focused support', subtitle: 'Personalised for every child' },
+  { title: 'Gentle consultations', subtitle: 'Personalised for every child' },
+  { title: 'Child-specific guidance', subtitle: 'Personalised for every child' },
 ];
 
 const PEDIATRIC_PILLS = [
-  { title: 'Clear health advice',       subtitle: 'Supporting confident parents' },
-  { title: 'Feeding guidance',          subtitle: 'Supporting confident parents' },
-  { title: 'Developmental support',     subtitle: 'Supporting confident parents' },
-  { title: 'Vaccination guidance',      subtitle: 'Supporting confident parents' },
-  { title: 'Practical parenting tips',  subtitle: 'Supporting confident parents' },
+  { title: 'Clear health advice', subtitle: 'Supporting confident parents' },
+  { title: 'Feeding guidance', subtitle: 'Supporting confident parents' },
+  { title: 'Developmental support', subtitle: 'Supporting confident parents' },
+  { title: 'Vaccination guidance', subtitle: 'Supporting confident parents' },
+  { title: 'Practical parenting tips', subtitle: 'Supporting confident parents' },
 ];
 
 const CareSplit = () => {
@@ -33,7 +33,7 @@ const CareSplit = () => {
           </p>
         </div>
 
-        {/* ─── Specialty Row 1: Neonatal Care (Image LEFT, Content RIGHT) ─── */}
+        {/* ─── Specialty Row 1: Neonatal Intensive Care (Image LEFT, Content RIGHT) ─── */}
         <div className="specialty-experience-row">
           {/* Left Arch Image with Floating Badge */}
           <div className="specialty-arch-container">

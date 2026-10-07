@@ -1,0 +1,29 @@
+-- SQL Schema for Database: `childrensclinic`
+
+CREATE DATABASE IF NOT EXISTS `childrensclinic` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `childrensclinic`;
+
+-- Table 1: `appointment`
+CREATE TABLE IF NOT EXISTS `appointment` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `parent_name` VARCHAR(255) NOT NULL,
+  `child_name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NULL,
+  `phone_no` VARCHAR(50) NOT NULL,
+  `date` DATE NOT NULL,
+  `time` VARCHAR(100) NOT NULL,
+  `message` TEXT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table 2: `contact`
+CREATE TABLE IF NOT EXISTS `contact` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `phone_no` VARCHAR(50) NULL,
+  `message` TEXT NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

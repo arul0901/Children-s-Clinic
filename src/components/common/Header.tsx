@@ -6,13 +6,12 @@ import './Header.css';
 const NAV = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  { 
-    label: 'Services', 
-    to: '/services',
+  {
+    label: 'Services',
     subItems: [
       { label: 'Lactation Support', to: '/services/lactation-support-in-krishnagiri' },
-      { label: 'Neonatal Care', to: '/services/neonatal-care-in-krishnagiri' },
-      { label: 'Newborn Care', to: '/services/newborn-care-jaundice-krishnagiri' },
+      { label: 'Neonatal Intensive Care', to: '/services/neonatal-care-in-krishnagiri' },
+      { label: 'Expert Newborn Care', to: '/services/newborn-care-jaundice-krishnagiri' },
       { label: 'Growth & Development', to: '/services/child-growth-development-krishnagiri' },
       { label: 'Pediatric Care', to: '/services/pediatric-fever-cold-cough-krishnagiri' },
       { label: 'Vaccination', to: '/services/child-vaccination-krishnagiri' },
@@ -55,14 +54,24 @@ const Header = () => {
           {/* ── Desktop Nav (Home, Services, About, Gallery, Contact) ── */}
           <nav className="nav-links" aria-label="Primary navigation">
             {NAV.map(n => (
-              <div key={n.to} className="nav-item-wrapper">
-                <Link
-                  to={n.to}
-                  className={`nav-link ${location.pathname.startsWith(n.to) && (n.to !== '/' || location.pathname === '/') ? 'active' : ''}`}
-                >
-                  {n.label}
-                  {n.subItems && <ChevronDown size={14} />}
-                </Link>
+              <div key={n.label} className="nav-item-wrapper">
+                {n.to ? (
+                  <Link
+                    to={n.to}
+                    className={`nav-link ${location.pathname.startsWith(n.to) && (n.to !== '/' || location.pathname === '/') ? 'active' : ''}`}
+                  >
+                    {n.label}
+                    {n.subItems && <ChevronDown size={14} />}
+                  </Link>
+                ) : (
+                  <span
+                    className={`nav-link ${location.pathname.startsWith('/services') ? 'active' : ''}`}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {n.label}
+                    {n.subItems && <ChevronDown size={14} />}
+                  </span>
+                )}
 
                 {n.subItems && (
                   <div className="nav-dropdown">
@@ -104,7 +113,7 @@ const Header = () => {
       <div className={`mobile-nav-overlay ${menuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav-links">
           {NAV.map(n => (
-            <div key={n.to} className="mobile-nav-item">
+            <div key={n.label} className="mobile-nav-item">
               {n.subItems ? (
                 <>
                   <button

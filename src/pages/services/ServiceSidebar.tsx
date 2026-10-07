@@ -4,15 +4,15 @@ import './ServiceSidebar.css';
 
 export const SERVICE_LINKS = [
   { id: 'lactation-support-in-krishnagiri', label: 'Lactation Support' },
-  { id: 'neonatal-care-in-krishnagiri', label: 'Neonatal Care' },  
-  { id: 'newborn-care-jaundice-krishnagiri', label: 'Newborn Care' },
+  { id: 'neonatal-care-in-krishnagiri', label: 'Neonatal Intensive Care' },
+  { id: 'newborn-care-jaundice-krishnagiri', label: 'Expert Newborn Care' },
   { id: 'child-growth-development-krishnagiri', label: 'Growth & Development' },
   { id: 'pediatric-fever-cold-cough-krishnagiri', label: 'Pediatric Care' },
   { id: 'child-vaccination-krishnagiri', label: 'Vaccination' },
   { id: 'seizures-fits-babies-children-krishnagiri', label: 'Seizures & Fits Care' },
 ];
 
-const PHONE = '+91 XXXXX XXXXX';
+const PHONE = '+91 80566 29061';
 
 const ServiceSidebar = () => {
   const navigate = useNavigate();

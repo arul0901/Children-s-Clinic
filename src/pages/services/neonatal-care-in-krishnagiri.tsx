@@ -12,12 +12,12 @@ import './ServiceSidebar.css';
 
 const FAQS = [
   {
-    question: "What is neonatal care?",
-    answer: "Neonatal care is medical care for newborn babies who need additional assessment, monitoring or treatment because of their health condition. The level of care depends on factors such as prematurity, symptoms and the baby's overall clinical condition."
+    question: "What is Neonatal Intensive Care?",
+    answer: "Neonatal Intensive Care is medical care for newborn babies who need additional assessment, monitoring or treatment because of their health condition. The level of care depends on factors such as prematurity, symptoms and the baby's overall clinical condition."
   },
   {
-    question: "Where can I get neonatal care in Krishnagiri?",
-    answer: "The Children's Clinic provides newborn and neonatal care in Krishnagiri, including neonatal intensive care and newborn ventilator support as part of its stated areas of care."
+    question: "Where can I get Neonatal Intensive Care in Krishnagiri?",
+    answer: "The Doctor Manages newborn and Neonatal Intensive Care in Krishnagiri, including neonatal intensive care and newborn ventilator support as part of its stated areas of care."
   },
   {
     question: "What is neonatal intensive care?",
@@ -25,14 +25,14 @@ const FAQS = [
   },
   {
     question: "Does The Children's Clinic provide newborn ventilator support?",
-    answer: "Yes. Newborn ventilator support is among the stated neonatal care services at The Children's Clinic. Whether a baby requires ventilator support depends on the baby's clinical condition and medical assessment."
+    answer: "Yes. Newborn ventilator support is among the stated Neonatal Intensive Care services at The Children's Clinic. Whether a baby requires ventilator support depends on the baby's clinical condition and medical assessment."
   },
   {
-    question: "Can premature babies receive neonatal care?",
+    question: "Can premature babies receive Neonatal Intensive Care?",
     answer: "Yes. Premature babies may require additional monitoring and care depending on their gestational age, maturity and health condition."
   },
   {
-    question: "Does neonatal care include newborn jaundice treatment?",
+    question: "Does Neonatal Intensive Care include newborn jaundice treatment?",
     answer: "The Children's Clinic provides newborn jaundice care and phototherapy. Whether phototherapy is appropriate depends on the baby's bilirubin level, age and clinical assessment."
   },
   {
@@ -87,10 +87,10 @@ const NeonatalCare = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/assets/home/neonatal-banner.jpg" alt="Neonatal Care in Krishnagiri" />
+        <img className="sd-hero-bg" src="/assets/home/neonatal-banner.jpg" alt="Neonatal Intensive Care in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
-            <h2 className="font-plus-jakarta banner-font">Neonatal Care &amp; Intensive Care </h2>
+            <h2 className="font-plus-jakarta banner-font">Neonatal Intensive Care &amp; Intensive Care </h2>
           </div>
         </div>
       </section>
@@ -108,18 +108,18 @@ const NeonatalCare = () => {
 
             {/* Overview Intro */}
             <div className="sd-reveal" data-reveal>
-              <h1 className='sd-heading'>Neonatal Care &amp; Intensive Care in Krishnagiri</h1>
+              <h1 className='sd-heading'>Neonatal Intensive Care &amp; Intensive Care in Krishnagiri</h1>
               <p className="sd-copy sd-text">
                 Newborns can sometimes need closer medical observation and specialized care, particularly when they are born prematurely, develop jaundice, have feeding difficulties, experience breathing problems, or show other health concerns soon after birth.
               </p>
               <p className="sd-copy sd-text">
-                <span className='sp-span'>The Children’s Clinic in Krishnagiri provides newborn and neonatal care, including neonatal intensive care and newborn ventilator support when clinically required.</span> The clinic is led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, with a focus on caring for newborns, infants and children.
+                <span className='sp-span'>The Children’s Clinic in Krishnagiri provides newborn and Neonatal Intensive Care, including neonatal intensive care and newborn ventilator support when clinically required.</span> The clinic is led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, with a focus on caring for newborns, infants and children.
               </p>
             </div>
 
             {/* Top Prompt Callout Box */}
             <div className="ls-callout-box sd-reveal" data-reveal>
-              <h3>Concerned about your newborn's health or needing specialized neonatal care?</h3>
+              <h3>Concerned about your newborn's health or needing specialized Neonatal Intensive Care?</h3>
               <p>Discuss your baby's condition with the pediatric team and understand the appropriate next step.</p>
               <div className="ls-actions">
                 <button onClick={() => navigate('/appointment')} className="ls-btn-gold">
@@ -131,13 +131,13 @@ const NeonatalCare = () => {
               </div>
             </div>
 
-            {/* ── Section: What Is Neonatal Care? ── */}
+            {/* ── Section: What Is Neonatal Intensive Care? ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              What Is Neonatal Care?
+              What Is Neonatal Intensive Care?
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              <span className="sp-span">Neonatal care is medical care provided to newborn babies who need additional observation, assessment or treatment because of their health condition after birth.</span> The level of care required depends on the baby's age, gestational maturity, symptoms and overall clinical condition.
+              <span className="sp-span">Neonatal Intensive Care is medical care provided to newborn babies who need additional observation, assessment or treatment because of their health condition after birth.</span> The level of care required depends on the baby's age, gestational maturity, symptoms and overall clinical condition.
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Some newborns transition to life outside the womb without significant difficulty, while others may need closer monitoring or medical support.
@@ -148,7 +148,7 @@ const NeonatalCare = () => {
               <div className="ls-guidance-circle" />
               <h3 className="font-happy-monkey ls-guidance-title">
                 <FeedingBottle size={24} color="var(--color-gold)" />
-                Neonatal care may be relevant for babies with concerns involving:
+                Neonatal Intensive Care may be relevant for babies with concerns involving:
               </h3>
 
               <div className="ls-guidance-grid">
@@ -174,16 +174,16 @@ const NeonatalCare = () => {
               The appropriate care depends on the individual baby's condition.
             </p>
 
-            {/* ── Section: Neonatal Care for Newborn Health Concerns ── */}
+            {/* ── Section: Neonatal Intensive Care for Newborn Health Concerns ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              Neonatal Care in Krishnagiri for Newborn Health Concerns
+              Neonatal Intensive Care in Krishnagiri for Newborn Health Concerns
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Parents may feel uncertain when a newborn requires more medical attention than expected after birth. Understanding why additional care is needed can make the situation easier to navigate.
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              <span className="sp-span">At The Children's Clinic, </span>neonatal care is approached as part of the baby's overall health and development rather than focusing on a single symptom.
+              <span className="sp-span">At The Children's Clinic, </span>Neonatal Intensive Care is approached as part of the baby's overall health and development rather than focusing on a single symptom.
             </p>
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
@@ -219,7 +219,7 @@ const NeonatalCare = () => {
               When Does a Newborn Need Specialized Care?
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              <span className="sp-span">A newborn may require closer medical care when there are concerns about breathing, feeding, jaundice, neurological symptoms, prematurity or the baby's general condition.</span> The need for specialized neonatal care cannot be determined from one symptom alone and should be assessed by a qualified healthcare professional.
+              <span className="sp-span">A newborn may require closer medical care when there are concerns about breathing, feeding, jaundice, neurological symptoms, prematurity or the baby's general condition.</span> The need for specialized Neonatal Intensive Care cannot be determined from one symptom alone and should be assessed by a qualified healthcare professional.
             </p>
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
@@ -260,7 +260,7 @@ const NeonatalCare = () => {
               The need for intensive care varies between babies. Some newborns may require closer monitoring for a limited period, while others may need specific medical support depending on their condition.
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              At The Children's Clinic, neonatal intensive care is one of the stated areas of newborn care, including<span className="sp-span"> newborn ventilator support</span> when clinically indicated. The exact level and duration of care depend on the baby's medical condition and response to treatment.
+              At The Children's Clinic, neonatal intensive care is one of the stated areas of Expert Newborn Care, including<span className="sp-span"> CPAP, HFNC and ventilator support</span> when clinically indicated. The exact level and duration of care depend on the baby's medical condition and response to treatment.
             </p>
 
             {/* ── Section: Newborn Ventilator Support ── */}
@@ -347,13 +347,13 @@ const NeonatalCare = () => {
               <span className="sp-span">Premature baby care should be individualized because the needs of one premature baby can differ considerably from another.</span>
             </p>
             <p className="sd-copy sd-reveal sd-text sd-note-italic" data-reveal>
-              Parents should discuss concerns about feeding, breathing, growth or general health with the baby's pediatric or neonatal care team.
+              Parents should discuss concerns about feeding, breathing, growth or general health with the baby's pediatric or Neonatal Intensive Care team.
             </p>
 
-            {/* ── Section: Newborn Jaundice and Neonatal Care ── */}
+            {/* ── Section: Newborn Jaundice and Neonatal Intensive Care ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              Newborn Jaundice and Neonatal Care
+              Newborn Jaundice and Neonatal Intensive Care
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Jaundice can occur in newborn babies and causes yellowing of the skin or eyes because of increased bilirubin levels.
@@ -361,7 +361,7 @@ const NeonatalCare = () => {
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Many newborns develop jaundice during the early days of life, but the baby's age, clinical condition and bilirubin level are important when deciding whether assessment or treatment is required.
             </p>
-            <p className="sd-copy sd-reveal sd-text" data-reveal>At The Children's Clinic, <span className="sp-span">newborn jaundice and phototherapy</span> are among the areas of newborn care provided.</p>
+            <p className="sd-copy sd-reveal sd-text" data-reveal>At The Children's Clinic, <span className="sp-span">newborn jaundice and phototherapy</span> are among the areas of Expert Newborn Care provided.</p>
             <p className="sd-copy sd-reveal sd-text sd-text-bold-primary" data-reveal>
               When Can Phototherapy Be Used?
             </p>
@@ -372,10 +372,10 @@ const NeonatalCare = () => {
               Parents should not rely on the visible degree of yellowing alone to determine whether treatment is needed.
             </p>
 
-            {/* ── Section: Newborn Feeding and Neonatal Care ── */}
+            {/* ── Section: Newborn Feeding and Neonatal Intensive Care ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              Newborn Feeding and Neonatal Care
+              Newborn Feeding and Neonatal Intensive Care
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Feeding is an important part of newborn wellbeing.
@@ -383,7 +383,7 @@ const NeonatalCare = () => {
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Some babies may experience difficulty feeding because of prematurity, illness or other individual factors. A baby who is struggling to feed may require assessment of both feeding and overall health.</p>
             <p className="sd-copy sd-reveal sd-text sd-text-bold-primary" data-reveal>
-              Neonatal care may therefore overlap with:
+              Neonatal Intensive Care may therefore overlap with:
             </p>
             <ul className="sd-points sd-reveal" data-reveal>
               {[
@@ -403,19 +403,19 @@ const NeonatalCare = () => {
               Parents can discuss feeding concerns with the pediatric team to understand whether additional lactation guidance or medical assessment may be appropriate.
             </p>
 
-            {/* ── Section: Is It Neonatal Care or Routine Newborn Care? ── */}
+            {/* ── Section: Is It Neonatal Intensive Care or Routine Expert Newborn Care? ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              Is It Neonatal Care or Routine Newborn Care?
+              Is It Neonatal Intensive Care or Routine Expert Newborn Care?
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               This is an important distinction for parents.
             </p>
             <div className="ls-cards-grid">
               {[
-                { title: 'Routine Newborn Care', desc: 'A healthy newborn may require routine monitoring, feeding support, vaccination and assessment of normal growth and development.' },
-                { title: 'Additional Neonatal Care', desc: 'A newborn may require additional medical observation or treatment when there are concerns such as prematurity, jaundice, breathing difficulties, feeding problems or other health issues.' },
-                { title: 'Intensive Neonatal Care', desc: 'A baby whose condition requires a higher level of monitoring or medical support may need neonatal intensive care.' },
+                { title: 'Routine Expert Newborn Care', desc: 'A healthy newborn may require routine monitoring, feeding support, vaccination and assessment of normal growth and development.' },
+                { title: 'Additional Neonatal Intensive Care', desc: 'A newborn may require additional medical observation or treatment when there are concerns such as prematurity, jaundice, breathing difficulties, feeding problems or other health issues.' },
+                { title: 'Intensive Neonatal Intensive Care', desc: 'A baby whose condition requires a higher level of monitoring or medical support may need neonatal intensive care.' },
               ].map((card) => (
                 <article key={card.title} className="ls-concern-card sd-reveal" data-reveal>
                   <h3>{card.title}</h3>
@@ -495,24 +495,24 @@ const NeonatalCare = () => {
               </p>
             </div>
 
-            {/* ── Section: Neonatal Care With Pediatric Expertise ── */}
+            {/* ── Section: Neonatal Intensive Care With Pediatric Expertise ── */}
             <h2 className="sd-heading sd-reveal" data-reveal>
               <span className="sd-mark" />
-              Neonatal Care With Pediatric Expertise
+              Neonatal Intensive Care With Pediatric Expertise
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              Newborn care requires an understanding of how rapidly a baby's health can change during the early period of life.
+              Expert Newborn Care requires an understanding of how rapidly a baby's health can change during the early period of life.
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              <span className="sp-span">At The Children's Clinic,</span> neonatal care forms part of a broader pediatric approach led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span> The clinic's stated newborn and pediatric focus includes:
+              <span className="sp-span">At The Children's Clinic,</span> Neonatal Intensive Care forms part of a broader pediatric approach led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span> The clinic's stated newborn and pediatric focus includes:
             </p>
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
               <div className="ls-guidance-circle" />
               <div className="ls-guidance-grid">
                 {[
-                  'Newborn care',
-                  'Neonatal care',
+                  'Expert Newborn Care',
+                  'Neonatal Intensive Care',
                   'Premature baby care',
                   'Lactation support',
                   'Newborn jaundice and phototherapy',
@@ -538,9 +538,9 @@ const NeonatalCare = () => {
               </button>
             </div>
 
-            {/* ── Section: Not Sure What Level of Newborn Care Your Baby Needs? (CTA Banner) ── */}
+            {/* ── Section: Not Sure What Level of Expert Newborn Care Your Baby Needs? (CTA Banner) ── */}
             <div className="ls-cta-banner sd-reveal" data-reveal>
-              <h3>Not Sure What Level of Newborn Care Your Baby Needs?</h3>
+              <h3>Not Sure What Level of Expert Newborn Care Your Baby Needs?</h3>
               <p>
                 It is common for parents to be unsure whether a concern requires routine pediatric attention, neonatal monitoring or more intensive care. <strong>The important consideration is the baby's clinical condition, not simply the name of the symptom.</strong>
               </p>
@@ -569,9 +569,9 @@ const NeonatalCare = () => {
 
             {/* ── Section: Clinic Info & Address ── */}
             <div className="ls-clinic-card sd-reveal" data-reveal>
-              <h2>Neonatal Care in Krishnagiri at The Children's Clinic</h2>
+              <h2>Neonatal Intensive Care in Krishnagiri at The Children's Clinic</h2>
               <p>
-                <span className="sp-span">The Children's Clinic</span> provides newborn and neonatal care in Krishnagiri, with services addressing newborn health concerns ranging from premature baby care and jaundice management to neonatal intensive care and newborn ventilator support.
+                <span className="sp-span">The Children's Clinic</span> provides newborn and Neonatal Intensive Care in Krishnagiri, with services addressing newborn health concerns ranging from premature baby care and jaundice management to neonatal intensive care and newborn ventilator support.
               </p>
               <p> The clinic is led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span></p>
 
@@ -618,7 +618,7 @@ const NeonatalCare = () => {
                   <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>
                   <p className="ls-doctor-creds">MD, DNB (Pediatrics) • 9+ Years of Experience</p>
                   <p className="ls-doctor-bio">
-                    <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), has 9+ years of experience caring for newborns, infants and children.</span> Her areas of focus include newborn care, neonatal care, premature baby care, lactation support, newborn jaundice and phototherapy, seizures or fits, neonatal intensive care and newborn ventilator support.
+                    <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), has 9+ years of experience caring for newborns, infants and children.</span> Her areas of focus include Expert Newborn Care, Neonatal Intensive Care, premature baby care, lactation support, newborn jaundice and phototherapy, seizures or fits, neonatal intensive care and newborn ventilator support.
                   </p>
                 </div>
               </div>
@@ -639,10 +639,10 @@ const NeonatalCare = () => {
 
             {/* ── Section: Frequently Asked Questions ── */}
             <h2 className="sd-heading sd-faq-title sd-reveal" data-reveal>
-              Frequently Asked Questions About Neonatal Care
+              Frequently Asked Questions About Neonatal Intensive Care
             </h2>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              Common questions families ask about newborn and neonatal care in Krishnagiri, with clear answers from our care team.
+              Common questions families ask about newborn and Neonatal Intensive Care in Krishnagiri, with clear answers from our care team.
             </p>
             <div className="sd-faq">
               {FAQS.map((faq, index) => {
@@ -668,7 +668,7 @@ const NeonatalCare = () => {
                 The first days and weeks of life can bring important health questions for parents. When a newborn needs additional monitoring or treatment, understanding the reason for that care can help families make informed decisions and follow appropriate medical guidance.
               </p>
               <p className="ls-highlight">
-                The Children's Clinic in Krishnagiri provides newborn and neonatal care, including premature baby care, newborn jaundice and phototherapy, neonatal intensive care and newborn ventilator support.
+                The Children's Clinic in Krishnagiri provides newborn and Neonatal Intensive Care, including premature baby care, newborn jaundice and phototherapy, neonatal intensive care and newborn ventilator support.
               </p>
               <p className="ls-question">
                 Concerned about your newborn's health?

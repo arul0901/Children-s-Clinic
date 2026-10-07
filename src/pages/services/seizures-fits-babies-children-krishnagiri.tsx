@@ -589,7 +589,7 @@ const SeizuresFits = () => {
                                     <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>
                                     <p className="ls-doctor-creds">MD, DNB (Pediatrics) • 9+ Years of Experience</p>
                                     <p className="ls-doctor-bio">
-                                        <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), has 9+ years of experience caring for newborns, infants and children.</span> Her areas of focus include seizures and fits in babies and children, newborn and neonatal care, vaccination, lactation support, child growth and development, and common pediatric concerns.
+                                        <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), has 9+ years of experience caring for newborns, infants and children.</span> Her areas of focus include seizures and fits in babies and children, newborn and Neonatal Intensive Care, vaccination, lactation support, child growth and development, and common pediatric concerns.
                                     </p>
                                 </div>
                             </div>

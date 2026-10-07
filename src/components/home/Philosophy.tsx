@@ -12,9 +12,9 @@ const Philosophy = () => {
       gsap.fromTo(textRef.current,
         { opacity: 0, y: 50 },
         {
-          opacity: 1, 
-          y: 0, 
-          duration: 1.2, 
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -22,13 +22,13 @@ const Philosophy = () => {
           }
         }
       );
-      
+
       gsap.fromTo(descRef.current,
         { opacity: 0, y: 30 },
         {
-          opacity: 1, 
-          y: 0, 
-          duration: 1, 
+          opacity: 1,
+          y: 0,
+          duration: 1,
           delay: 0.3,
           ease: 'power3.out',
           scrollTrigger: {
@@ -38,7 +38,7 @@ const Philosophy = () => {
         }
       );
     }, sectionRef);
-    
+
     return () => ctx.revert();
   }, []);
 
@@ -49,7 +49,7 @@ const Philosophy = () => {
           Because the smallest patients deserve the highest level of care.
         </h2>
         <p ref={descRef} className="philosophy-desc">
-          A comprehensive clinic aimed at addressing lactational support, expert newborn care, vaccination, management of common childhood illness, and neonatal and pediatric emergency care.
+          A comprehensive clinic aimed at addressing lactational support, expert Expert Newborn Care, vaccination, management of common childhood illness, and neonatal and pediatric emergency care.
         </p>
       </div>
     </section>

@@ -37,7 +37,7 @@ const BookAppointmentCTA = () => {
 
         {/* Description */}
         <p className="creative-cta-desc font-dm-sans">
-          From newborn and neonatal care to <span className="font-happy-monkey cta-purple-accent">vaccinations</span>, <span className="font-happy-monkey cta-purple-accent">growth monitoring</span>, <span className="font-happy-monkey cta-purple-accent">common childhood illnesses</span> and <span className="font-happy-monkey cta-purple-accent">ongoing pediatric support</span>, The Children’s Clinic is here to guide parents through every stage of their child’s healthcare journey.
+          From newborn and Neonatal Intensive Care to <span className="font-happy-monkey cta-purple-accent">vaccinations</span>, <span className="font-happy-monkey cta-purple-accent">growth monitoring</span>, <span className="font-happy-monkey cta-purple-accent">common childhood illnesses</span> and <span className="font-happy-monkey cta-purple-accent">ongoing pediatric support</span>, The Children’s Clinic is here to guide parents through every stage of their child’s healthcare journey.
         </p>
 
         {/* Button Wrapper */}

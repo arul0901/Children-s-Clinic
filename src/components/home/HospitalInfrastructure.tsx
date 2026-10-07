@@ -582,11 +582,11 @@ export interface HeroCard {
 export interface HospitalHeroProps {
   navLinks?: { label: string; active?: boolean }[];
   cards?: HeroCard[];
-  onCtaClick?: () => void;
+  onCtaClick?: (route?: string) => void;
 }
 
 const DEFAULT_NAV = [
-  { label: "Newborn & Neonatal Care" },
+  { label: "Neonatal Intensive Care" },
   { label: "Pediatric Care" },
   { label: "Lactation & Infant Care" },
 ];
@@ -599,13 +599,13 @@ const DEFAULT_CARDS: HeroCard[] = [
     image: infra1,
     alt: "Specialised Care for Newborns From the Very Beginning",
     headline: "Specialised Care for Newborns From the Very Beginning",
-    body: "Comprehensive newborn and neonatal support, including premature baby care, newborn jaundice, phototherapy and intensive care needs when medically required.",
+    body: "Comprehensive newborn and neonatal support, including management of preterm babies,low birth Babies,Newborn jaundice & Phototherapy and intensive care needs when medically required.",
     bullets: [
       "Newborn & Premature Baby Care",
       "Newborn Jaundice & Phototherapy",
       "Neonatal Intensive & Ventilator Support",
     ],
-    ctaLabel: "Explore Newborn Care Services",
+    ctaLabel: "Explore Expert Newborn Care Services",
     ctaRoute: "/services/neonatal-care-in-krishnagiri",
   },
   {
@@ -623,7 +623,7 @@ const DEFAULT_CARDS: HeroCard[] = [
     ],
     ctaLabel: "Explore Pediatric Care",
     ctaRoute: "/services/child-growth-development-krishnagiri",
-  },  
+  },
   {
     id: "lactation",
     index: "03",
@@ -712,7 +712,7 @@ export default function HospitalInfrastructure({
             ))}
           </ul>
 
-          <button type="button" className="hh-cta" onClick={() => onCtaClick ? onCtaClick() : navigate(cards[active].ctaRoute)}>
+          <button type="button" className="hh-cta" onClick={() => onCtaClick ? onCtaClick(cards[active].ctaRoute) : navigate(cards[active].ctaRoute)}>
             <span>{cards[active].ctaLabel}</span>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path

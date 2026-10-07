@@ -8,38 +8,38 @@ export default function HolisticWellness() {
   return (
     <section className="holistic-wellness-section">
       <div className="holistic-wellness-container">
-        
+
         {/* ── Left Side: 2x2 Asymmetric Media Collage ── */}
         <div className="holistic-media-grid">
           {/* Card 1: Top Left with Lime Arch */}
           <div className="holistic-img-card holistic-card-top-left">
-            <img 
-              src="/hero_image.jpg" 
-              alt="Child resting comfortably in clinic bed" 
+            <img
+              src="/hero_image.jpg"
+              alt="Child resting comfortably in clinic bed"
             />
           </div>
 
           {/* Card 2: Top Right (Doctor High Five) */}
           <div className="holistic-img-card holistic-card-top-right">
-            <img 
-              src="/pediatric_bg.jpg" 
-              alt="Doctor giving high five to young patient" 
+            <img
+              src="/pediatric_bg.jpg"
+              alt="Doctor giving high five to young patient"
             />
           </div>
 
           {/* Card 3: Bottom Left (Doctor smiling at child) */}
           <div className="holistic-img-card holistic-card-bottom-left">
-            <img 
-              src="/service_editorial_1_1789990863800.jpg" 
-              alt="Female pediatrician examining happy young girl" 
+            <img
+              src="/service_editorial_1_1789990863800.jpg"
+              alt="Female pediatrician examining happy young girl"
             />
           </div>
 
           {/* Card 4: Bottom Right (B&W Newborn Swaddled with Purple Arch) */}
           <div className="holistic-img-card holistic-card-bottom-right">
-            <img 
-              src="/service_neonatal_care_1789988898999.jpg" 
-              alt="Swaddled newborn baby sleeping peacefully" 
+            <img
+              src="/service_neonatal_care_1789988898999.jpg"
+              alt="Swaddled newborn baby sleeping peacefully"
             />
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function HolisticWellness() {
           </h1>
 
           <p className="holistic-desc-paragraph">
-           <strong>The Children’s Clinic is dedicated to providing thoughtful, child-focused healthcare for newborns, infants and growing children.</strong>Led by <strong>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</strong>, the clinic focuses on newborn care, neonatal support, lactation, vaccination, growth monitoring and common childhood health concerns.
+            <strong>The Children’s Clinic is dedicated to providing thoughtful, child-focused healthcare for newborns, infants and growing children.</strong>Led by <strong>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</strong>, the clinic focuses on newborn &amp;  neonatal   care, lactation support, vaccination, growth monitoring and common childhood health concerns.
           </p>
 
           <p className="holistic-desc-paragraph">
@@ -61,11 +61,12 @@ export default function HolisticWellness() {
           {/* 5 Outlined Stat Pills (Row 1: 1, 2 | Row 2: 3, 4 | Row 3: 5 centered) */}
           <div className="holistic-pills-grid">
             {[
-              { id: 1, title: 'Newborn & Neonatal Care' },
-              { id: 2, title: 'Lactation & Breastfeeding Support' },
-              { id: 3, title: 'Growth & Development Monitoring' },
-              { id: 4, title: 'Vaccination & Immunization' },
-              { id: 5, title: 'Complete Pediatric Care' },
+              { id: 1, title: 'Expert Newborn Care' },
+              { id: 2, title: 'Neonatal Intensive Care' },
+              { id: 3, title: 'Lactation & Breastfeeding Support' },
+              { id: 4, title: 'Growth & Development Monitoring' },
+              { id: 5, title: 'Vaccination' },
+              { id: 6, title: 'Complete Pediatric Care' },
             ].map((pill) => (
               <div key={pill.id} className="holistic-stat-pill">
                 <div className="holistic-pill-icon-box">
@@ -79,9 +80,9 @@ export default function HolisticWellness() {
           </div>
 
           {/* CTA Button */}
-          <button 
-            type="button" 
-            className="holistic-cta-btn" 
+          <button
+            type="button"
+            className="holistic-cta-btn"
             onClick={() => navigate('/about')}
           >
             Meet Our Pediatrician
