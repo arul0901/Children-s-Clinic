@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, MessageCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock,  AlertCircle, Loader2 } from 'lucide-react';
 import { submitContactForm } from '../config/api';
 import './Contact.css';
 
