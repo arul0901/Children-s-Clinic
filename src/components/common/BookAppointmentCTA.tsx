@@ -27,7 +27,7 @@ const BookAppointmentCTA = () => {
           <span className="font-happy-monkey cta-purple-accent">Medical Support</span>{' '}
           <span className="font-plus-jakarta">They Need</span>{' '}
           <span className="cta-inline-avatars">
-            <img src="/doctor_portrait.jpg" alt="Doctor" className="avatar-img-1" />
+            <img src="/dr.fathima.png" alt="Doctor" className="avatar-img-1" />
             <img src="/phototherapy_treatment_1789989308209.jpg" alt="Care Specialist" className="avatar-img-2" />
             <img src="/service_neonatal_care_1789988898999.jpg" alt="Medical Team" className="avatar-img-3" />
           </span>{' '}

@@ -51,7 +51,7 @@ export default function HolisticWellness() {
           </h1>
 
           <p className="holistic-desc-paragraph">
-            <strong>The Children’s Clinic is dedicated to providing thoughtful, child-focused healthcare for newborns, infants and growing children.</strong>Led by <strong>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</strong>, the clinic focuses on newborn &amp;  neonatal   care, lactation support, vaccination, growth monitoring and common childhood health concerns.
+            <span className="sp-span">The Children’s Clinic is dedicated to providing thoughtful, child-focused healthcare for newborns and Neonatal Intensive care, infants and growing children.</span> Led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, the clinic focuses on newborn &amp;  neonatal   care, lactation support, vaccination, growth monitoring and common childhood health concerns.
           </p>
 
           <p className="holistic-desc-paragraph">

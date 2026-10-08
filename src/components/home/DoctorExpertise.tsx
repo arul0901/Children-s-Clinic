@@ -35,10 +35,10 @@ const DoctorExpertise = () => {
 
       itemsRef.current.forEach((item) => {
         if (item) {
-          gsap.fromTo(item, 
-            { opacity: 0, x: -30 }, 
-            { 
-              opacity: 1, x: 0, duration: 0.8, 
+          gsap.fromTo(item,
+            { opacity: 0, x: -30 },
+            {
+              opacity: 1, x: 0, duration: 0.8,
               scrollTrigger: {
                 trigger: item,
                 start: "top 80%"
@@ -60,7 +60,7 @@ const DoctorExpertise = () => {
           <h2 className="expertise-title">Specialist care backed by advanced neonatal expertise.</h2>
           <div className="doctor-profile">
             <div className="img-placeholder-wrapper doctor-profile-img-wrap">
-               <img src="/doctor_portrait.jpg" alt="Doctor Portrait" />
+              <img src="/dr.fathima.png" alt="Doctor Portrait" />
             </div>
           </div>
         </div>
@@ -68,9 +68,9 @@ const DoctorExpertise = () => {
         <div className="expertise-timeline">
           <div className="timeline-line" ref={lineRef}></div>
           {timelineData.map((item, index) => (
-            <div 
-              className="timeline-item" 
-              key={index} 
+            <div
+              className="timeline-item"
+              key={index}
               ref={(el) => { itemsRef.current[index] = el; }}
             >
               <div className="timeline-dot"></div>

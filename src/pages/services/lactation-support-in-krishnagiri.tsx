@@ -506,7 +506,7 @@ const LactationSupport = () => {
             <div className="ls-doctor-card sd-reveal" data-reveal>
               <div className="ls-doctor-profile">
                 <div className="ls-doctor-img-wrap">
-                  <img src="/doctor_portrait.jpg" alt="Dr. Haseen Fathima" />
+                  <img src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
                 </div>
                 <div className="ls-doctor-info">
                   <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>

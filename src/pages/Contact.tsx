@@ -149,20 +149,10 @@ const Contact = () => {
             {/* Left – Doctor image + Chat card */}
             <div className="contact-form-image-col">
               <img
-                src="/contact-doctor.jpg"
+                src="/dr.fathima.png"
                 alt="Dr. Haseen Fathima"
                 className="contact-person-img"
               />
-              <div className="contact-chat-card">
-                <div className="contact-chat-icon">
-                  <MessageCircle size={20} color="#fff" />
-                </div>
-                <h4>Chat With Live!</h4>
-                <p>
-                  Have a quick question? Chat directly with our medical team for instant support.
-                </p>
-                <button className="contact-chat-btn">Let's Chat</button>
-              </div>
             </div>
 
             {/* Right – Form */}

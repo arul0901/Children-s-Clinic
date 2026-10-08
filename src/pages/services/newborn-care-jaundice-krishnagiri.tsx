@@ -268,7 +268,7 @@ const NewbornCare = () => {
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               <span className="sp-span">The Children's Clinic provides newborn jaundice care and phototherapy</span> as part of its newborn and pediatric services.
             </p>
-            
+
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Treatment is not automatically required for every baby with jaundice. The need for treatment depends on the baby's bilirubin level, age and other clinical factors.
             </p>
@@ -548,7 +548,7 @@ const NewbornCare = () => {
             <div className="ls-doctor-card sd-reveal" data-reveal>
               <div className="ls-doctor-profile">
                 <div className="ls-doctor-img-wrap">
-                  <img src="/doctor_portrait.jpg" alt="Dr. Haseen Fathima" />
+                  <img src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
                 </div>
                 <div className="ls-doctor-info">
                   <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>

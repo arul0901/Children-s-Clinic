@@ -23,14 +23,14 @@ const DOCTOR = {
   tagline: 'Trusted child specialist in Krishnagiri',
   bio: [
     'Dr. Haseen Fathima, MD, DNB (Pediatrics), is a pediatric doctor with 9+ years of experience in caring for newborns, infants and children. Her areas of focus include newborn and Neonatal Intensive Care, lactation and breastfeeding support, child growth and development monitoring, vaccination and the management of common childhood concerns such as fever, cold and cough.',
-    'Her clinical focus also includes expert newborn care, care of preterm and low birth weight babies, POCUS- point of care ultrasound in newborn, management of neonatal jaundice, seizures, breathing difficulties and other neonatal emergency care, premature baby care, newborn jaundice and phototherapy, seizures or fits in babies and children, neonatal intensive care and newborn ventilator support. At The Children’s Clinic, the emphasis is on understanding each child\'s individual health needs while providing parents with clear and practical guidance throughout their child\'s healthcare journey.',
+    'Her clinical focus also includes expert newborn care, care of preterm and low birth weight babies, POCUS- point of care ultrasound in newborn, management of neonatal jaundice, seizures, breathing difficulties and other neonatal emergency care. At The Children’s Clinic, the emphasis is on understanding each child\'s individual health needs while providing parents with clear and practical guidance throughout their child\'s healthcare journey.',
   ],
   messageTitle: 'A Message from Dr. Haseen Fathima',
   quote: 'Every child is unique, and every stage of childhood brings its own healthcare needs. My aim is to provide thoughtful, compassionate care while helping parents understand their child’s health, growth and development with confidence.',
   education: [
     'MBBS - Govt. Chengalpattu medical College',
     'MD Pediatrics - Pondicherry Institute of Medical sciences',
-    'DNB',
+    'DNB - National Board ',
     'Senior resident in Neonatology from JIPMER, Puducherry ',
     'Has under gone many online fellowship programs like Neopocus, Neopearls, Advanced Asthma course.',
   ],
@@ -46,6 +46,10 @@ const DOCTOR = {
     'Preventive pediatrics & immunisation',
     'Newborn jaundice & phototherapy',
     'Seizures & pediatric health concerns',
+    'Neonatal Sepsis',
+    'Neonatal Emergencies',
+    'Developmental assessment',
+    'Follow up of preterm and sick babies',
     
   ],
 };

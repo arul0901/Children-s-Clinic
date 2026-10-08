@@ -599,7 +599,7 @@ const DEFAULT_CARDS: HeroCard[] = [
     image: infra1,
     alt: "Specialised Care for Newborns From the Very Beginning",
     headline: "Specialised Care for Newborns From the Very Beginning",
-    body: "Comprehensive newborn and neonatal support, including management of preterm babies,low birth Babies,Newborn jaundice & Phototherapy and intensive care needs when medically required.",
+    body: "Comprehensive newborn and Advanced neonatal support, including management of preterm babies,low birth Babies,Newborn jaundice & Phototherapy and intensive care needs when medically required.",
     bullets: [
       "Newborn & Premature Baby Care",
       "Newborn Jaundice & Phototherapy",

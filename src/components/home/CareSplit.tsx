@@ -11,11 +11,11 @@ const NEONATAL_PILLS = [
 ];
 
 const PEDIATRIC_PILLS = [
-  { title: 'Clear health advice', subtitle: 'Supporting confident parents' },
-  { title: 'Feeding guidance', subtitle: 'Supporting confident parents' },
-  { title: 'Developmental support', subtitle: 'Supporting confident parents' },
-  { title: 'Vaccination guidance', subtitle: 'Supporting confident parents' },
-  { title: 'Practical parenting tips', subtitle: 'Supporting confident parents' },
+  { title: 'Clear health advice', subtitle: 'Empowering confidence in parents' },
+  { title: 'Feeding guidance', subtitle: 'Empowering confidence in parents' },
+  { title: 'Developmental support', subtitle: 'Empowering confidence in parents' },
+  { title: 'Vaccination guidance', subtitle: 'Empowering confidence in parents' },
+  { title: 'Practical parenting tips', subtitle: 'Empowering confidence in parents' },
 ];
 
 const CareSplit = () => {
@@ -170,7 +170,7 @@ const CareSplit = () => {
               </div>
               <div className="badge-text-box">
                 <span className="badge-title">Guidance for Parents</span>
-                <span className="badge-sub">Supporting confident parents</span>
+                <span className="badge-sub">Empowering confidence in parents</span>
               </div>
             </div>
             <div className="specialty-arch-image-wrapper arch-right">
