@@ -30,7 +30,7 @@ const DOCTOR = {
   education: [
     'MBBS - Govt. Chengalpattu medical College',
     'MD Pediatrics - Pondicherry Institute of Medical sciences',
-    'DNB - National Board ',
+    'DNB - National Board of Education ',
     'Senior resident in Neonatology from JIPMER, Puducherry ',
     'Has under gone many online fellowship programs like Neopocus, Neopearls, Advanced Asthma course.',
   ],

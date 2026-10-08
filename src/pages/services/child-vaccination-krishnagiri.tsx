@@ -113,7 +113,7 @@ const ChildVaccination = () => {
                 Vaccination is an important part of preventive healthcare during childhood. Parents may have questions about which vaccines their child needs, when they are due, what to expect after vaccination and what to do if a scheduled dose has been missed.
               </p>
               <p className="sd-copy sd-text">
-                <span className='sp-span'>The Children's Clinic in Krishnagiri provides child vaccination as part of its pediatric and preventive healthcare services. we follow the IAP vaccination schedule.</span> Led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, the clinic supports parents in understanding their child's vaccination needs alongside their overall health and development.
+                <span className='sp-span'>The Children's Clinic in Krishnagiri provides child vaccination as part of its pediatric and preventive healthcare services. We follow the IAP vaccination schedule.</span> Led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, the clinic supports parents in understanding their child's vaccination needs alongside their overall health and development.
               </p>
             </div>
 

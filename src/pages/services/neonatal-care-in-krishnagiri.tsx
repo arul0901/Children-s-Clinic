@@ -108,7 +108,7 @@ const NeonatalCare = () => {
 
             {/* Overview Intro */}
             <div className="sd-reveal" data-reveal>
-              <h1 className='sd-heading'>Neonatal Intensive Care &amp; Intensive Care in Krishnagiri</h1>
+              <h1 className='sd-heading'>Neonatal Intensive Care in Krishnagiri</h1>
               <p className="sd-copy sd-text">
                 Newborns can sometimes need closer medical observation and specialized care, particularly when they are born prematurely, develop jaundice, have feeding difficulties, experience breathing problems, or show other health concerns soon after birth.
               </p>
@@ -183,7 +183,7 @@ const NeonatalCare = () => {
               Parents may feel uncertain when a newborn requires more medical attention than expected after birth. Understanding why additional care is needed can make the situation easier to navigate.
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              <span className="sp-span">At The Children's Clinic, </span>Neonatal Intensive Care is approached as part of the baby's overall health and development rather than focusing on a single symptom.
+              At our NICU every baby is carefully examined and monitored 24*7 before reaching the diagnosis
             </p>
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
@@ -260,7 +260,7 @@ const NeonatalCare = () => {
               The need for intensive care varies between babies. Some newborns may require closer monitoring for a limited period, while others may need specific medical support depending on their condition.
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              At The Children's Clinic, neonatal intensive care is one of the stated areas of Expert Newborn Care, including<span className="sp-span"> CPAP, HFNC and ventilator support</span> when clinically indicated. The exact level and duration of care depend on the baby's medical condition and response to treatment.
+              Our NICU led by Dr.Haseen Fathima is one of the stated areas of Expert Newborn Care, including<span className="sp-span"> CPAP, HFNC and ventilator support</span> when clinically indicated. The exact level and duration of care depend on the baby's medical condition and response to treatment.
             </p>
 
             {/* ── Section: Newborn Ventilator Support ── */}
@@ -504,7 +504,7 @@ const NeonatalCare = () => {
               Expert Newborn Care requires an understanding of how rapidly a baby's health can change during the early period of life.
             </p>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
-              <span className="sp-span">At The Children's Clinic,</span> Neonatal Intensive Care forms part of a broader pediatric approach led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span> The clinic's stated newborn and pediatric focus includes:
+              Neonatal Intensive Care forms part of a broader pediatric approach led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience.</span> The clinic's stated newborn and pediatric focus includes:
             </p>
 
             <div className="ls-guidance-card sd-reveal" data-reveal>
@@ -569,7 +569,7 @@ const NeonatalCare = () => {
 
             {/* ── Section: Clinic Info & Address ── */}
             <div className="ls-clinic-card sd-reveal" data-reveal>
-              <h2>Neonatal Intensive Care in Krishnagiri at The Children's Clinic</h2>
+              <h2>Neonatal Intensive Care in Krishnagiri led by Dr.Haseen Fathima</h2>
               <p>
                 <span className="sp-span">The Children's Clinic</span> provides newborn and Neonatal Intensive Care in Krishnagiri, with services addressing newborn health concerns ranging from premature baby care and jaundice management to neonatal intensive care and newborn ventilator support.
               </p>

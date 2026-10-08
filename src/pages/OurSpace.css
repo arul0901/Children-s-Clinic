@@ -1,15 +1,22 @@
 /* ─────────────────────────────────────────────────────────────
-   OUR SPACE / AMBIENCE PAGE - CLEAN & NEAT LAYOUT
+   OUR SPACE / AMBIENCE PAGE - PREMIUM & ELEGANT LAYOUT
    Fonts: Happy Monkey (Headings), Plus Jakarta Sans (Body & UI)
    ───────────────────────────────────────────────────────────── */
 
 :root {
-  --space-page-bg: #F4ECF8;          /* Soft lavender / lilac background */
-  --space-card-bg: #DDD6E2;          /* Light placeholder fill */
-  --space-title-color: #3D1B54;       /* Deep purple title text */
-  --space-text-color: #484054;        /* Dark indigo body text */
-  --space-accent: #6B2A91;            /* Accent purple */
-  --space-card-radius: 20px;         /* Smooth rounded corners */
+  --space-page-bg: #F5EEF9;
+  /* Soft lilac-tinted background */
+  --space-card-bg: rgba(255, 255, 255, 0.72);
+  --space-title-color: #3B1652;
+  /* Deep plum title text */
+  --space-text-color: #4A3E56;
+  /* Indigo body text */
+  --space-accent: #7B2CBF;
+  /* Vibrant purple accent */
+  --space-accent-light: #F0E5F8;
+  /* Light purple tint */
+  --space-border: rgba(123, 44, 191, 0.12);
+  --space-card-radius: 24px;
   --font-happy-monkey: 'Happy Monkey', cursive, sans-serif;
   --font-jakarta: 'Plus Jakarta Sans', sans-serif;
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
@@ -20,17 +27,18 @@
 }
 
 .our-space-page {
-  background-color: var(--space-page-bg);
+  background: linear-gradient(180deg, #F8F1FB 0%, #F3EAF6 50%, #EFE4F3 100%);
   min-height: 100vh;
   color: var(--space-text-color);
   font-family: var(--font-jakarta);
-  padding-top: 100px;
-  padding-bottom: 90px;
+  padding-top: 110px;
+  padding-bottom: 100px;
   overflow-x: hidden;
+  position: relative;
 }
 
 .our-space-container {
-  max-width: 1040px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -39,30 +47,96 @@
 
 .ambience-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ambience-top-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(123, 44, 191, 0.08);
+  border: 1px solid rgba(123, 44, 191, 0.2);
+  color: var(--space-accent);
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 10px rgba(123, 44, 191, 0.05);
+}
+
+.ambience-top-pill .pill-icon {
+  color: var(--space-accent);
 }
 
 .ambience-main-title {
   font-family: var(--font-happy-monkey);
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2.3rem, 4.5vw, 3.4rem);
   font-weight: 700;
   color: var(--space-title-color);
-  margin-bottom: 14px;
-  letter-spacing: -0.01em;
-  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
 }
 
 .ambience-main-subtitle {
   font-family: var(--font-jakarta);
-  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
-  line-height: 1.68;
+  font-size: clamp(0.98rem, 1.15vw, 1.1rem);
+  line-height: 1.7;
   color: var(--space-text-color);
-  opacity: 0.9;
-  max-width: 680px;
+  opacity: 0.92;
+  max-width: 720px;
   margin: 0 auto;
 }
 
-/* ──────────────── 2. VIEW OUR AMBIENCE LIST ──────────────── */
+/* ──────────────── 2. HIGHLIGHTS GRID ──────────────── */
+
+.ambience-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 20px rgba(61, 22, 82, 0.04);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--space-title-color);
+  transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(123, 44, 191, 0.1);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.highlight-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(123, 44, 191, 0.12) 0%, rgba(123, 44, 191, 0.05) 100%);
+  color: var(--space-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ──────────────── 3. FEATURE LIST ITEMS ──────────────── */
 
 .ambience-section {
   padding-top: 10px;
@@ -71,41 +145,44 @@
 .ambience-list {
   display: flex;
   flex-direction: column;
-  gap: 55px;
+  gap: 50px;
 }
 
 .ambience-item {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 44px;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(8px);
-  padding: 24px;
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 30px rgba(61, 27, 84, 0.05);
-  transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth);
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 28px;
+  border-radius: var(--space-card-radius);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 35px rgba(59, 22, 82, 0.06);
+  transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth), border-color 0.4s var(--ease-smooth);
 }
 
 .ambience-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(61, 27, 84, 0.09);
-  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(59, 22, 82, 0.11);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(123, 44, 191, 0.2);
 }
 
 .ambience-item.reverse {
   flex-direction: row-reverse;
 }
 
-/* Image Container */
+/* ── Image Container ── */
 .ambience-image-box {
   flex: 1.15;
-  height: 290px;
-  border-radius: var(--space-card-radius);
-  background-color: var(--space-card-bg);
+  min-height: 310px;
+  border-radius: 18px;
+  background-color: #E7DDF0;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 8px 24px rgba(61, 27, 84, 0.08);
+  box-shadow: 0 8px 24px rgba(61, 22, 82, 0.08);
+  cursor: pointer;
 }
 
 .ambience-image-box img {
@@ -115,42 +192,100 @@
   object-position: center;
   display: block;
   transition: transform 0.6s var(--ease-smooth);
+  position: relative;
+  z-index: 2;
 }
 
 .ambience-item:hover .ambience-image-box img {
   transform: scale(1.04);
 }
 
-/* Corner Floating Badge */
+/* Portrait Image Container (Clean 3:4 Aspect Ratio) */
+.ambience-image-box.portrait-box {
+  flex: 0 0 240px;
+  width: 240px;
+  max-width: 240px;
+  height: 310px;
+  background-color: #E7DDF0;
+  align-self: center;
+}
+
+/* Corner Badge */
 .ambience-badge {
   position: absolute;
   top: 14px;
   left: 14px;
-  background-color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--space-title-color);
   font-family: var(--font-jakarta);
   font-size: 0.78rem;
   font-weight: 700;
-  padding: 5px 14px;
+  padding: 6px 14px;
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Content Box */
+.ambience-badge .badge-icon {
+  color: var(--space-accent);
+}
+
+/* Hover Expand Hint */
+.ambience-zoom-hint {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: rgba(30, 10, 45, 0.75);
+  backdrop-filter: blur(6px);
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 4;
+}
+
+.ambience-image-box:hover .ambience-zoom-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Content Container ── */
 .ambience-content-box {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 12px 8px;
+  padding: 8px 4px;
+}
+
+.ambience-category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--space-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
 }
 
 .ambience-heading {
   font-family: var(--font-happy-monkey);
-  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-size: clamp(1.4rem, 2.1vw, 1.8rem);
   font-weight: 700;
   color: var(--space-title-color);
   margin-bottom: 14px;
@@ -159,30 +294,256 @@
 
 .ambience-text {
   font-family: var(--font-jakarta);
-  font-size: clamp(0.94rem, 1.08vw, 1.04rem);
+  font-size: clamp(0.94rem, 1.08vw, 1.03rem);
   line-height: 1.7;
   color: var(--space-text-color);
   opacity: 0.92;
+  margin-bottom: 20px;
 }
 
-/* ──────────────── 3. RESPONSIVE BREAKPOINTS ──────────────── */
+/* Key Highlights Bullet Pills */
+.ambience-item-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.highlight-point {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(123, 44, 191, 0.07);
+  border: 1px solid rgba(123, 44, 191, 0.14);
+  color: var(--space-title-color);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.highlight-point .check-icon {
+  color: var(--space-accent);
+  flex-shrink: 0;
+}
+
+/* ──────────────── 4. CTA BOTTOM CARD ──────────────── */
+
+.ambience-cta-card {
+  margin-top: 70px;
+  background: linear-gradient(135deg, #3B1652 0%, #522073 60%, #6B2A91 100%);
+  border-radius: 28px;
+  padding: 44px 48px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 16px 40px rgba(59, 22, 82, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.ambience-cta-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #F8E8FF;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cta-badge .cta-heart {
+  color: #FFB3EC;
+}
+
+.cta-title {
+  font-family: var(--font-happy-monkey);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+.cta-desc {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cta-actions {
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.cta-btn.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  color: var(--space-title-color);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), background-color 0.3s ease;
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  background-color: #F9F3FF;
+}
+
+/* ──────────────── 5. LIGHTBOX MODAL ──────────────── */
+
+.ambience-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 8, 30, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.ambience-lightbox-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  max-width: 780px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox-img-wrap {
+  width: 100%;
+  max-height: 480px;
+  background: #2D143E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightbox-img-wrap img {
+  max-width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-details {
+  padding: 24px 28px;
+}
+
+.lightbox-badge {
+  display: inline-block;
+  background: rgba(123, 44, 191, 0.1);
+  color: var(--space-accent);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.lightbox-title {
+  font-family: var(--font-happy-monkey);
+  font-size: 1.4rem;
+  color: var(--space-title-color);
+  margin-bottom: 8px;
+}
+
+.lightbox-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--space-text-color);
+}
+
+/* ──────────────── 6. RESPONSIVE MEDIA QUERIES ──────────────── */
 
 @media (max-width: 992px) {
+  .ambience-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .ambience-item,
   .ambience-item.reverse {
     gap: 32px;
-    padding: 20px;
+    padding: 22px;
   }
 
   .ambience-image-box {
-    height: 250px;
+    min-height: 270px;
+  }
+
+  .ambience-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 28px;
+  }
+
+  .cta-content {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 767px) {
   .our-space-page {
-    padding-top: 80px;
-    padding-bottom: 60px;
+    padding-top: 85px;
+    padding-bottom: 70px;
   }
 
   .our-space-container {
@@ -190,20 +551,34 @@
   }
 
   .ambience-header {
-    margin-bottom: 36px;
+    margin-bottom: 30px;
+  }
+
+  .ambience-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 40px;
   }
 
   .ambience-item,
   .ambience-item.reverse {
     flex-direction: column !important;
     gap: 20px;
-    padding: 16px;
+    padding: 18px;
     border-radius: 20px;
   }
 
   .ambience-image-box {
     width: 100%;
-    height: 220px;
+    min-height: 230px;
+    max-height: 280px;
+  }
+
+  .ambience-image-box.portrait-box {
+    width: 220px;
+    max-width: 220px;
+    height: 280px;
+    margin: 0 auto;
   }
 
   .ambience-content-box {
@@ -211,26 +586,18 @@
   }
 
   .ambience-heading {
-    font-size: 1.28rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
   }
 
   .ambience-text {
     font-size: 0.92rem;
     line-height: 1.6;
-  }
-}
-
-@media (max-width: 374px) {
-  .ambience-image-box {
-    height: 185px;
+    margin-bottom: 16px;
   }
 
-  .ambience-heading {
-    font-size: 1.18rem;
-  }
-
-  .ambience-text {
-    font-size: 0.86rem;
+  .highlight-point {
+    font-size: 0.78rem;
+    padding: 5px 12px;
   }
 }
