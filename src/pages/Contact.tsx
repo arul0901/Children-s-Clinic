@@ -206,29 +206,18 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <div className="contact-form-row">
-                  <input
-                    className="contact-input"
-                    type="tel"
-                    name="phone"
-                    placeholder="Your Number*"
-                    value={form.phone}
-                    onChange={handleChange}
-                  />
-                  <input
-                    className="contact-input"
-                    type="text"
-                    name="subject"
-                    placeholder="Your Subject*"
-                    value={form.subject}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+                <input
+                  className="contact-input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Your Number*"
+                  value={form.phone}
+                  onChange={handleChange}
+                />
                 <textarea
                   className="contact-textarea"
                   name="message"
-                  placeholder="Enter message"
+                  placeholder="Enter message*"
                   value={form.message}
                   onChange={handleChange}
                   required
