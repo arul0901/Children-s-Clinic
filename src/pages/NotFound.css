@@ -1,0 +1,423 @@
+/* ================================================================
+   404 NOT FOUND — EDITORIAL TWO-PANEL LAYOUT
+   The Children's Clinic
+   ================================================================ */
+
+/* ── Root: full-viewport, split left/right ── */
+.nf-root {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────
+   LEFT PANEL
+───────────────────────────────────────── */
+.nf-left {
+  flex: 1 1 55%;
+  display: flex;
+  align-items: center;
+  padding: 3.5rem clamp(2rem, 5vw, 4.5rem);
+  position: relative;
+  border-right: 1px solid rgba(79, 25, 117, 0.08);
+  background:
+    radial-gradient(80% 60% at 0% 0%, rgba(243, 234, 247, 0.85) 0%, transparent 65%),
+    var(--color-bg);
+}
+
+.nf-left-inner {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Eyebrow */
+.nf-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  animation: nf-fade-up 0.55s ease 0.05s both;
+}
+.nf-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1.5px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* 404 numerals */
+.nf-four-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.01em;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  user-select: none;
+}
+
+.nf-four,
+.nf-zero {
+  font-family: 'Bebas Neue', display, sans-serif;
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  animation: nf-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.nf-four {
+  color: var(--color-primary-dark);
+  animation-delay: 0.05s;
+}
+
+.nf-zero {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-primary);
+  animation-delay: 0.12s;
+}
+
+.nf-four:last-child {
+  animation-delay: 0.18s;
+}
+
+@keyframes nf-slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Rule */
+.nf-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    rgba(214, 168, 95, 0.55) 40%,
+    transparent 100%
+  );
+  width: 100%;
+  margin-bottom: 1.5rem;
+  animation: nf-rule-grow 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+  transform-origin: left center;
+}
+
+@keyframes nf-rule-grow {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+
+/* Copy block */
+.nf-copy-block {
+  margin-bottom: 1.75rem;
+  animation: nf-fade-up 0.55s ease 0.32s both;
+}
+
+.nf-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.15rem);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.65rem;
+}
+
+.nf-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.97rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 400px;
+}
+
+/* Buttons */
+.nf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  animation: nf-fade-up 0.55s ease 0.38s both;
+}
+
+.nf-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.72rem 1.55rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 5px 18px rgba(79, 25, 117, 0.2);
+}
+.nf-btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(79, 25, 117, 0.3);
+}
+
+.nf-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.72rem 1.55rem;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1.5px solid rgba(79, 25, 117, 0.22);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+.nf-btn-ghost:hover {
+  background: var(--color-lavender);
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Emergency phone */
+.nf-emergency {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-text-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  animation: nf-fade-up 0.55s ease 0.44s both;
+}
+.nf-emergency:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-gold);
+}
+.nf-emergency svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────
+   RIGHT PANEL
+───────────────────────────────────────── */
+.nf-right {
+  flex: 0 1 42%;
+  display: flex;
+  align-items: flex-start;
+  padding: 3.5rem clamp(1.5rem, 4vw, 3.5rem);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(75% 55% at 100% 100%, rgba(214, 168, 95, 0.07) 0%, transparent 65%),
+    var(--color-lavender-light);
+}
+
+.nf-right-inner {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* "Where to next?" label */
+.nf-nav-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  animation: nf-fade-up 0.55s ease 0.22s both;
+  position: relative;
+  z-index: 2;
+}
+
+/* Link list */
+.nf-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.nf-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(79, 25, 117, 0.09);
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: color 0.18s ease, padding-left 0.2s ease;
+  opacity: 0;
+  transform: translateY(8px);
+}
+.nf-link-row:first-child {
+  border-top: 1px solid rgba(79, 25, 117, 0.09);
+}
+
+/* JS animation class */
+.nf-link-row.nf-animate-in {
+  animation: nf-fade-up 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.nf-link-row:hover {
+  color: var(--color-primary);
+  padding-left: 5px;
+}
+
+.nf-link-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nf-link-arrow {
+  color: var(--color-gold);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  flex-shrink: 0;
+}
+
+.nf-link-row:hover .nf-link-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Watermark */
+.nf-watermark {
+  position: absolute;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 0;
+  font-family: 'Bebas Neue', display, sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1.05;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(79, 25, 117, 0.06);
+  letter-spacing: 0.05em;
+  text-align: right;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ─────────────────────────────────────────
+   SHARED KEYFRAMES
+───────────────────────────────────────── */
+@keyframes nf-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — tablet ≤ 860px: stack panels
+───────────────────────────────────────── */
+@media (max-width: 860px) {
+  .nf-root {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .nf-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(79, 25, 117, 0.08);
+    padding: 3rem 1.5rem 2.5rem;
+    flex: none;
+    align-items: flex-start;
+  }
+
+  .nf-left-inner {
+    max-width: 100%;
+  }
+
+  .nf-four,
+  .nf-zero {
+    font-size: clamp(3.8rem, 15vw, 6rem);
+  }
+
+  .nf-zero {
+    -webkit-text-stroke-width: 1.6px;
+  }
+
+  .nf-heading {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+
+  .nf-right {
+    flex: none;
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .nf-watermark {
+    display: none;
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — mobile ≤ 480px
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .nf-left {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .nf-four,
+  .nf-zero {
+    font-size: clamp(3.2rem, 18vw, 5rem);
+  }
+
+  .nf-heading {
+    font-size: 1.35rem;
+  }
+
+  .nf-body {
+    font-size: 0.92rem;
+  }
+
+  .nf-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nf-btn-primary,
+  .nf-btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nf-right {
+    padding: 2rem 1.25rem 2.5rem;
+  }
+
+  .nf-link-row {
+    padding: 0.75rem 0;
+  }
+}

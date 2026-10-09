@@ -13,6 +13,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Appointment from './pages/Appointment';
 import OurSpace from './pages/OurSpace';
+import NotFound from './pages/NotFound';
 
 // Dedicated Service Pages
 import {
@@ -100,6 +101,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="appointment" element={<Appointment />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
