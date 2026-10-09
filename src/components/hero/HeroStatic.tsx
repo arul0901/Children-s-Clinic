@@ -105,7 +105,7 @@ const HeroStatic = () => {
         </p>
         <div className="hero-split-cta hero-anim">
           <button className="hero-cta-btn" onClick={() => navigate('/appointment')}>
-            Book a Appointment
+            Book an Appointment
           </button>
         </div>
       </div>
@@ -135,7 +135,7 @@ const HeroStatic = () => {
           </div>
           <div className="hero-float-card-text">
             <span className="hero-float-card-title">Neonatal Emergency</span>
-            <span className="hero-float-card-sub">Available 24/7</span>
+            {/* <span className="hero-float-card-sub">Available </span> */}
           </div>
         </div>
 

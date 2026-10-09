@@ -100,7 +100,7 @@ const Contact = () => {
                 <div className="contact-card-icon">
                   <Phone size={18} />
                 </div>
-                <span className="contact-card-label">24/7 Service<br />Call Us On</span>
+                <span className="contact-card-label"> Service<br />Call Us On</span>
               </div>
               <h3 className="contact-card-title">Call Us On</h3>
               <p className="contact-card-detail">

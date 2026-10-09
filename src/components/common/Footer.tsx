@@ -84,7 +84,7 @@ const Footer = () => {
 
             <div className="footer-contact-item">
               <Clock size={18} />
-              <span>Available 24/7 for Emergencies</span>
+              <span>Available  for Emergencies</span>
             </div>
 
             <button

@@ -47,7 +47,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 5,
-    title: '24/7 Pediatric Emergency Response',
+    title: ' Pediatric Emergency Response',
     category: 'clinic',
     categoryLabel: 'Clinic & Facilities',
     image: '/service_emergency_care_1789988990048.jpg',

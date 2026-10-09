@@ -128,7 +128,7 @@ export const servicesData: Record<string, ServiceContent> = {
       },
       {
         title: 'Continuous Monitoring',
-        description: '24/7 observation of vital signs, oxygen levels, and cardiac function by specialized neonatal nurses.'
+        description: ' observation of vital signs, oxygen levels, and cardiac function by specialized neonatal nurses.'
       },
       {
         title: 'Nutritional Support',
@@ -160,7 +160,7 @@ export const servicesData: Record<string, ServiceContent> = {
     information: [
       {
         title: 'Visiting the NICU',
-        content: 'Parents have 24/7 access to their babies. Strict handwashing and infection control protocols must be followed to protect our vulnerable patients.'
+        content: 'Parents have  access to their babies. Strict handwashing and infection control protocols must be followed to protect our vulnerable patients.'
       },
       {
         title: 'What to expect',
