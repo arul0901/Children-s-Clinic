@@ -249,7 +249,7 @@ const OurSpace = () => {
             </div>
             <h2 className="cta-title">Experience Our Comforting Space in Person</h2>
             <p className="cta-desc font-jakarta">
-              Schedule a visit or consultation with Dr. Haseen Fathima (MD Pediatrics, Fellowship in Neonatology) at Children’s Clinic, Krishnagiri.
+              Schedule a visit or consultation with Dr. Haseen Fathima (MD Pediatrics) at Children’s Clinic, Krishnagiri.
             </p>
           </div>
           <div className="cta-actions">

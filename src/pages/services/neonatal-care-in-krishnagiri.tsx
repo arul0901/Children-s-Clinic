@@ -113,7 +113,7 @@ const NeonatalCare = () => {
                 Newborns can sometimes need closer medical observation and specialized care, particularly when they are born prematurely, develop jaundice, have feeding difficulties, experience breathing problems, or show other health concerns soon after birth.
               </p>
               <p className="sd-copy sd-text">
-                <span className='sp-span'>The Children’s Clinic in Krishnagiri provides newborn and Neonatal Intensive Care, including neonatal intensive care and newborn ventilator support when clinically required.</span> The clinic is led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, with a focus on caring for newborns, infants and children.
+                <span className='sp-span'>Neonatal intensive care led by Dr.Haseen Fathima provides CPAP/ HFNC/ Neonatal ventilator support in Krishnagiri when clinically required</span> The clinic is led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, with a focus on caring for newborns, infants and children.
               </p>
             </div>
 
@@ -668,7 +668,7 @@ const NeonatalCare = () => {
                 The first days and weeks of life can bring important health questions for parents. When a newborn needs additional monitoring or treatment, understanding the reason for that care can help families make informed decisions and follow appropriate medical guidance.
               </p>
               <p className="ls-highlight">
-                The Children's Clinic in Krishnagiri provides newborn and Neonatal Intensive Care, including premature baby care, newborn jaundice and phototherapy, neonatal intensive care and newborn ventilator support.
+                NICU led by Dr.Haseen Fathima provides newborn and Neonatal Intensive Care, including premature baby care, newborn jaundice and phototherapy, neonatal intensive care and newborn ventilator support.
               </p>
               <p className="ls-question">
                 Concerned about your newborn's health?
