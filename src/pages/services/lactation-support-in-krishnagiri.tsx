@@ -49,7 +49,7 @@ const FAQS = [
   },
   {
     question: "Where is The Children's Clinic located?",
-    answer: "The Children's Clinic is located at 35/13, 2nd Cross Rd, Co-operative Colony, Thiruvalluvar Nagar, Krishnagiri, Tamil Nadu 635002."
+    answer: "The Children's Clinic is located at 35/13, 2nd Cross Rd, Co-operative Colony, Krishnagiri, Tamil Nadu 635001."
   }
 ];
 
@@ -467,7 +467,7 @@ const LactationSupport = () => {
             <div className="ls-clinic-card sd-reveal" data-reveal>
               <h2>Know about Lactation Support in Krishnagiri at The Children's Clinic</h2>
               <p>
-                 lactation and breastfeeding support as part of its focus on newborn and pediatric care in Krishnagiri. The clinic is led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics)</span>, with 9+ years of experience. Her areas of focus include Expert Newborn Care, Neonatal Intensive Care, lactation support, vaccination, growth and development monitoring and common pediatric concerns.
+                lactation and breastfeeding support as part of its focus on newborn and pediatric care in Krishnagiri. The clinic is led by <span className="sp-span">Dr. Haseen Fathima, MD, DNB (Pediatrics)</span>, with 9+ years of experience. Her areas of focus include Expert Newborn Care, Neonatal Intensive Care, lactation support, vaccination, growth and development monitoring and common pediatric concerns.
               </p>
 
               <div className="ls-clinic-address">
@@ -478,8 +478,8 @@ const LactationSupport = () => {
                   <strong>The Children's Clinic</strong><br />
                   35/13, 2nd Cross Rd,<br />
                   Co-operative Colony,<br />
-                  Thiruvalluvar Nagar,<br />
-                  Krishnagiri, Tamil Nadu 635002
+                  ,<br />
+                  Krishnagiri, Tamil Nadu 635001
                 </address>
               </div>
 

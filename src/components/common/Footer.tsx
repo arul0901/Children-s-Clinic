@@ -69,7 +69,7 @@ const Footer = () => {
 
             <div className="footer-contact-item">
               <MapPin size={18} />
-              <span> 35/13, 2nd Cross Rd, Co-operative Colony, Thiruvalluvar Nagar, Krishnagiri, Tamil Nadu 635002.</span>
+              <span> 35/13, 2nd Cross Rd, Co-operative Colony, Krishnagiri, Tamil Nadu 635001.</span>
             </div>
 
             <div className="footer-contact-item">

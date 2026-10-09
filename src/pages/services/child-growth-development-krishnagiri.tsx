@@ -49,7 +49,7 @@ const FAQS = [
   },
   {
     question: "Where is The Children's Clinic located?",
-    answer: "The Children's Clinic is located at 35/13, 2nd Cross Rd, Co-operative Colony, Thiruvalluvar Nagar, Krishnagiri, Tamil Nadu 635002."
+    answer: "The Children's Clinic is located at 35/13, 2nd Cross Rd, Co-operative Colony, Krishnagiri, Tamil Nadu 635001."
   }
 ];
 
@@ -674,8 +674,8 @@ const GrowthDevelopment = () => {
                   <strong>The Children's Clinic</strong><br />
                   35/13, 2nd Cross Rd,<br />
                   Co-operative Colony,<br />
-                  Thiruvalluvar Nagar,<br />
-                  Krishnagiri, Tamil Nadu 635002
+                  ,<br />
+                  Krishnagiri, Tamil Nadu 635001
                 </address>
               </div>
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock,  AlertCircle, Loader2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, AlertCircle, Loader2 } from 'lucide-react';
 import { submitContactForm } from '../config/api';
 import './Contact.css';
 
@@ -90,7 +90,7 @@ const Contact = () => {
               </div>
               <h3 className="contact-card-title">Visit Us At</h3>
               <p className="contact-card-detail">
-                35/13, 2nd Cross Rd, Co-operative Colony, Thiruvalluvar Nagar, Krishnagiri, Tamil Nadu 635002.
+                35/13, 2nd Cross Rd, Co-operative Colony, Krishnagiri, Tamil Nadu 635001.
               </p>
             </div>
 
