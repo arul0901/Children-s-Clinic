@@ -90,7 +90,7 @@ const NeonatalCare = () => {
         <img className="sd-hero-bg" src="/assets/home/neonatal-banner.jpg" alt="Neonatal Intensive Care in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
-            <h2 className="font-plus-jakarta banner-font">Neonatal Intensive Care &amp; Intensive Care </h2>
+            <h2 className="font-plus-jakarta banner-font">Neonatal Intensive Care </h2>
           </div>
         </div>
       </section>
@@ -113,7 +113,7 @@ const NeonatalCare = () => {
                 Newborns can sometimes need closer medical observation and specialized care, particularly when they are born prematurely, develop jaundice, have feeding difficulties, experience breathing problems, or show other health concerns soon after birth.
               </p>
               <p className="sd-copy sd-text">
-                <span className='sp-span'>Neonatal intensive care led by Dr.Haseen Fathima provides CPAP/ HFNC/ Neonatal ventilator support in Krishnagiri when clinically required</span> The clinic is led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, with a focus on caring for newborns, infants and children.
+                <span className='sp-span'>Neonatal intensive care led by Dr.Haseen Fathima provides CPAP/ HFNC/ Neonatal ventilator support in Krishnagiri when clinically required.</span> The clinic is led by <span className='sp-span'>Dr. Haseen Fathima, MD, DNB (Pediatrics), with 9+ years of experience</span>, with a focus on caring for newborns, infants and children.
               </p>
             </div>
 
