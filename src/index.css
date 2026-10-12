@@ -64,6 +64,7 @@
 
 html {
   scroll-behavior: auto;
+  background-color: var(--color-bg);
 }
 
 html.lenis, html.lenis body {

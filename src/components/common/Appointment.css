@@ -1,43 +1,55 @@
 .appointment-section {
-  background-color: var(--color-mint-light);
-  padding: 6rem 0;
+  background-color: var(--color-lavender-light, #F8F3FA);
+  padding: 5rem 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .appointment-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.appointment-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .appointment-text h2 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(1.85rem, 4vw, 3rem);
   color: var(--color-primary);
   margin-bottom: 1rem;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 .appointment-text p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   color: var(--color-navy);
-  opacity: 0.8;
+  opacity: 0.85;
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 /* Appointment Timings Card */
 .appointment-timings-card {
   background: #ffffff;
-  border: 1px solid rgba(38, 70, 83, 0.12);
+  border: 1px solid rgba(79, 25, 117, 0.12);
   border-left: 4px solid var(--color-primary);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .appointment-timings-card h4 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--color-primary-dark);
   margin-bottom: 1rem;
   font-weight: 700;
@@ -46,13 +58,14 @@
 .app-timing-row {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px dashed #e2e8f0;
+  gap: 0.35rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed rgba(79, 25, 117, 0.15);
 }
 
 .app-timing-row:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 
 .app-timing-days {
@@ -62,14 +75,18 @@
 }
 
 .app-timing-badge {
-  font-size: 0.95rem;
+  font-size: clamp(0.82rem, 3.2vw, 0.95rem);
   font-weight: 700;
   color: var(--color-primary-dark);
-  background: var(--color-mint-light);
-  padding: 0.25rem 0.6rem;
+  background: var(--color-lavender, #F3EAF7);
+  padding: 0.35rem 0.65rem;
   border-radius: 6px;
   display: inline-block;
   width: fit-content;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 /* Form Styles */
@@ -78,24 +95,27 @@
   padding: 3rem;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .appointment-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  width: 100%;
 }
 
 .form-group.full-width {
@@ -106,7 +126,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-navy);
 }
@@ -114,14 +134,23 @@
 .form-group input,
 .form-group textarea,
 .time-slot-select {
-  padding: 0.8rem 1rem;
-  border: 1px solid var(--color-mint-dark);
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(79, 25, 117, 0.18);
   border-radius: var(--radius-md);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 16px; /* 16px prevents iOS Safari auto-zoom on input focus */
   color: var(--color-navy);
   background-color: #f8fafc;
   transition: var(--transition-fast);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-height: 48px;
+}
+
+.form-group textarea {
+  min-height: 90px;
+  resize: vertical;
 }
 
 .form-group input:focus,
@@ -130,25 +159,39 @@
   outline: none;
   border-color: var(--color-primary);
   background-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(38, 70, 83, 0.1);
+  box-shadow: 0 0 0 3px rgba(79, 25, 117, 0.1);
+}
+
+.time-slot-select {
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .timing-hint-tag {
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-primary);
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
+  line-height: 1.4;
+  word-break: break-word;
+  display: block;
 }
 
 .submit-btn {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Success state */
 .appointment-success-state {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem 0.5rem;
 }
 
 .app-success-icon {
@@ -157,50 +200,91 @@
 }
 
 .appointment-success-state h3 {
-  font-size: 1.6rem;
+  font-size: clamp(1.3rem, 3.5vw, 1.6rem);
   color: var(--color-primary-dark);
   margin-bottom: 0.75rem;
+  word-break: break-word;
 }
 
 .appointment-success-state p {
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
   color: var(--color-text-muted);
   margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 .app-summary-card {
   background: #f1f5f9;
-  padding: 1.25rem;
+  padding: 1.1rem;
   border-radius: var(--radius-md);
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   text-align: left;
+  word-break: break-word;
 }
 
 .app-summary-card p {
   margin: 0.4rem 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--color-navy);
 }
 
+/* Responsive Breakpoints */
 @media (max-width: 968px) {
+  .appointment-section {
+    padding: 3.5rem 0;
+  }
+
   .appointment-wrapper {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.25rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .form-row {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  
+
   .appointment-form-container {
-    padding: 1.5rem;
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-section {
+    padding: 2.25rem 0;
+  }
+
+  .appointment-form-container {
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .appointment-timings-card {
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .app-summary-card {
+    padding: 0.85rem;
   }
 }
 
 .appointment-page-wrapper {
-  padding-top: 80px;
-  min-height: 80vh;
+  padding-top: clamp(75px, 9vw, 90px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .appointment-page-wrapper {
+    padding-top: 70px;
+    min-height: calc(100vh - 70px);
+  }
 }
 

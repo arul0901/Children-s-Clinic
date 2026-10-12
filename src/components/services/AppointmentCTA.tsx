@@ -202,8 +202,8 @@ const AppointmentCTA = ({ serviceName }: AppointmentCTAProps) => {
                 <h3 className="cta-form-title">Quick Booking Form</h3>
 
                 {errorMsg && (
-                  <div style={{ background: '#fee2e2', color: '#991b1b', padding: '0.8rem 1rem', borderRadius: '8px', fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <AlertCircle size={18} />
+                  <div style={{ background: '#fee2e2', color: '#991b1b', padding: '0.8rem 1rem', borderRadius: '8px', fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', wordBreak: 'break-word' }}>
+                    <AlertCircle size={18} style={{ flexShrink: 0 }} />
                     <span>{errorMsg}</span>
                   </div>
                 )}

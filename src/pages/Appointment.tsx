@@ -7,9 +7,9 @@ const Appointment = () => {
   }, []);
 
   return (
-    <div className="appointment-page-wrapper">
+    <main className="appointment-page-wrapper" role="main" aria-label="Book an Appointment">
       <AppointmentComponent />
-    </div>
+    </main>
   );
 };
 
