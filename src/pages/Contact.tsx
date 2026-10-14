@@ -59,7 +59,15 @@ const Contact = () => {
     <>
       {/* ── 1. Hero Banner ── */}
       <section className="contact-hero">
-        <img src="/contact-hero.jpg" alt="Contact The Children's Clinic" className="contact-hero-img" />
+        <img
+          src="/contact-hero.jpg"
+          alt="Contact The Children's Clinic"
+          className="contact-hero-img"
+          fetchPriority="high"
+          decoding="async"
+          width={1376}
+          height={768}
+        />
         <div className="contact-hero-overlay">
           <h1 className="contact-hero-title">Contact</h1>
         </div>
@@ -152,6 +160,10 @@ const Contact = () => {
                 src="/dr.fathima.png"
                 alt="Dr. Haseen Fathima"
                 className="contact-person-img"
+                loading="lazy"
+                decoding="async"
+                width={923}
+                height={751}
               />
             </div>
 

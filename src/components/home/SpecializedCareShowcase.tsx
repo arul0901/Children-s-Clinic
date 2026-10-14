@@ -98,6 +98,10 @@ const SpecializedCareShowcase = () => {
               src="/service_editorial_1_1789990863800.jpg"
               alt="Pediatric care patient and doctor consultation"
               className="service-image-banner"
+              loading="lazy"
+              decoding="async"
+              width={1200}
+              height={896}
             />
           </div>
         </div>

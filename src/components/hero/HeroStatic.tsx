@@ -89,7 +89,15 @@ const HeroStatic = () => {
   return (
     <section className="hero-split" ref={comp} id="home">
       {/* ── Background Image & Dark Overlay (Matching Lactation Support Page) ── */}
-      <img className="home-sd-hero-bg" src="/hero_banner_new.jpg" alt="The Children's Clinic Banner" />
+      <img
+        className="home-sd-hero-bg"
+        src="/hero_banner_new.jpg"
+        alt="The Children's Clinic Banner"
+        fetchPriority="high"
+        decoding="async"
+        width={1376}
+        height={768}
+      />
       <div className="home-sd-hero-overlay"></div>
 
       {/* Left Content */}
@@ -117,12 +125,25 @@ const HeroStatic = () => {
 
         {/* Main image (larger, front) */}
         <div className="hero-img-main">
-          <img src="/hero_baby_main.jpg" alt="Baby wrapped in a cozy blanket" />
+          <img
+            src="/hero_baby_main.jpg"
+            alt="Baby wrapped in a cozy blanket"
+            fetchPriority="high"
+            decoding="async"
+            width={896}
+            height={1200}
+          />
         </div>
 
         {/* Secondary image (smaller, behind/overlapping) */}
         <div className="hero-img-secondary">
-          <img src="/hero_baby_secondary.jpg" alt="Newborn baby resting peacefully" />
+          <img
+            src="/hero_baby_secondary.jpg"
+            alt="Newborn baby resting peacefully"
+            decoding="async"
+            width={1200}
+            height={896}
+          />
         </div>
 
         {/* Floating info card - top */}

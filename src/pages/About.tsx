@@ -272,7 +272,15 @@ const About = () => {
     <div className="abt-page" ref={pageRef}>
       {/* ── Hero Banner (Service Detail Style) ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/banner.jpg" alt="About The Children's Clinic" />
+        <img
+          className="sd-hero-bg"
+          src="/banner.jpg"
+          alt="About The Children's Clinic"
+          fetchPriority="high"
+          decoding="async"
+          width={1376}
+          height={768}
+        />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h1>About Us</h1>
@@ -289,7 +297,14 @@ const About = () => {
               <div className="abt-doctor__archwrap">
                 <div className="abt-doctor__arch-outline" />
                 <div className="abt-doctor__arch">
-                  <img src="dr.fathima.png" alt={DOCTOR.name} />
+                  <img
+                    src="/dr.fathima.png"
+                    alt={DOCTOR.name}
+                    loading="lazy"
+                    decoding="async"
+                    width={923}
+                    height={751}
+                  />
                 </div>
                 <div className="abt-doctor__exp">
                   <span className="abt-doctor__exp-num">9+</span>
@@ -349,7 +364,14 @@ const About = () => {
           <div className="abt-about__media">
             <div className="abt-about__ring" />
             <div className="abt-about__frame">
-              <img src="/services_image.jpg" alt="Inside The Children’s Clinic" />
+              <img
+                src="/services_image.jpg"
+                alt="Inside The Children’s Clinic"
+                loading="lazy"
+                decoding="async"
+                width={896}
+                height={1200}
+              />
             </div>
           </div>
           <div className="abt-about__copy">

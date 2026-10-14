@@ -65,7 +65,7 @@ const ServicePage = () => {
   return (
     <div className="sd-page" ref={pageRef}>
       <section className="sd-hero">
-        <img className="sd-hero-bg" src={data.heroImage} alt="" />
+        <img className="sd-hero-bg" src={data.heroImage} alt="" fetchPriority="high" decoding="async" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h1 key={data.title}>{data.title}</h1>
@@ -86,7 +86,7 @@ const ServicePage = () => {
 
           <article className="sd-content" key={id}>
             <div className="sd-feature">
-              <img src={data.heroImage} alt={data.title} />
+              <img src={data.heroImage} alt={data.title} loading="lazy" decoding="async" />
             </div>
 
             <h2 className="sd-heading sd-reveal" data-reveal>
@@ -162,7 +162,7 @@ const ServicePage = () => {
             <div className="sd-gallery">
               {center.images.map((image: { src: string; caption: string }) => (
                 <figure key={image.caption}>
-                  <img src={image.src} alt="" />
+                  <img src={image.src} alt="" loading="lazy" decoding="async" />
                   <figcaption className="sd-reveal sd-text" data-reveal>{image.caption}</figcaption>
                 </figure>
               ))}

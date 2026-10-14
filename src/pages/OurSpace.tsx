@@ -189,6 +189,8 @@ const OurSpace = () => {
                     <img
                       src={item.src}
                       alt={item.alt}
+                      loading="lazy"
+                      decoding="async"
                       style={{
                         objectFit: item.objectFit || 'cover',
                         objectPosition: item.objectPosition || 'center',
@@ -292,7 +294,7 @@ const OurSpace = () => {
               </button>
 
               <div className="lightbox-img-wrap">
-                <img src={selectedImage.src} alt={selectedImage.alt} />
+                <img src={selectedImage.src} alt={selectedImage.alt} decoding="async" />
               </div>
 
               <div className="lightbox-details font-jakarta">

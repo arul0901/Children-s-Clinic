@@ -126,7 +126,7 @@ const Gallery = () => {
               onClick={() => setSelectedItem(item)}
             >
               <div className="gallery-card-img-wrapper">
-                <img src={item.image} alt={item.title} loading="lazy" />
+                <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
                 <div className="gallery-card-overlay">
                   <span className="gallery-zoom-badge">
                     <ZoomIn size={14} className="gallery-zoom-icon" /> Click to View
@@ -155,7 +155,7 @@ const Gallery = () => {
               <X size={20} />
             </button>
             <div className="lightbox-img-col">
-              <img src={selectedItem.image} alt={selectedItem.title} />
+              <img src={selectedItem.image} alt={selectedItem.title} decoding="async" />
             </div>
             <div className="lightbox-info-col">
               <span className="gallery-card-tag">{selectedItem.categoryLabel}</span>

@@ -48,7 +48,15 @@ const Header = () => {
 
           {/* ── Logo ── */}
           <Link to="/" className="logo-mark" onClick={() => setMenuOpen(false)}>
-            <img src="/logo.png" alt="The Children's Clinic" className="logo-image" />
+            <img
+              src="/logo.png"
+              alt="The Children's Clinic"
+              className="logo-image"
+              fetchPriority="high"
+              decoding="async"
+              width={160}
+              height={40}
+            />
           </Link>
 
           {/* ── Desktop Nav (Home, Services, About, Gallery, Contact) ── */}

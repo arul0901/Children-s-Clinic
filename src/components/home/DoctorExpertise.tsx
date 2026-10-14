@@ -60,7 +60,14 @@ const DoctorExpertise = () => {
           <h2 className="expertise-title">Specialist care backed by advanced neonatal expertise.</h2>
           <div className="doctor-profile">
             <div className="img-placeholder-wrapper doctor-profile-img-wrap">
-              <img src="/dr.fathima.png" alt="Doctor Portrait" />
+              <img
+                src="/dr.fathima.png"
+                alt="Doctor Portrait"
+                loading="lazy"
+                decoding="async"
+                width={923}
+                height={751}
+              />
             </div>
           </div>
         </div>

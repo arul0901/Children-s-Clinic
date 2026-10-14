@@ -87,7 +87,7 @@ const NeonatalCare = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/assets/home/neonatal-banner.jpg" alt="Neonatal Intensive Care in Krishnagiri" />
+        <img className="sd-hero-bg" fetchPriority="high" decoding="async" src="/assets/home/neonatal-banner.jpg" alt="Neonatal Intensive Care in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h2 className="font-plus-jakarta banner-font">Neonatal Intensive Care </h2>
@@ -103,7 +103,7 @@ const NeonatalCare = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/assets/home/neonatal1.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
+              <img loading="lazy" decoding="async" src="/assets/home/neonatal1.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
             </div>
 
             {/* Overview Intro */}
@@ -314,7 +314,7 @@ const NeonatalCare = () => {
               Premature Baby Care and Neonatal Support
             </h2>
             <div className="sd-feature">
-              <img src="/neonatal2.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
+              <img loading="lazy" decoding="async" src="/neonatal2.jpg" alt="Neonatal and Newborn Intensive Care Consultation" />
             </div>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Premature babies can have different healthcare needs depending on how early they were born and their individual health condition.
@@ -612,7 +612,7 @@ const NeonatalCare = () => {
             <div className="ls-doctor-card sd-reveal" data-reveal>
               <div className="ls-doctor-profile">
                 <div className="ls-doctor-img-wrap">
-                  <img src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
+                  <img loading="lazy" decoding="async" src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
                 </div>
                 <div className="ls-doctor-info">
                   <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>

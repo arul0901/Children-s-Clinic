@@ -5,8 +5,6 @@ import infra2 from "../../assets/home/infra2.jpeg";
 import infra3 from "../../assets/home/infra3.jpeg";
 
 const HOSPITAL_HERO_CSS = `
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340..600&family=Inter:wght@400;500;600&display=swap");
-
 .hh-root {
   --hh-bg: #f9f8fe;
   --hh-surface: #ffffff;

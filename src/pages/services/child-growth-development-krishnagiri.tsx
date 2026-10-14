@@ -87,7 +87,7 @@ const GrowthDevelopment = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/grow-banner.png" alt="Child Growth & Development Monitoring in Krishnagiri" />
+        <img className="sd-hero-bg" fetchPriority="high" decoding="async" src="/grow-banner.png" alt="Child Growth & Development Monitoring in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h2 className="font-plus-jakarta banner-font">Child Growth &amp; Development Monitoring </h2>
@@ -103,7 +103,7 @@ const GrowthDevelopment = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/assets/home/grow2.jpg" alt="Child Growth and Development Monitoring Consultation" />
+              <img loading="lazy" decoding="async" src="/assets/home/grow2.jpg" alt="Child Growth and Development Monitoring Consultation" />
             </div>
 
             {/* Overview Intro */}
@@ -515,7 +515,7 @@ const GrowthDevelopment = () => {
               When Is a Growth Concern Different From a Developmental Concern?
             </h2>
             <div className="sd-feature">
-              <img src="/grow1.jpg" alt="Child Growth and Development Monitoring Consultation" />
+              <img loading="lazy" decoding="async" src="/grow1.jpg" alt="Child Growth and Development Monitoring Consultation" />
             </div>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               Understanding the difference can help parents know what they are observing.
@@ -627,7 +627,7 @@ const GrowthDevelopment = () => {
             <div className="ls-doctor-card sd-reveal" data-reveal>
               <div className="ls-doctor-profile">
                 <div className="ls-doctor-img-wrap">
-                  <img src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
+                  <img loading="lazy" decoding="async" src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
                 </div>
                 <div className="ls-doctor-info">
                   <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>

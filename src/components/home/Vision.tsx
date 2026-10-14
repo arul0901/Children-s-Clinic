@@ -32,7 +32,15 @@ const Vision = () => {
     <section className="section vision-section" ref={sectionRef}>
       <div className="vision-bg">
         <div className="img-placeholder-wrapper">
-          <img src="/vision_bg.jpg" alt="Vision Background" className="vision-bg-img" />
+          <img
+            src="/vision_bg.jpg"
+            alt="Vision Background"
+            className="vision-bg-img"
+            loading="lazy"
+            decoding="async"
+            width={1376}
+            height={768}
+          />
         </div>
       </div>
       <div className="container">

@@ -87,7 +87,7 @@ const FeverColdCough = () => {
         <div className="sd-page" ref={pageRef}>
             {/* ── 1) Hero Banner ── */}
             <section className="sd-hero">
-                <img className="sd-hero-bg" src="/fever-banner.jpg" alt="Pediatric Fever, Cold and Cough Care in Krishnagiri" />
+                <img className="sd-hero-bg" fetchPriority="high" decoding="async" src="/fever-banner.jpg" alt="Pediatric Fever, Cold and Cough Care in Krishnagiri" />
                 <div className="sd-hero-overlay">
                     <div className="container sd-hero-inner">
                         <h2 className="font-plus-jakarta banner-font">Pediatric Fever, Cold &amp; Cough Care</h2>
@@ -104,7 +104,7 @@ const FeverColdCough = () => {
                     <article className="sd-content">
                         {/* Main Feature Image */}
                         <div className="sd-feature">
-                            <img src="/cold.jpg" alt="Pediatric Fever, Cold and Cough Consultation" />
+                            <img loading="lazy" decoding="async" src="/cold.jpg" alt="Pediatric Fever, Cold and Cough Consultation" />
                         </div>
 
                         {/* Overview Intro */}
@@ -429,7 +429,7 @@ const FeverColdCough = () => {
                             Fever Medicine: Why the Dose Matters
                         </h2>
                         <div className="sd-feature">
-                            <img src="/cough.jpg" alt="Pediatric Fever, Cold and Cough Consultation" />
+                            <img loading="lazy" decoding="async" src="/cough.jpg" alt="Pediatric Fever, Cold and Cough Consultation" />
                         </div>
                         <p className="sd-copy sd-reveal sd-text" data-reveal>
                             <span className="sp-span">Children's medicines should be given according to appropriate medical guidance, because medication choice and dosing can depend on factors such as the child's age, weight and health condition</span>.
@@ -600,7 +600,7 @@ const FeverColdCough = () => {
                         <div className="ls-doctor-card sd-reveal" data-reveal>
                             <div className="ls-doctor-profile">
                                 <div className="ls-doctor-img-wrap">
-                                    <img src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
+                                    <img loading="lazy" decoding="async" src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
                                 </div>
                                 <div className="ls-doctor-info">
                                     <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>

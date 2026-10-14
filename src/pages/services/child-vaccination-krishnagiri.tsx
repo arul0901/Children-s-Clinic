@@ -87,7 +87,7 @@ const ChildVaccination = () => {
     <div className="sd-page" ref={pageRef}>
       {/* ── 1) Hero Banner ── */}
       <section className="sd-hero">
-        <img className="sd-hero-bg" src="/vaccine-banner.jpg" alt="Child Vaccination in Krishnagiri" />
+        <img className="sd-hero-bg" fetchPriority="high" decoding="async" src="/vaccine-banner.jpg" alt="Child Vaccination in Krishnagiri" />
         <div className="sd-hero-overlay">
           <div className="container sd-hero-inner">
             <h2 className="font-plus-jakarta banner-font">Child Vaccination </h2>
@@ -103,7 +103,7 @@ const ChildVaccination = () => {
           <article className="sd-content">
             {/* Main Feature Image */}
             <div className="sd-feature">
-              <img src="/vaccine1.jpg" alt="Child Vaccination Consultation" />
+              <img loading="lazy" decoding="async" src="/vaccine1.jpg" alt="Child Vaccination Consultation" />
             </div>
 
             {/* Overview Intro */}
@@ -439,7 +439,7 @@ const ChildVaccination = () => {
               Keeping Your Child's Vaccination Records Updated
             </h2>
             <div className="sd-feature">
-              <img src="/vaccine2.jpeg" alt="Child Vaccination Consultation" />
+              <img loading="lazy" decoding="async" src="/vaccine2.jpeg" alt="Child Vaccination Consultation" />
             </div>
             <p className="sd-copy sd-reveal sd-text" data-reveal>
               <span className="sp-span">A vaccination record helps parents and healthcare professionals understand which vaccines a child has already received and which may be due.</span>
@@ -566,7 +566,7 @@ const ChildVaccination = () => {
             <div className="ls-doctor-card sd-reveal" data-reveal>
               <div className="ls-doctor-profile">
                 <div className="ls-doctor-img-wrap">
-                  <img src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
+                  <img loading="lazy" decoding="async" src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
                 </div>
                 <div className="ls-doctor-info">
                   <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>

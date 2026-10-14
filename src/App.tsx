@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -7,24 +7,24 @@ import 'lenis/dist/lenis.css';
 
 import { Layout, CustomCursor } from './components';
 import Home from './pages/Home';
-import Services from './pages/ServicesPage';
-import About from './pages/About';
-import Gallery from './pages/Gallery';
-import Contact from './pages/Contact';
-import Appointment from './pages/Appointment';
-import OurSpace from './pages/OurSpace';
-import NotFound from './pages/NotFound';
+
+// Lazy-loaded secondary pages for faster initial load
+const Services = lazy(() => import('./pages/ServicesPage'));
+const About = lazy(() => import('./pages/About'));
+const Gallery = lazy(() => import('./pages/Gallery'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Appointment = lazy(() => import('./pages/Appointment'));
+const OurSpace = lazy(() => import('./pages/OurSpace'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Dedicated Service Pages
-import {
-  LactationSupport,
-  NeonatalCare,
-  NewbornCare,
-  GrowthDevelopment,
-  PediatricCare,
-  Vaccination,
-  Seizures
-} from './pages/services/index';
+const LactationSupport = lazy(() => import('./pages/services/lactation-support-in-krishnagiri'));
+const NeonatalCare = lazy(() => import('./pages/services/neonatal-care-in-krishnagiri'));
+const NewbornCare = lazy(() => import('./pages/services/newborn-care-jaundice-krishnagiri'));
+const GrowthDevelopment = lazy(() => import('./pages/services/child-growth-development-krishnagiri'));
+const PediatricCare = lazy(() => import('./pages/services/pediatric-fever-cold-cough-krishnagiri'));
+const Vaccination = lazy(() => import('./pages/services/child-vaccination-krishnagiri'));
+const Seizures = lazy(() => import('./pages/services/seizures-fits-babies-children-krishnagiri'));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,6 +42,31 @@ function ScrollToTop({ lenis }: { lenis: Lenis | null }) {
 
   return null;
 }
+
+// Lightweight route transition fallback
+const RouteFallback = () => (
+  <div style={{
+    minHeight: '60vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'var(--color-bg, #FCFAFD)'
+  }}>
+    <div style={{
+      width: '36px',
+      height: '36px',
+      border: '3px solid rgba(79, 25, 117, 0.15)',
+      borderTopColor: '#4F1975',
+      borderRadius: '50%',
+      animation: 'spin 0.7s linear infinite'
+    }} />
+    <style>{`
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    `}</style>
+  </div>
+);
 
 function App() {
   useEffect(() => {
@@ -79,30 +104,31 @@ function App() {
     <BrowserRouter>
       <ScrollToTop lenis={(window as any).__lenis || null} />
       <CustomCursor />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="services" element={<Services />} />
-          
-          {/* Dedicated Service Pages */}
-          <Route path="services/lactation-support-in-krishnagiri" element={<LactationSupport />} />
-          <Route path="services/neonatal-care-in-krishnagiri" element={<NeonatalCare />} />
-          <Route path="services/newborn-care-jaundice-krishnagiri" element={<NewbornCare />} />
-          <Route path="services/child-growth-development-krishnagiri" element={<GrowthDevelopment />} />
-          <Route path="services/pediatric-fever-cold-cough-krishnagiri" element={<PediatricCare />} />
-          <Route path="services/child-vaccination-krishnagiri" element={<Vaccination />} />
-          <Route path="services/seizures-fits-babies-children-krishnagiri" element={<Seizures />} />
-          
+      <Suspense fallback={<RouteFallback />}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="services" element={<Services />} />
+            
+            {/* Dedicated Service Pages */}
+            <Route path="services/lactation-support-in-krishnagiri" element={<LactationSupport />} />
+            <Route path="services/neonatal-care-in-krishnagiri" element={<NeonatalCare />} />
+            <Route path="services/newborn-care-jaundice-krishnagiri" element={<NewbornCare />} />
+            <Route path="services/child-growth-development-krishnagiri" element={<GrowthDevelopment />} />
+            <Route path="services/pediatric-fever-cold-cough-krishnagiri" element={<PediatricCare />} />
+            <Route path="services/child-vaccination-krishnagiri" element={<Vaccination />} />
+            <Route path="services/seizures-fits-babies-children-krishnagiri" element={<Seizures />} />
 
-          <Route path="about" element={<About />} />
-          <Route path="our-space" element={<OurSpace />} />
-          <Route path="facilities" element={<OurSpace />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="appointment" element={<Appointment />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+            <Route path="about" element={<About />} />
+            <Route path="our-space" element={<OurSpace />} />
+            <Route path="facilities" element={<OurSpace />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="appointment" element={<Appointment />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

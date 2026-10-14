@@ -16,6 +16,10 @@ export default function HolisticWellness() {
             <img
               src="/hero_image.jpg"
               alt="Child resting comfortably in clinic bed"
+              loading="lazy"
+              decoding="async"
+              width={1200}
+              height={896}
             />
           </div>
 
@@ -24,6 +28,10 @@ export default function HolisticWellness() {
             <img
               src="/pediatric_bg.jpg"
               alt="Doctor giving high five to young patient"
+              loading="lazy"
+              decoding="async"
+              width={1200}
+              height={896}
             />
           </div>
 
@@ -32,6 +40,10 @@ export default function HolisticWellness() {
             <img
               src="/service_editorial_1_1789990863800.jpg"
               alt="Female pediatrician examining happy young girl"
+              loading="lazy"
+              decoding="async"
+              width={1200}
+              height={896}
             />
           </div>
 
@@ -40,6 +52,10 @@ export default function HolisticWellness() {
             <img
               src="/service_neonatal_care_1789988898999.jpg"
               alt="Swaddled newborn baby sleeping peacefully"
+              loading="lazy"
+              decoding="async"
+              width={1200}
+              height={896}
             />
           </div>
         </div>

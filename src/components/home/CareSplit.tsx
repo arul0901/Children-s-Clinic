@@ -51,6 +51,10 @@ const CareSplit = () => {
                 src="/pediatric_bg.jpg"
                 alt="Neonatal doctor examining baby"
                 className="arch-img"
+                loading="lazy"
+                decoding="async"
+                width={1200}
+                height={896}
               />
             </div>
           </div>
@@ -178,6 +182,10 @@ const CareSplit = () => {
                 src="/service_editorial_1_1789990863800.jpg"
                 alt="Pediatric doctor examining child"
                 className="arch-img"
+                loading="lazy"
+                decoding="async"
+                width={1200}
+                height={896}
               />
             </div>
           </div>

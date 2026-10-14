@@ -13,7 +13,15 @@ const Footer = () => {
           {/* Brand & Social */}
           <div className="footer-brand">
             <Link to="/" className="logo-mark" onClick={() => window.scrollTo(0, 0)}>
-              <img src="/logo.png" alt="The Children's Clinic" className="logo-image footer-logo-image" />
+              <img
+                src="/logo.png"
+                alt="The Children's Clinic"
+                className="logo-image footer-logo-image"
+                loading="lazy"
+                decoding="async"
+                width={160}
+                height={40}
+              />
             </Link>
             <p>
               Premium pediatric and Neonatal Intensive Care led by Dr. Haseen Fathima. We combine deep medical expertise with an instinctive understanding of how children and families experience illness.

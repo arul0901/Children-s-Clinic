@@ -87,7 +87,7 @@ const SeizuresFits = () => {
         <div className="sd-page" ref={pageRef}>
             {/* ── 1) Hero Banner ── */}
             <section className="sd-hero">
-                <img className="sd-hero-bg" src="/seizure-banner.jpeg" alt="Seizures & Fits in Babies and Children in Krishnagiri" />
+                <img className="sd-hero-bg" fetchPriority="high" decoding="async" src="/seizure-banner.jpeg" alt="Seizures & Fits in Babies and Children in Krishnagiri" />
                 <div className="sd-hero-overlay">
                     <div className="container sd-hero-inner">
                         <h2 className="font-plus-jakarta banner-font">Seizures &amp; Fits in Babies and Children </h2>
@@ -103,7 +103,7 @@ const SeizuresFits = () => {
                     <article className="sd-content">
                         {/* Main Feature Image */}
                         <div className="sd-feature">
-                            <img src="/seizure1.jpeg" alt="Seizures and Fits in Babies and Children Consultation" />
+                            <img loading="lazy" decoding="async" src="/seizure1.jpeg" alt="Seizures and Fits in Babies and Children Consultation" />
                         </div>
 
                         {/* Overview Intro */}
@@ -371,7 +371,7 @@ const SeizuresFits = () => {
                             Seizures in Babies: Why Evaluation Matters
                         </h2>
                         <div className="sd-feature">
-                            <img src="/seizure2.jpeg" alt="Seizures and Fits in Babies and Children Consultation" />
+                            <img loading="lazy" decoding="async" src="/seizure2.jpeg" alt="Seizures and Fits in Babies and Children Consultation" />
                         </div>
                         <p className="sd-copy sd-reveal sd-text" data-reveal>
                             Babies cannot describe what they are experiencing, which can make unusual episodes particularly difficult for parents to interpret.
@@ -583,7 +583,7 @@ const SeizuresFits = () => {
                         <div className="ls-doctor-card sd-reveal" data-reveal>
                             <div className="ls-doctor-profile">
                                 <div className="ls-doctor-img-wrap">
-                                    <img src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
+                                    <img loading="lazy" decoding="async" src="/dr.fathima.png" alt="Dr. Haseen Fathima" />
                                 </div>
                                 <div className="ls-doctor-info">
                                     <h2 className="ls-doctor-name">Meet Dr. Haseen Fathima</h2>
